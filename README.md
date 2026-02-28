@@ -42,7 +42,7 @@ ATM-Expert encodes the diagnostic knowledge of experienced ATM engineers into an
 | Knowledge Engineer | Emmanuel | Knowledge elicitation & rule validation |
 | Knowledge Engineer | Didemudo PeterPaul | Knowledge elicitation & rule validation |
 | Developer 1 | Shadrack Dorkenoo | Inference Engine |
-| Developer 2 | Otabil Wilfred du | Knowledge Base |
+| Developer 2 | Otabil Wilfred Adu | Knowledge Base |
 | Developer 3 | Joel Adom Opoku | User Interface |
 | Developer 4 | Gadri Wisdom | Integration & Security |
 
@@ -70,7 +70,7 @@ atm-expert/
 │   ├── maintenance_manual.md         # System maintenance and rule update procedures
 │   └── architecture_overview.md      # System architecture diagram and component description
 │
-├── knowledge_base/                   # Dev 2 — Otabil Wilfred du
+├── knowledge_base/                   # Dev 2 — Otabil Wilfred Adu
 │   ├── fault_profiles/               # Encoded ATM fault profiles by domain
 │   │   ├── hardware_faults.json      # Card reader, dispenser, printer, and sensor faults
 │   │   ├── software_faults.json      # OS, application, firmware, and database faults
