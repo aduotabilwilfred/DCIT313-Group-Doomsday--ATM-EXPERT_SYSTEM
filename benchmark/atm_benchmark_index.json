@@ -1,0 +1,2792 @@
+{
+  "meta": {
+    "project": "ATM-Expert — Intelligent ATM Fault Diagnosis & Advisory System",
+    "file": "atm_benchmark_scenarios.json",
+    "description": "200 benchmark ATM fault scenarios for inference engine evaluation",
+    "generated": "2026-02-28T11:30:38Z",
+    "total_scenarios": 200,
+    "domain_breakdown": {
+      "Hardware": 50,
+      "Software": 35,
+      "Network": 35,
+      "Cash Handling": 40,
+      "Security": 40
+    },
+    "severity_breakdown": {
+      "LOW": 6,
+      "MEDIUM": 46,
+      "HIGH": 96,
+      "CRITICAL": 52
+    },
+    "schema_version": "1.0",
+    "usage": "Each scenario contains 'facts' (normalised ATM state facts) to be injected into the inference engine's working memory. The 'expected_diagnosis', 'expected_severity', and 'expected_resolution' fields are the ground-truth labels for accuracy evaluation."
+  },
+  "scenarios": [
+    {
+      "scenario_id": "H001",
+      "domain": "Hardware",
+      "sub_domain": "Card Reader",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-01-13T23:17:00Z",
+      "error_codes": [
+        "3A1",
+        "ICM001"
+      ],
+      "expected_diagnosis": "Card Reader Jam",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H001: Card reader jam detected via ICM status code."
+    },
+    {
+      "scenario_id": "H002",
+      "domain": "Hardware",
+      "sub_domain": "Card Reader",
+      "atm_id": "ATM-0018",
+      "timestamp": "2025-02-14T18:27:00Z",
+      "error_codes": [
+        "3A1",
+        "ICM001"
+      ],
+      "expected_diagnosis": "Card Reader Jam",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H002: Card reader jam detected via ICM status code."
+    },
+    {
+      "scenario_id": "H003",
+      "domain": "Hardware",
+      "sub_domain": "Card Reader",
+      "atm_id": "ATM-0017",
+      "timestamp": "2025-11-05T00:35:00Z",
+      "error_codes": [
+        "3A1",
+        "ICM001"
+      ],
+      "expected_diagnosis": "Card Reader Jam",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H003: Card reader jam detected via ICM status code."
+    },
+    {
+      "scenario_id": "H004",
+      "domain": "Hardware",
+      "sub_domain": "Card Reader",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-05-23T00:48:00Z",
+      "error_codes": [
+        "3A1",
+        "ICM001"
+      ],
+      "expected_diagnosis": "Card Reader Jam",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H004: Card reader jam detected via ICM status code."
+    },
+    {
+      "scenario_id": "H005",
+      "domain": "Hardware",
+      "sub_domain": "Card Reader",
+      "atm_id": "ATM-0005",
+      "timestamp": "2025-04-21T10:06:00Z",
+      "error_codes": [
+        "3A5",
+        "ICM004"
+      ],
+      "expected_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H005: Card reader dirty sensor detected via ICM status code."
+    },
+    {
+      "scenario_id": "H006",
+      "domain": "Hardware",
+      "sub_domain": "Card Reader",
+      "atm_id": "ATM-0020",
+      "timestamp": "2025-05-16T01:46:00Z",
+      "error_codes": [
+        "3A5",
+        "ICM004"
+      ],
+      "expected_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H006: Card reader dirty sensor detected via ICM status code."
+    },
+    {
+      "scenario_id": "H007",
+      "domain": "Hardware",
+      "sub_domain": "Card Reader",
+      "atm_id": "ATM-0018",
+      "timestamp": "2025-05-31T20:39:00Z",
+      "error_codes": [
+        "3A5",
+        "ICM004"
+      ],
+      "expected_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H007: Card reader dirty sensor detected via ICM status code."
+    },
+    {
+      "scenario_id": "H008",
+      "domain": "Hardware",
+      "sub_domain": "Card Reader",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-12-05T07:49:00Z",
+      "error_codes": [
+        "3A5",
+        "ICM004"
+      ],
+      "expected_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H008: Card reader dirty sensor detected via ICM status code."
+    },
+    {
+      "scenario_id": "H009",
+      "domain": "Hardware",
+      "sub_domain": "Cash Dispenser",
+      "atm_id": "ATM-0009",
+      "timestamp": "2025-08-21T20:53:00Z",
+      "error_codes": [
+        "4B1",
+        "DISP_ERR_56"
+      ],
+      "expected_diagnosis": "Cash Dispenser Jam",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H009: Cash Dispenser Jam detected via dispenser status sensor."
+    },
+    {
+      "scenario_id": "H010",
+      "domain": "Hardware",
+      "sub_domain": "Cash Dispenser",
+      "atm_id": "ATM-0009",
+      "timestamp": "2025-12-26T21:41:00Z",
+      "error_codes": [
+        "4B8",
+        "DISP_ERR_19"
+      ],
+      "expected_diagnosis": "Dispenser Actuator Wear Warning",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H010: Dispenser Actuator Wear Warning detected via dispenser status sensor."
+    },
+    {
+      "scenario_id": "H011",
+      "domain": "Hardware",
+      "sub_domain": "Cash Dispenser",
+      "atm_id": "ATM-0008",
+      "timestamp": "2025-03-25T14:24:00Z",
+      "error_codes": [
+        "4C2",
+        "DISP_ERR_44"
+      ],
+      "expected_diagnosis": "Reject Bin Full",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H011: Reject Bin Full detected via dispenser status sensor."
+    },
+    {
+      "scenario_id": "H012",
+      "domain": "Hardware",
+      "sub_domain": "Cash Dispenser",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-04-28T01:51:00Z",
+      "error_codes": [
+        "4D1",
+        "DISP_ERR_50"
+      ],
+      "expected_diagnosis": "Cash Presenter Fault",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H012: Cash Presenter Fault detected via dispenser status sensor."
+    },
+    {
+      "scenario_id": "H013",
+      "domain": "Hardware",
+      "sub_domain": "Cash Dispenser",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-06-11T06:41:00Z",
+      "error_codes": [
+        "4B1",
+        "DISP_ERR_73"
+      ],
+      "expected_diagnosis": "Cash Dispenser Jam",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H013: Cash Dispenser Jam detected via dispenser status sensor."
+    },
+    {
+      "scenario_id": "H014",
+      "domain": "Hardware",
+      "sub_domain": "Cash Dispenser",
+      "atm_id": "ATM-0005",
+      "timestamp": "2025-05-07T23:35:00Z",
+      "error_codes": [
+        "4B8",
+        "DISP_ERR_78"
+      ],
+      "expected_diagnosis": "Dispenser Actuator Wear Warning",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H014: Dispenser Actuator Wear Warning detected via dispenser status sensor."
+    },
+    {
+      "scenario_id": "H015",
+      "domain": "Hardware",
+      "sub_domain": "Cash Dispenser",
+      "atm_id": "ATM-0012",
+      "timestamp": "2025-04-23T04:32:00Z",
+      "error_codes": [
+        "4C2",
+        "DISP_ERR_73"
+      ],
+      "expected_diagnosis": "Reject Bin Full",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H015: Reject Bin Full detected via dispenser status sensor."
+    },
+    {
+      "scenario_id": "H016",
+      "domain": "Hardware",
+      "sub_domain": "Cash Dispenser",
+      "atm_id": "ATM-0006",
+      "timestamp": "2025-12-15T13:38:00Z",
+      "error_codes": [
+        "4D1",
+        "DISP_ERR_18"
+      ],
+      "expected_diagnosis": "Cash Presenter Fault",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H016: Cash Presenter Fault detected via dispenser status sensor."
+    },
+    {
+      "scenario_id": "H017",
+      "domain": "Hardware",
+      "sub_domain": "Receipt Printer",
+      "atm_id": "ATM-0018",
+      "timestamp": "2025-01-06T21:46:00Z",
+      "error_codes": [
+        "5E1"
+      ],
+      "expected_diagnosis": "Printer Paper Out",
+      "expected_severity": "LOW",
+      "notes": "Scenario H017: Printer Paper Out."
+    },
+    {
+      "scenario_id": "H018",
+      "domain": "Hardware",
+      "sub_domain": "Receipt Printer",
+      "atm_id": "ATM-0011",
+      "timestamp": "2025-02-27T09:27:00Z",
+      "error_codes": [
+        "5E3"
+      ],
+      "expected_diagnosis": "Printer Paper Jam",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H018: Printer Paper Jam."
+    },
+    {
+      "scenario_id": "H019",
+      "domain": "Hardware",
+      "sub_domain": "Receipt Printer",
+      "atm_id": "ATM-0009",
+      "timestamp": "2025-09-14T05:32:00Z",
+      "error_codes": [
+        "5E7"
+      ],
+      "expected_diagnosis": "Print Head Failure",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H019: Print Head Failure."
+    },
+    {
+      "scenario_id": "H020",
+      "domain": "Hardware",
+      "sub_domain": "Receipt Printer",
+      "atm_id": "ATM-0017",
+      "timestamp": "2025-11-08T06:09:00Z",
+      "error_codes": [
+        "5E1"
+      ],
+      "expected_diagnosis": "Printer Paper Out",
+      "expected_severity": "LOW",
+      "notes": "Scenario H020: Printer Paper Out."
+    },
+    {
+      "scenario_id": "H021",
+      "domain": "Hardware",
+      "sub_domain": "Receipt Printer",
+      "atm_id": "ATM-0018",
+      "timestamp": "2025-09-29T00:38:00Z",
+      "error_codes": [
+        "5E3"
+      ],
+      "expected_diagnosis": "Printer Paper Jam",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H021: Printer Paper Jam."
+    },
+    {
+      "scenario_id": "H022",
+      "domain": "Hardware",
+      "sub_domain": "Receipt Printer",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-07-05T09:15:00Z",
+      "error_codes": [
+        "5E7"
+      ],
+      "expected_diagnosis": "Print Head Failure",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H022: Print Head Failure."
+    },
+    {
+      "scenario_id": "H023",
+      "domain": "Hardware",
+      "sub_domain": "Receipt Printer",
+      "atm_id": "ATM-0003",
+      "timestamp": "2025-09-06T02:48:00Z",
+      "error_codes": [
+        "5E1"
+      ],
+      "expected_diagnosis": "Printer Paper Out",
+      "expected_severity": "LOW",
+      "notes": "Scenario H023: Printer Paper Out."
+    },
+    {
+      "scenario_id": "H024",
+      "domain": "Hardware",
+      "sub_domain": "Receipt Printer",
+      "atm_id": "ATM-0005",
+      "timestamp": "2025-12-04T15:35:00Z",
+      "error_codes": [
+        "5E3"
+      ],
+      "expected_diagnosis": "Printer Paper Jam",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H024: Printer Paper Jam."
+    },
+    {
+      "scenario_id": "H025",
+      "domain": "Hardware",
+      "sub_domain": "Receipt Printer",
+      "atm_id": "ATM-0007",
+      "timestamp": "2025-10-04T23:44:00Z",
+      "error_codes": [
+        "5E7"
+      ],
+      "expected_diagnosis": "Print Head Failure",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H025: Print Head Failure."
+    },
+    {
+      "scenario_id": "H026",
+      "domain": "Hardware",
+      "sub_domain": "Sensors & Environment",
+      "atm_id": "ATM-0013",
+      "timestamp": "2025-12-10T20:23:00Z",
+      "error_codes": [
+        "9T1"
+      ],
+      "expected_diagnosis": "Overheating — Temperature Critical",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H026: Overheating — Temperature Critical."
+    },
+    {
+      "scenario_id": "H027",
+      "domain": "Hardware",
+      "sub_domain": "Sensors & Environment",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-03-03T07:14:00Z",
+      "error_codes": [
+        "9D1"
+      ],
+      "expected_diagnosis": "ATM Enclosure Door Open",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario H027: ATM Enclosure Door Open."
+    },
+    {
+      "scenario_id": "H028",
+      "domain": "Hardware",
+      "sub_domain": "Sensors & Environment",
+      "atm_id": "ATM-0001",
+      "timestamp": "2025-10-29T17:14:00Z",
+      "error_codes": [
+        "9S2"
+      ],
+      "expected_diagnosis": "General Sensor Malfunction",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H028: General Sensor Malfunction."
+    },
+    {
+      "scenario_id": "H029",
+      "domain": "Hardware",
+      "sub_domain": "Sensors & Environment",
+      "atm_id": "ATM-0003",
+      "timestamp": "2025-12-29T20:03:00Z",
+      "error_codes": [
+        "9V3"
+      ],
+      "expected_diagnosis": "Power / Voltage Instability",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H029: Power / Voltage Instability."
+    },
+    {
+      "scenario_id": "H030",
+      "domain": "Hardware",
+      "sub_domain": "Sensors & Environment",
+      "atm_id": "ATM-0011",
+      "timestamp": "2025-02-06T16:15:00Z",
+      "error_codes": [
+        "9F1"
+      ],
+      "expected_diagnosis": "Cooling Fan Failure",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H030: Cooling Fan Failure."
+    },
+    {
+      "scenario_id": "H031",
+      "domain": "Hardware",
+      "sub_domain": "Sensors & Environment",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-04-20T17:08:00Z",
+      "error_codes": [
+        "9T1"
+      ],
+      "expected_diagnosis": "Overheating — Temperature Critical",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H031: Overheating — Temperature Critical."
+    },
+    {
+      "scenario_id": "H032",
+      "domain": "Hardware",
+      "sub_domain": "Sensors & Environment",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-08-31T07:50:00Z",
+      "error_codes": [
+        "9D1"
+      ],
+      "expected_diagnosis": "ATM Enclosure Door Open",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario H032: ATM Enclosure Door Open."
+    },
+    {
+      "scenario_id": "H033",
+      "domain": "Hardware",
+      "sub_domain": "Sensors & Environment",
+      "atm_id": "ATM-0007",
+      "timestamp": "2025-02-18T03:42:00Z",
+      "error_codes": [
+        "9S2"
+      ],
+      "expected_diagnosis": "General Sensor Malfunction",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H033: General Sensor Malfunction."
+    },
+    {
+      "scenario_id": "H034",
+      "domain": "Hardware",
+      "sub_domain": "Sensors & Environment",
+      "atm_id": "ATM-0014",
+      "timestamp": "2025-07-30T14:55:00Z",
+      "error_codes": [
+        "9V3"
+      ],
+      "expected_diagnosis": "Power / Voltage Instability",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H034: Power / Voltage Instability."
+    },
+    {
+      "scenario_id": "H035",
+      "domain": "Hardware",
+      "sub_domain": "Sensors & Environment",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-07-26T23:21:00Z",
+      "error_codes": [
+        "9F1"
+      ],
+      "expected_diagnosis": "Cooling Fan Failure",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H035: Cooling Fan Failure."
+    },
+    {
+      "scenario_id": "H036",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-05-08T06:12:00Z",
+      "error_codes": [
+        "6P1"
+      ],
+      "expected_diagnosis": "PIN Pad Unresponsive",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H036: PIN Pad Unresponsive."
+    },
+    {
+      "scenario_id": "H037",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0005",
+      "timestamp": "2025-08-05T05:17:00Z",
+      "error_codes": [
+        "6S2"
+      ],
+      "expected_diagnosis": "Display Screen Failure",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H037: Display Screen Failure."
+    },
+    {
+      "scenario_id": "H038",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0008",
+      "timestamp": "2025-02-08T14:51:00Z",
+      "error_codes": [
+        "6C1"
+      ],
+      "expected_diagnosis": "ATM Camera Offline",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H038: ATM Camera Offline."
+    },
+    {
+      "scenario_id": "H039",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-11-30T17:53:00Z",
+      "error_codes": [
+        "9U1"
+      ],
+      "expected_diagnosis": "UPS Battery Low — Replace Soon",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H039: UPS Battery Low — Replace Soon."
+    },
+    {
+      "scenario_id": "H040",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0003",
+      "timestamp": "2025-05-02T05:26:00Z",
+      "error_codes": [
+        "6B3"
+      ],
+      "expected_diagnosis": "Barcode / QR Reader Fault",
+      "expected_severity": "LOW",
+      "notes": "Scenario H040: Barcode / QR Reader Fault."
+    },
+    {
+      "scenario_id": "H041",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-04-20T12:57:00Z",
+      "error_codes": [
+        "6P1"
+      ],
+      "expected_diagnosis": "PIN Pad Unresponsive",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H041: PIN Pad Unresponsive."
+    },
+    {
+      "scenario_id": "H042",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0006",
+      "timestamp": "2025-07-14T00:24:00Z",
+      "error_codes": [
+        "6S2"
+      ],
+      "expected_diagnosis": "Display Screen Failure",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H042: Display Screen Failure."
+    },
+    {
+      "scenario_id": "H043",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-05-27T13:44:00Z",
+      "error_codes": [
+        "6C1"
+      ],
+      "expected_diagnosis": "ATM Camera Offline",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H043: ATM Camera Offline."
+    },
+    {
+      "scenario_id": "H044",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0005",
+      "timestamp": "2025-04-08T09:13:00Z",
+      "error_codes": [
+        "9U1"
+      ],
+      "expected_diagnosis": "UPS Battery Low — Replace Soon",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H044: UPS Battery Low — Replace Soon."
+    },
+    {
+      "scenario_id": "H045",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-10-05T01:47:00Z",
+      "error_codes": [
+        "6B3"
+      ],
+      "expected_diagnosis": "Barcode / QR Reader Fault",
+      "expected_severity": "LOW",
+      "notes": "Scenario H045: Barcode / QR Reader Fault."
+    },
+    {
+      "scenario_id": "H046",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-01-26T18:30:00Z",
+      "error_codes": [
+        "6P1"
+      ],
+      "expected_diagnosis": "PIN Pad Unresponsive",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H046: PIN Pad Unresponsive."
+    },
+    {
+      "scenario_id": "H047",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-09-18T02:54:00Z",
+      "error_codes": [
+        "6S2"
+      ],
+      "expected_diagnosis": "Display Screen Failure",
+      "expected_severity": "HIGH",
+      "notes": "Scenario H047: Display Screen Failure."
+    },
+    {
+      "scenario_id": "H048",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0003",
+      "timestamp": "2025-11-01T02:43:00Z",
+      "error_codes": [
+        "6C1"
+      ],
+      "expected_diagnosis": "ATM Camera Offline",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H048: ATM Camera Offline."
+    },
+    {
+      "scenario_id": "H049",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0013",
+      "timestamp": "2025-03-03T18:15:00Z",
+      "error_codes": [
+        "9U1"
+      ],
+      "expected_diagnosis": "UPS Battery Low — Replace Soon",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario H049: UPS Battery Low — Replace Soon."
+    },
+    {
+      "scenario_id": "H050",
+      "domain": "Hardware",
+      "sub_domain": "Peripherals",
+      "atm_id": "ATM-0020",
+      "timestamp": "2025-02-11T13:42:00Z",
+      "error_codes": [
+        "6B3"
+      ],
+      "expected_diagnosis": "Barcode / QR Reader Fault",
+      "expected_severity": "LOW",
+      "notes": "Scenario H050: Barcode / QR Reader Fault."
+    },
+    {
+      "scenario_id": "S001",
+      "domain": "Software",
+      "sub_domain": "OS",
+      "atm_id": "ATM-0009",
+      "timestamp": "2025-04-15T21:45:00Z",
+      "error_codes": [
+        "SW001",
+        "SYS_421"
+      ],
+      "expected_diagnosis": "OS Kernel Panic / Blue Screen",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario S001: OS Kernel Panic / Blue Screen. Sub-domain: OS."
+    },
+    {
+      "scenario_id": "S002",
+      "domain": "Software",
+      "sub_domain": "OS",
+      "atm_id": "ATM-0011",
+      "timestamp": "2025-02-07T00:29:00Z",
+      "error_codes": [
+        "SW002",
+        "SYS_736"
+      ],
+      "expected_diagnosis": "OS Disk Space Critical",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S002: OS Disk Space Critical. Sub-domain: OS."
+    },
+    {
+      "scenario_id": "S003",
+      "domain": "Software",
+      "sub_domain": "Application",
+      "atm_id": "ATM-0005",
+      "timestamp": "2025-06-28T02:56:00Z",
+      "error_codes": [
+        "SW010",
+        "SYS_350"
+      ],
+      "expected_diagnosis": "ATM Application Crash",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S003: ATM Application Crash. Sub-domain: Application."
+    },
+    {
+      "scenario_id": "S004",
+      "domain": "Software",
+      "sub_domain": "Application",
+      "atm_id": "ATM-0018",
+      "timestamp": "2025-06-03T21:06:00Z",
+      "error_codes": [
+        "SW011",
+        "SYS_999"
+      ],
+      "expected_diagnosis": "Application Version Mismatch",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario S004: Application Version Mismatch. Sub-domain: Application."
+    },
+    {
+      "scenario_id": "S005",
+      "domain": "Software",
+      "sub_domain": "Application",
+      "atm_id": "ATM-0010",
+      "timestamp": "2025-11-06T06:45:00Z",
+      "error_codes": [
+        "SW012",
+        "SYS_451"
+      ],
+      "expected_diagnosis": "Application Deadlock Detected",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S005: Application Deadlock Detected. Sub-domain: Application."
+    },
+    {
+      "scenario_id": "S006",
+      "domain": "Software",
+      "sub_domain": "Application",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-02-17T20:27:00Z",
+      "error_codes": [
+        "SW013",
+        "SYS_949"
+      ],
+      "expected_diagnosis": "Configuration File Corrupt",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S006: Configuration File Corrupt. Sub-domain: Application."
+    },
+    {
+      "scenario_id": "S007",
+      "domain": "Software",
+      "sub_domain": "Firmware",
+      "atm_id": "ATM-0006",
+      "timestamp": "2025-08-15T17:45:00Z",
+      "error_codes": [
+        "SW020",
+        "SYS_537"
+      ],
+      "expected_diagnosis": "Firmware Update Failed",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S007: Firmware Update Failed. Sub-domain: Firmware."
+    },
+    {
+      "scenario_id": "S008",
+      "domain": "Software",
+      "sub_domain": "Firmware",
+      "atm_id": "ATM-0012",
+      "timestamp": "2025-10-26T17:09:00Z",
+      "error_codes": [
+        "SW021",
+        "SYS_540"
+      ],
+      "expected_diagnosis": "Firmware Version Mismatch",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario S008: Firmware Version Mismatch. Sub-domain: Firmware."
+    },
+    {
+      "scenario_id": "S009",
+      "domain": "Software",
+      "sub_domain": "Database",
+      "atm_id": "ATM-0007",
+      "timestamp": "2025-12-16T07:42:00Z",
+      "error_codes": [
+        "SW030",
+        "SYS_205"
+      ],
+      "expected_diagnosis": "Transaction Database Unreachable",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario S009: Transaction Database Unreachable. Sub-domain: Database."
+    },
+    {
+      "scenario_id": "S010",
+      "domain": "Software",
+      "sub_domain": "Database",
+      "atm_id": "ATM-0006",
+      "timestamp": "2025-04-01T13:01:00Z",
+      "error_codes": [
+        "SW031",
+        "SYS_283"
+      ],
+      "expected_diagnosis": "Transaction Log Full",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S010: Transaction Log Full. Sub-domain: Database."
+    },
+    {
+      "scenario_id": "S011",
+      "domain": "Software",
+      "sub_domain": "Security Software",
+      "atm_id": "ATM-0006",
+      "timestamp": "2025-12-26T03:24:00Z",
+      "error_codes": [
+        "SW040",
+        "SYS_993"
+      ],
+      "expected_diagnosis": "Anti-Tamper Software Alert",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario S011: Anti-Tamper Software Alert. Sub-domain: Security Software."
+    },
+    {
+      "scenario_id": "S012",
+      "domain": "Software",
+      "sub_domain": "Security Software",
+      "atm_id": "ATM-0010",
+      "timestamp": "2025-04-27T07:01:00Z",
+      "error_codes": [
+        "SW041",
+        "SYS_775"
+      ],
+      "expected_diagnosis": "Certificate / TLS Expiry",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S012: Certificate / TLS Expiry. Sub-domain: Security Software."
+    },
+    {
+      "scenario_id": "S013",
+      "domain": "Software",
+      "sub_domain": "Security Software",
+      "atm_id": "ATM-0012",
+      "timestamp": "2025-11-25T16:25:00Z",
+      "error_codes": [
+        "SW042",
+        "SYS_795"
+      ],
+      "expected_diagnosis": "Encryption Key Rotation Overdue",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S013: Encryption Key Rotation Overdue. Sub-domain: Security Software."
+    },
+    {
+      "scenario_id": "S014",
+      "domain": "Software",
+      "sub_domain": "Diagnostics",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-05-16T01:06:00Z",
+      "error_codes": [
+        "SW050",
+        "SYS_710"
+      ],
+      "expected_diagnosis": "Self-Test Failure at Startup",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S014: Self-Test Failure at Startup. Sub-domain: Diagnostics."
+    },
+    {
+      "scenario_id": "S015",
+      "domain": "Software",
+      "sub_domain": "Diagnostics",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-04-08T08:02:00Z",
+      "error_codes": [
+        "SW051",
+        "SYS_825"
+      ],
+      "expected_diagnosis": "Scheduled Maintenance Mode Stuck",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario S015: Scheduled Maintenance Mode Stuck. Sub-domain: Diagnostics."
+    },
+    {
+      "scenario_id": "S016",
+      "domain": "Software",
+      "sub_domain": "Remote Management",
+      "atm_id": "ATM-0014",
+      "timestamp": "2025-02-05T21:58:00Z",
+      "error_codes": [
+        "SW060",
+        "SYS_438"
+      ],
+      "expected_diagnosis": "Remote Management Agent Offline",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario S016: Remote Management Agent Offline. Sub-domain: Remote Management."
+    },
+    {
+      "scenario_id": "S017",
+      "domain": "Software",
+      "sub_domain": "Remote Management",
+      "atm_id": "ATM-0011",
+      "timestamp": "2025-07-26T22:18:00Z",
+      "error_codes": [
+        "SW061",
+        "SYS_667"
+      ],
+      "expected_diagnosis": "Software Patch Failed to Apply",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario S017: Software Patch Failed to Apply. Sub-domain: Remote Management."
+    },
+    {
+      "scenario_id": "S018",
+      "domain": "Software",
+      "sub_domain": "Watchdog",
+      "atm_id": "ATM-0020",
+      "timestamp": "2025-10-19T09:25:00Z",
+      "error_codes": [
+        "SW070",
+        "SYS_661"
+      ],
+      "expected_diagnosis": "Watchdog Timer Restart Loop",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S018: Watchdog Timer Restart Loop. Sub-domain: Watchdog."
+    },
+    {
+      "scenario_id": "S019",
+      "domain": "Software",
+      "sub_domain": "Watchdog",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-08-15T14:43:00Z",
+      "error_codes": [
+        "SW071",
+        "SYS_318"
+      ],
+      "expected_diagnosis": "Memory Leak Detected",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S019: Memory Leak Detected. Sub-domain: Watchdog."
+    },
+    {
+      "scenario_id": "S020",
+      "domain": "Software",
+      "sub_domain": "Startup",
+      "atm_id": "ATM-0017",
+      "timestamp": "2025-12-06T20:39:00Z",
+      "error_codes": [
+        "SW080",
+        "SYS_443"
+      ],
+      "expected_diagnosis": "ATM Failed to Boot",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario S020: ATM Failed to Boot. Sub-domain: Startup."
+    },
+    {
+      "scenario_id": "S021",
+      "domain": "Software",
+      "sub_domain": "OS",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-05-06T15:39:00Z",
+      "error_codes": [
+        "SW001",
+        "SYS_421"
+      ],
+      "expected_diagnosis": "OS Kernel Panic / Blue Screen",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario S001: OS Kernel Panic / Blue Screen. Sub-domain: OS."
+    },
+    {
+      "scenario_id": "S022",
+      "domain": "Software",
+      "sub_domain": "Application",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-08-01T20:36:00Z",
+      "error_codes": [
+        "SW010",
+        "SYS_350"
+      ],
+      "expected_diagnosis": "ATM Application Crash",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S003: ATM Application Crash. Sub-domain: Application."
+    },
+    {
+      "scenario_id": "S023",
+      "domain": "Software",
+      "sub_domain": "Firmware",
+      "atm_id": "ATM-0013",
+      "timestamp": "2025-09-11T12:15:00Z",
+      "error_codes": [
+        "SW020",
+        "SYS_537"
+      ],
+      "expected_diagnosis": "Firmware Update Failed",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S007: Firmware Update Failed. Sub-domain: Firmware."
+    },
+    {
+      "scenario_id": "S024",
+      "domain": "Software",
+      "sub_domain": "Application",
+      "atm_id": "ATM-0001",
+      "timestamp": "2025-02-24T13:14:00Z",
+      "error_codes": [
+        "SW012",
+        "SYS_451"
+      ],
+      "expected_diagnosis": "Application Deadlock Detected",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S005: Application Deadlock Detected. Sub-domain: Application."
+    },
+    {
+      "scenario_id": "S025",
+      "domain": "Software",
+      "sub_domain": "Application",
+      "atm_id": "ATM-0017",
+      "timestamp": "2025-08-26T01:35:00Z",
+      "error_codes": [
+        "SW013",
+        "SYS_949"
+      ],
+      "expected_diagnosis": "Configuration File Corrupt",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S006: Configuration File Corrupt. Sub-domain: Application."
+    },
+    {
+      "scenario_id": "S026",
+      "domain": "Software",
+      "sub_domain": "Firmware",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-08-22T04:51:00Z",
+      "error_codes": [
+        "SW021",
+        "SYS_540"
+      ],
+      "expected_diagnosis": "Firmware Version Mismatch",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario S008: Firmware Version Mismatch. Sub-domain: Firmware."
+    },
+    {
+      "scenario_id": "S027",
+      "domain": "Software",
+      "sub_domain": "Diagnostics",
+      "atm_id": "ATM-0017",
+      "timestamp": "2025-10-14T19:20:00Z",
+      "error_codes": [
+        "SW051",
+        "SYS_825"
+      ],
+      "expected_diagnosis": "Scheduled Maintenance Mode Stuck",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario S015: Scheduled Maintenance Mode Stuck. Sub-domain: Diagnostics."
+    },
+    {
+      "scenario_id": "S028",
+      "domain": "Software",
+      "sub_domain": "Diagnostics",
+      "atm_id": "ATM-0020",
+      "timestamp": "2025-09-16T13:53:00Z",
+      "error_codes": [
+        "SW051",
+        "SYS_825"
+      ],
+      "expected_diagnosis": "Scheduled Maintenance Mode Stuck",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario S015: Scheduled Maintenance Mode Stuck. Sub-domain: Diagnostics."
+    },
+    {
+      "scenario_id": "S029",
+      "domain": "Software",
+      "sub_domain": "Watchdog",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-03-23T23:55:00Z",
+      "error_codes": [
+        "SW070",
+        "SYS_661"
+      ],
+      "expected_diagnosis": "Watchdog Timer Restart Loop",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S018: Watchdog Timer Restart Loop. Sub-domain: Watchdog."
+    },
+    {
+      "scenario_id": "S030",
+      "domain": "Software",
+      "sub_domain": "Remote Management",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-05-13T07:53:00Z",
+      "error_codes": [
+        "SW060",
+        "SYS_438"
+      ],
+      "expected_diagnosis": "Remote Management Agent Offline",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario S016: Remote Management Agent Offline. Sub-domain: Remote Management."
+    },
+    {
+      "scenario_id": "S031",
+      "domain": "Software",
+      "sub_domain": "Database",
+      "atm_id": "ATM-0017",
+      "timestamp": "2025-09-06T20:15:00Z",
+      "error_codes": [
+        "SW030",
+        "SYS_205"
+      ],
+      "expected_diagnosis": "Transaction Database Unreachable",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario S009: Transaction Database Unreachable. Sub-domain: Database."
+    },
+    {
+      "scenario_id": "S032",
+      "domain": "Software",
+      "sub_domain": "Database",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-02-09T22:18:00Z",
+      "error_codes": [
+        "SW030",
+        "SYS_205"
+      ],
+      "expected_diagnosis": "Transaction Database Unreachable",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario S009: Transaction Database Unreachable. Sub-domain: Database."
+    },
+    {
+      "scenario_id": "S033",
+      "domain": "Software",
+      "sub_domain": "Firmware",
+      "atm_id": "ATM-0009",
+      "timestamp": "2025-06-21T10:57:00Z",
+      "error_codes": [
+        "SW021",
+        "SYS_540"
+      ],
+      "expected_diagnosis": "Firmware Version Mismatch",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario S008: Firmware Version Mismatch. Sub-domain: Firmware."
+    },
+    {
+      "scenario_id": "S034",
+      "domain": "Software",
+      "sub_domain": "Watchdog",
+      "atm_id": "ATM-0003",
+      "timestamp": "2025-03-12T04:14:00Z",
+      "error_codes": [
+        "SW070",
+        "SYS_661"
+      ],
+      "expected_diagnosis": "Watchdog Timer Restart Loop",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S018: Watchdog Timer Restart Loop. Sub-domain: Watchdog."
+    },
+    {
+      "scenario_id": "S035",
+      "domain": "Software",
+      "sub_domain": "Security Software",
+      "atm_id": "ATM-0005",
+      "timestamp": "2025-12-28T06:04:00Z",
+      "error_codes": [
+        "SW042",
+        "SYS_795"
+      ],
+      "expected_diagnosis": "Encryption Key Rotation Overdue",
+      "expected_severity": "HIGH",
+      "notes": "Scenario S013: Encryption Key Rotation Overdue. Sub-domain: Security Software."
+    },
+    {
+      "scenario_id": "N001",
+      "domain": "Network",
+      "sub_domain": "Connectivity",
+      "atm_id": "ATM-0014",
+      "timestamp": "2025-07-28T10:34:00Z",
+      "error_codes": [
+        "NET001",
+        "NET_ERR_69"
+      ],
+      "expected_diagnosis": "ATM Offline — No Network Response",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario N001: ATM Offline — No Network Response. Sub-domain: Connectivity."
+    },
+    {
+      "scenario_id": "N002",
+      "domain": "Network",
+      "sub_domain": "Connectivity",
+      "atm_id": "ATM-0007",
+      "timestamp": "2025-08-04T12:57:00Z",
+      "error_codes": [
+        "NET002",
+        "NET_ERR_84"
+      ],
+      "expected_diagnosis": "Intermittent Network Drops",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N002: Intermittent Network Drops. Sub-domain: Connectivity."
+    },
+    {
+      "scenario_id": "N003",
+      "domain": "Network",
+      "sub_domain": "Connectivity",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-07-14T15:00:00Z",
+      "error_codes": [
+        "NET003",
+        "NET_ERR_55"
+      ],
+      "expected_diagnosis": "High Network Latency",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario N003: High Network Latency. Sub-domain: Connectivity."
+    },
+    {
+      "scenario_id": "N004",
+      "domain": "Network",
+      "sub_domain": "Connectivity",
+      "atm_id": "ATM-0014",
+      "timestamp": "2025-10-03T23:47:00Z",
+      "error_codes": [
+        "NET004",
+        "NET_ERR_79"
+      ],
+      "expected_diagnosis": "DNS Resolution Failure",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N004: DNS Resolution Failure. Sub-domain: Connectivity."
+    },
+    {
+      "scenario_id": "N005",
+      "domain": "Network",
+      "sub_domain": "TLS/Security",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-04-23T08:27:00Z",
+      "error_codes": [
+        "NET010",
+        "NET_ERR_72"
+      ],
+      "expected_diagnosis": "TLS Handshake Failure",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N005: TLS Handshake Failure. Sub-domain: TLS/Security."
+    },
+    {
+      "scenario_id": "N006",
+      "domain": "Network",
+      "sub_domain": "TLS/Security",
+      "atm_id": "ATM-0011",
+      "timestamp": "2025-12-09T21:51:00Z",
+      "error_codes": [
+        "NET011",
+        "NET_ERR_61"
+      ],
+      "expected_diagnosis": "SSL Certificate Mismatch",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N006: SSL Certificate Mismatch. Sub-domain: TLS/Security."
+    },
+    {
+      "scenario_id": "N007",
+      "domain": "Network",
+      "sub_domain": "TLS/Security",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-03-07T19:34:00Z",
+      "error_codes": [
+        "NET012",
+        "NET_ERR_13"
+      ],
+      "expected_diagnosis": "Man-in-the-Middle Warning",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario N007: Man-in-the-Middle Warning. Sub-domain: TLS/Security."
+    },
+    {
+      "scenario_id": "N008",
+      "domain": "Network",
+      "sub_domain": "Host Connectivity",
+      "atm_id": "ATM-0003",
+      "timestamp": "2025-11-26T13:08:00Z",
+      "error_codes": [
+        "NET020",
+        "NET_ERR_69"
+      ],
+      "expected_diagnosis": "Cannot Reach Bank Core System",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario N008: Cannot Reach Bank Core System. Sub-domain: Host Connectivity."
+    },
+    {
+      "scenario_id": "N009",
+      "domain": "Network",
+      "sub_domain": "Host Connectivity",
+      "atm_id": "ATM-0009",
+      "timestamp": "2025-07-14T10:13:00Z",
+      "error_codes": [
+        "NET021",
+        "NET_ERR_68"
+      ],
+      "expected_diagnosis": "Connection Timeout to Core System",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N009: Connection Timeout to Core System. Sub-domain: Host Connectivity."
+    },
+    {
+      "scenario_id": "N010",
+      "domain": "Network",
+      "sub_domain": "Host Connectivity",
+      "atm_id": "ATM-0013",
+      "timestamp": "2025-05-23T13:16:00Z",
+      "error_codes": [
+        "NET022",
+        "NET_ERR_20"
+      ],
+      "expected_diagnosis": "Authentication Rejected by Core",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N010: Authentication Rejected by Core. Sub-domain: Host Connectivity."
+    },
+    {
+      "scenario_id": "N011",
+      "domain": "Network",
+      "sub_domain": "VPN",
+      "atm_id": "ATM-0018",
+      "timestamp": "2025-01-27T11:14:00Z",
+      "error_codes": [
+        "NET030",
+        "NET_ERR_93"
+      ],
+      "expected_diagnosis": "VPN Tunnel Down",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario N011: VPN Tunnel Down. Sub-domain: VPN."
+    },
+    {
+      "scenario_id": "N012",
+      "domain": "Network",
+      "sub_domain": "VPN",
+      "atm_id": "ATM-0001",
+      "timestamp": "2025-05-07T06:53:00Z",
+      "error_codes": [
+        "NET031",
+        "NET_ERR_12"
+      ],
+      "expected_diagnosis": "VPN Authentication Failed",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N012: VPN Authentication Failed. Sub-domain: VPN."
+    },
+    {
+      "scenario_id": "N013",
+      "domain": "Network",
+      "sub_domain": "Firewall",
+      "atm_id": "ATM-0008",
+      "timestamp": "2025-03-06T15:42:00Z",
+      "error_codes": [
+        "NET040",
+        "NET_ERR_24"
+      ],
+      "expected_diagnosis": "ATM Traffic Blocked by Firewall",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N013: ATM Traffic Blocked by Firewall. Sub-domain: Firewall."
+    },
+    {
+      "scenario_id": "N014",
+      "domain": "Network",
+      "sub_domain": "Firewall",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-12-25T08:49:00Z",
+      "error_codes": [
+        "NET041",
+        "NET_ERR_57"
+      ],
+      "expected_diagnosis": "IP Address Conflict",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario N014: IP Address Conflict. Sub-domain: Firewall."
+    },
+    {
+      "scenario_id": "N015",
+      "domain": "Network",
+      "sub_domain": "Switch/Router",
+      "atm_id": "ATM-0006",
+      "timestamp": "2025-06-09T03:37:00Z",
+      "error_codes": [
+        "NET050",
+        "NET_ERR_13"
+      ],
+      "expected_diagnosis": "Network Switch Port Down",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N015: Network Switch Port Down. Sub-domain: Switch/Router."
+    },
+    {
+      "scenario_id": "N016",
+      "domain": "Network",
+      "sub_domain": "Switch/Router",
+      "atm_id": "ATM-0013",
+      "timestamp": "2025-04-12T02:37:00Z",
+      "error_codes": [
+        "NET051",
+        "NET_ERR_98"
+      ],
+      "expected_diagnosis": "Router Unreachable",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario N016: Router Unreachable. Sub-domain: Switch/Router."
+    },
+    {
+      "scenario_id": "N017",
+      "domain": "Network",
+      "sub_domain": "Bandwidth",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-12-23T09:54:00Z",
+      "error_codes": [
+        "NET060",
+        "NET_ERR_97"
+      ],
+      "expected_diagnosis": "Bandwidth Saturation",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario N017: Bandwidth Saturation. Sub-domain: Bandwidth."
+    },
+    {
+      "scenario_id": "N018",
+      "domain": "Network",
+      "sub_domain": "Bandwidth",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-01-22T11:34:00Z",
+      "error_codes": [
+        "NET061",
+        "NET_ERR_64"
+      ],
+      "expected_diagnosis": "Packet Loss Exceeding Threshold",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N018: Packet Loss Exceeding Threshold. Sub-domain: Bandwidth."
+    },
+    {
+      "scenario_id": "N019",
+      "domain": "Network",
+      "sub_domain": "NTP",
+      "atm_id": "ATM-0003",
+      "timestamp": "2025-09-17T20:21:00Z",
+      "error_codes": [
+        "NET070",
+        "NET_ERR_11"
+      ],
+      "expected_diagnosis": "Clock Sync Failure (NTP)",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario N019: Clock Sync Failure (NTP). Sub-domain: NTP."
+    },
+    {
+      "scenario_id": "N020",
+      "domain": "Network",
+      "sub_domain": "NTP",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-02-24T13:23:00Z",
+      "error_codes": [
+        "NET071",
+        "NET_ERR_91"
+      ],
+      "expected_diagnosis": "ATM Clock Drift Detected",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario N020: ATM Clock Drift Detected. Sub-domain: NTP."
+    },
+    {
+      "scenario_id": "N021",
+      "domain": "Network",
+      "sub_domain": "TLS/Security",
+      "atm_id": "ATM-0014",
+      "timestamp": "2025-04-01T23:33:00Z",
+      "error_codes": [
+        "NET010",
+        "NET_ERR_72"
+      ],
+      "expected_diagnosis": "TLS Handshake Failure",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N005: TLS Handshake Failure. Sub-domain: TLS/Security."
+    },
+    {
+      "scenario_id": "N022",
+      "domain": "Network",
+      "sub_domain": "Host Connectivity",
+      "atm_id": "ATM-0020",
+      "timestamp": "2025-10-03T15:29:00Z",
+      "error_codes": [
+        "NET021",
+        "NET_ERR_68"
+      ],
+      "expected_diagnosis": "Connection Timeout to Core System",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N009: Connection Timeout to Core System. Sub-domain: Host Connectivity."
+    },
+    {
+      "scenario_id": "N023",
+      "domain": "Network",
+      "sub_domain": "Firewall",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-05-18T10:54:00Z",
+      "error_codes": [
+        "NET041",
+        "NET_ERR_57"
+      ],
+      "expected_diagnosis": "IP Address Conflict",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario N014: IP Address Conflict. Sub-domain: Firewall."
+    },
+    {
+      "scenario_id": "N024",
+      "domain": "Network",
+      "sub_domain": "Host Connectivity",
+      "atm_id": "ATM-0003",
+      "timestamp": "2025-05-23T14:15:00Z",
+      "error_codes": [
+        "NET020",
+        "NET_ERR_69"
+      ],
+      "expected_diagnosis": "Cannot Reach Bank Core System",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario N008: Cannot Reach Bank Core System. Sub-domain: Host Connectivity."
+    },
+    {
+      "scenario_id": "N025",
+      "domain": "Network",
+      "sub_domain": "Switch/Router",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-11-09T21:24:00Z",
+      "error_codes": [
+        "NET050",
+        "NET_ERR_13"
+      ],
+      "expected_diagnosis": "Network Switch Port Down",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N015: Network Switch Port Down. Sub-domain: Switch/Router."
+    },
+    {
+      "scenario_id": "N026",
+      "domain": "Network",
+      "sub_domain": "VPN",
+      "atm_id": "ATM-0001",
+      "timestamp": "2025-09-11T10:11:00Z",
+      "error_codes": [
+        "NET030",
+        "NET_ERR_93"
+      ],
+      "expected_diagnosis": "VPN Tunnel Down",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario N011: VPN Tunnel Down. Sub-domain: VPN."
+    },
+    {
+      "scenario_id": "N027",
+      "domain": "Network",
+      "sub_domain": "Switch/Router",
+      "atm_id": "ATM-0007",
+      "timestamp": "2025-07-01T08:21:00Z",
+      "error_codes": [
+        "NET051",
+        "NET_ERR_98"
+      ],
+      "expected_diagnosis": "Router Unreachable",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario N016: Router Unreachable. Sub-domain: Switch/Router."
+    },
+    {
+      "scenario_id": "N028",
+      "domain": "Network",
+      "sub_domain": "Host Connectivity",
+      "atm_id": "ATM-0020",
+      "timestamp": "2025-12-26T08:35:00Z",
+      "error_codes": [
+        "NET021",
+        "NET_ERR_68"
+      ],
+      "expected_diagnosis": "Connection Timeout to Core System",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N009: Connection Timeout to Core System. Sub-domain: Host Connectivity."
+    },
+    {
+      "scenario_id": "N029",
+      "domain": "Network",
+      "sub_domain": "Connectivity",
+      "atm_id": "ATM-0017",
+      "timestamp": "2025-04-08T02:15:00Z",
+      "error_codes": [
+        "NET001",
+        "NET_ERR_69"
+      ],
+      "expected_diagnosis": "ATM Offline — No Network Response",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario N001: ATM Offline — No Network Response. Sub-domain: Connectivity."
+    },
+    {
+      "scenario_id": "N030",
+      "domain": "Network",
+      "sub_domain": "Firewall",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-10-12T07:44:00Z",
+      "error_codes": [
+        "NET041",
+        "NET_ERR_57"
+      ],
+      "expected_diagnosis": "IP Address Conflict",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario N014: IP Address Conflict. Sub-domain: Firewall."
+    },
+    {
+      "scenario_id": "N031",
+      "domain": "Network",
+      "sub_domain": "Switch/Router",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-08-18T00:05:00Z",
+      "error_codes": [
+        "NET051",
+        "NET_ERR_98"
+      ],
+      "expected_diagnosis": "Router Unreachable",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario N016: Router Unreachable. Sub-domain: Switch/Router."
+    },
+    {
+      "scenario_id": "N032",
+      "domain": "Network",
+      "sub_domain": "Host Connectivity",
+      "atm_id": "ATM-0008",
+      "timestamp": "2025-07-27T22:15:00Z",
+      "error_codes": [
+        "NET022",
+        "NET_ERR_20"
+      ],
+      "expected_diagnosis": "Authentication Rejected by Core",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N010: Authentication Rejected by Core. Sub-domain: Host Connectivity."
+    },
+    {
+      "scenario_id": "N033",
+      "domain": "Network",
+      "sub_domain": "Host Connectivity",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-07-08T15:35:00Z",
+      "error_codes": [
+        "NET022",
+        "NET_ERR_20"
+      ],
+      "expected_diagnosis": "Authentication Rejected by Core",
+      "expected_severity": "HIGH",
+      "notes": "Scenario N010: Authentication Rejected by Core. Sub-domain: Host Connectivity."
+    },
+    {
+      "scenario_id": "N034",
+      "domain": "Network",
+      "sub_domain": "Bandwidth",
+      "atm_id": "ATM-0012",
+      "timestamp": "2025-08-06T23:35:00Z",
+      "error_codes": [
+        "NET060",
+        "NET_ERR_97"
+      ],
+      "expected_diagnosis": "Bandwidth Saturation",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario N017: Bandwidth Saturation. Sub-domain: Bandwidth."
+    },
+    {
+      "scenario_id": "N035",
+      "domain": "Network",
+      "sub_domain": "VPN",
+      "atm_id": "ATM-0012",
+      "timestamp": "2025-12-26T14:17:00Z",
+      "error_codes": [
+        "NET030",
+        "NET_ERR_93"
+      ],
+      "expected_diagnosis": "VPN Tunnel Down",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario N011: VPN Tunnel Down. Sub-domain: VPN."
+    },
+    {
+      "scenario_id": "C001",
+      "domain": "Cash Handling",
+      "sub_domain": "Cassette",
+      "atm_id": "ATM-0010",
+      "timestamp": "2025-05-09T07:07:00Z",
+      "error_codes": [
+        "CSH001",
+        "CASH_34"
+      ],
+      "expected_diagnosis": "Cash Cassette Empty",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C001: Cash Cassette Empty. Sub-domain: Cassette."
+    },
+    {
+      "scenario_id": "C002",
+      "domain": "Cash Handling",
+      "sub_domain": "Cassette",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-05-22T23:37:00Z",
+      "error_codes": [
+        "CSH002",
+        "CASH_77"
+      ],
+      "expected_diagnosis": "Cash Cassette Low — Alert",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario C002: Cash Cassette Low — Alert. Sub-domain: Cassette."
+    },
+    {
+      "scenario_id": "C003",
+      "domain": "Cash Handling",
+      "sub_domain": "Cassette",
+      "atm_id": "ATM-0010",
+      "timestamp": "2025-04-27T11:11:00Z",
+      "error_codes": [
+        "CSH003",
+        "CASH_48"
+      ],
+      "expected_diagnosis": "Cassette Not Detected / Not Seated",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C003: Cassette Not Detected / Not Seated. Sub-domain: Cassette."
+    },
+    {
+      "scenario_id": "C004",
+      "domain": "Cash Handling",
+      "sub_domain": "Cassette",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-10-11T09:44:00Z",
+      "error_codes": [
+        "CSH004",
+        "CASH_26"
+      ],
+      "expected_diagnosis": "Wrong Cassette Denomination Loaded",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C004: Wrong Cassette Denomination Loaded. Sub-domain: Cassette."
+    },
+    {
+      "scenario_id": "C005",
+      "domain": "Cash Handling",
+      "sub_domain": "Cassette",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-05-26T15:30:00Z",
+      "error_codes": [
+        "CSH005",
+        "CASH_66"
+      ],
+      "expected_diagnosis": "Cassette Lock Fault",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario C005: Cassette Lock Fault. Sub-domain: Cassette."
+    },
+    {
+      "scenario_id": "C006",
+      "domain": "Cash Handling",
+      "sub_domain": "Note Handling",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-02-03T12:31:00Z",
+      "error_codes": [
+        "CSH010",
+        "CASH_19"
+      ],
+      "expected_diagnosis": "Note Jam in Transport Path",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C006: Note Jam in Transport Path. Sub-domain: Note Handling."
+    },
+    {
+      "scenario_id": "C007",
+      "domain": "Cash Handling",
+      "sub_domain": "Note Handling",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-06-05T02:15:00Z",
+      "error_codes": [
+        "CSH011",
+        "CASH_25"
+      ],
+      "expected_diagnosis": "Multiple Note Feed (Double Take)",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C007: Multiple Note Feed (Double Take). Sub-domain: Note Handling."
+    },
+    {
+      "scenario_id": "C008",
+      "domain": "Cash Handling",
+      "sub_domain": "Note Handling",
+      "atm_id": "ATM-0013",
+      "timestamp": "2025-08-19T14:19:00Z",
+      "error_codes": [
+        "CSH012",
+        "CASH_85"
+      ],
+      "expected_diagnosis": "Torn / Mutilated Note Detected",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario C008: Torn / Mutilated Note Detected. Sub-domain: Note Handling."
+    },
+    {
+      "scenario_id": "C009",
+      "domain": "Cash Handling",
+      "sub_domain": "Note Handling",
+      "atm_id": "ATM-0007",
+      "timestamp": "2025-11-17T06:16:00Z",
+      "error_codes": [
+        "CSH013",
+        "CASH_94"
+      ],
+      "expected_diagnosis": "High Reject Rate — Notes",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C009: High Reject Rate — Notes. Sub-domain: Note Handling."
+    },
+    {
+      "scenario_id": "C010",
+      "domain": "Cash Handling",
+      "sub_domain": "Counting",
+      "atm_id": "ATM-0003",
+      "timestamp": "2025-03-22T00:26:00Z",
+      "error_codes": [
+        "CSH020",
+        "CASH_67"
+      ],
+      "expected_diagnosis": "Dispense Count Mismatch",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario C010: Dispense Count Mismatch. Sub-domain: Counting."
+    },
+    {
+      "scenario_id": "C011",
+      "domain": "Cash Handling",
+      "sub_domain": "Counting",
+      "atm_id": "ATM-0008",
+      "timestamp": "2025-05-28T22:18:00Z",
+      "error_codes": [
+        "CSH021",
+        "CASH_99"
+      ],
+      "expected_diagnosis": "Short Dispense Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario C011: Short Dispense Detected. Sub-domain: Counting."
+    },
+    {
+      "scenario_id": "C012",
+      "domain": "Cash Handling",
+      "sub_domain": "Counting",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-12-05T06:27:00Z",
+      "error_codes": [
+        "CSH022",
+        "CASH_24"
+      ],
+      "expected_diagnosis": "Over-Dispense Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario C012: Over-Dispense Detected. Sub-domain: Counting."
+    },
+    {
+      "scenario_id": "C013",
+      "domain": "Cash Handling",
+      "sub_domain": "Balancing",
+      "atm_id": "ATM-0005",
+      "timestamp": "2025-02-06T01:10:00Z",
+      "error_codes": [
+        "CSH030",
+        "CASH_49"
+      ],
+      "expected_diagnosis": "Cash Balance Discrepancy at EOD",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C013: Cash Balance Discrepancy at EOD. Sub-domain: Balancing."
+    },
+    {
+      "scenario_id": "C014",
+      "domain": "Cash Handling",
+      "sub_domain": "Balancing",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-12-19T09:44:00Z",
+      "error_codes": [
+        "CSH031",
+        "CASH_61"
+      ],
+      "expected_diagnosis": "Cassette Inventory Mismatch",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C014: Cassette Inventory Mismatch. Sub-domain: Balancing."
+    },
+    {
+      "scenario_id": "C015",
+      "domain": "Cash Handling",
+      "sub_domain": "Currency Detector",
+      "atm_id": "ATM-0020",
+      "timestamp": "2025-01-21T13:47:00Z",
+      "error_codes": [
+        "CSH040",
+        "CASH_51"
+      ],
+      "expected_diagnosis": "Counterfeit Note Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario C015: Counterfeit Note Detected. Sub-domain: Currency Detector."
+    },
+    {
+      "scenario_id": "C016",
+      "domain": "Cash Handling",
+      "sub_domain": "Currency Detector",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-10-28T00:48:00Z",
+      "error_codes": [
+        "CSH041",
+        "CASH_96"
+      ],
+      "expected_diagnosis": "Currency Detector Fault",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C016: Currency Detector Fault. Sub-domain: Currency Detector."
+    },
+    {
+      "scenario_id": "C017",
+      "domain": "Cash Handling",
+      "sub_domain": "Recycling",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-09-23T20:28:00Z",
+      "error_codes": [
+        "CSH050",
+        "CASH_45"
+      ],
+      "expected_diagnosis": "Recycler Module Fault",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C017: Recycler Module Fault. Sub-domain: Recycling."
+    },
+    {
+      "scenario_id": "C018",
+      "domain": "Cash Handling",
+      "sub_domain": "Recycling",
+      "atm_id": "ATM-0003",
+      "timestamp": "2025-08-29T11:26:00Z",
+      "error_codes": [
+        "CSH051",
+        "CASH_52"
+      ],
+      "expected_diagnosis": "Recycled Note Rejected by Validator",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario C018: Recycled Note Rejected by Validator. Sub-domain: Recycling."
+    },
+    {
+      "scenario_id": "C019",
+      "domain": "Cash Handling",
+      "sub_domain": "Security",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-05-28T21:25:00Z",
+      "error_codes": [
+        "CSH060",
+        "CASH_80"
+      ],
+      "expected_diagnosis": "Cash Vault Door Open Alert",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario C019: Cash Vault Door Open Alert. Sub-domain: Security."
+    },
+    {
+      "scenario_id": "C020",
+      "domain": "Cash Handling",
+      "sub_domain": "Security",
+      "atm_id": "ATM-0011",
+      "timestamp": "2025-03-01T12:55:00Z",
+      "error_codes": [
+        "CSH061",
+        "CASH_75"
+      ],
+      "expected_diagnosis": "Cash Replenishment Anomaly",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C020: Cash Replenishment Anomaly. Sub-domain: Security."
+    },
+    {
+      "scenario_id": "C021",
+      "domain": "Cash Handling",
+      "sub_domain": "Note Handling",
+      "atm_id": "ATM-0017",
+      "timestamp": "2025-07-05T19:48:00Z",
+      "error_codes": [
+        "CSH011",
+        "CASH_25"
+      ],
+      "expected_diagnosis": "Multiple Note Feed (Double Take)",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C007: Multiple Note Feed (Double Take). Sub-domain: Note Handling."
+    },
+    {
+      "scenario_id": "C022",
+      "domain": "Cash Handling",
+      "sub_domain": "Currency Detector",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-01-27T06:17:00Z",
+      "error_codes": [
+        "CSH041",
+        "CASH_96"
+      ],
+      "expected_diagnosis": "Currency Detector Fault",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C016: Currency Detector Fault. Sub-domain: Currency Detector."
+    },
+    {
+      "scenario_id": "C023",
+      "domain": "Cash Handling",
+      "sub_domain": "Recycling",
+      "atm_id": "ATM-0005",
+      "timestamp": "2025-05-28T14:56:00Z",
+      "error_codes": [
+        "CSH051",
+        "CASH_52"
+      ],
+      "expected_diagnosis": "Recycled Note Rejected by Validator",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario C018: Recycled Note Rejected by Validator. Sub-domain: Recycling."
+    },
+    {
+      "scenario_id": "C024",
+      "domain": "Cash Handling",
+      "sub_domain": "Currency Detector",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-01-15T20:38:00Z",
+      "error_codes": [
+        "CSH041",
+        "CASH_96"
+      ],
+      "expected_diagnosis": "Currency Detector Fault",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C016: Currency Detector Fault. Sub-domain: Currency Detector."
+    },
+    {
+      "scenario_id": "C025",
+      "domain": "Cash Handling",
+      "sub_domain": "Note Handling",
+      "atm_id": "ATM-0006",
+      "timestamp": "2025-06-09T17:00:00Z",
+      "error_codes": [
+        "CSH012",
+        "CASH_85"
+      ],
+      "expected_diagnosis": "Torn / Mutilated Note Detected",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario C008: Torn / Mutilated Note Detected. Sub-domain: Note Handling."
+    },
+    {
+      "scenario_id": "C026",
+      "domain": "Cash Handling",
+      "sub_domain": "Recycling",
+      "atm_id": "ATM-0014",
+      "timestamp": "2025-02-17T07:53:00Z",
+      "error_codes": [
+        "CSH051",
+        "CASH_52"
+      ],
+      "expected_diagnosis": "Recycled Note Rejected by Validator",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario C018: Recycled Note Rejected by Validator. Sub-domain: Recycling."
+    },
+    {
+      "scenario_id": "C027",
+      "domain": "Cash Handling",
+      "sub_domain": "Cassette",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-03-02T20:53:00Z",
+      "error_codes": [
+        "CSH004",
+        "CASH_26"
+      ],
+      "expected_diagnosis": "Wrong Cassette Denomination Loaded",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C004: Wrong Cassette Denomination Loaded. Sub-domain: Cassette."
+    },
+    {
+      "scenario_id": "C028",
+      "domain": "Cash Handling",
+      "sub_domain": "Cassette",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-05-30T16:45:00Z",
+      "error_codes": [
+        "CSH005",
+        "CASH_66"
+      ],
+      "expected_diagnosis": "Cassette Lock Fault",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario C005: Cassette Lock Fault. Sub-domain: Cassette."
+    },
+    {
+      "scenario_id": "C029",
+      "domain": "Cash Handling",
+      "sub_domain": "Note Handling",
+      "atm_id": "ATM-0014",
+      "timestamp": "2025-09-05T15:15:00Z",
+      "error_codes": [
+        "CSH013",
+        "CASH_94"
+      ],
+      "expected_diagnosis": "High Reject Rate — Notes",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C009: High Reject Rate — Notes. Sub-domain: Note Handling."
+    },
+    {
+      "scenario_id": "C030",
+      "domain": "Cash Handling",
+      "sub_domain": "Currency Detector",
+      "atm_id": "ATM-0018",
+      "timestamp": "2025-03-16T12:12:00Z",
+      "error_codes": [
+        "CSH040",
+        "CASH_51"
+      ],
+      "expected_diagnosis": "Counterfeit Note Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario C015: Counterfeit Note Detected. Sub-domain: Currency Detector."
+    },
+    {
+      "scenario_id": "C031",
+      "domain": "Cash Handling",
+      "sub_domain": "Security",
+      "atm_id": "ATM-0017",
+      "timestamp": "2025-03-11T02:17:00Z",
+      "error_codes": [
+        "CSH061",
+        "CASH_75"
+      ],
+      "expected_diagnosis": "Cash Replenishment Anomaly",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C020: Cash Replenishment Anomaly. Sub-domain: Security."
+    },
+    {
+      "scenario_id": "C032",
+      "domain": "Cash Handling",
+      "sub_domain": "Balancing",
+      "atm_id": "ATM-0011",
+      "timestamp": "2025-09-17T08:52:00Z",
+      "error_codes": [
+        "CSH031",
+        "CASH_61"
+      ],
+      "expected_diagnosis": "Cassette Inventory Mismatch",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C014: Cassette Inventory Mismatch. Sub-domain: Balancing."
+    },
+    {
+      "scenario_id": "C033",
+      "domain": "Cash Handling",
+      "sub_domain": "Cassette",
+      "atm_id": "ATM-0010",
+      "timestamp": "2025-06-02T18:37:00Z",
+      "error_codes": [
+        "CSH001",
+        "CASH_34"
+      ],
+      "expected_diagnosis": "Cash Cassette Empty",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C001: Cash Cassette Empty. Sub-domain: Cassette."
+    },
+    {
+      "scenario_id": "C034",
+      "domain": "Cash Handling",
+      "sub_domain": "Currency Detector",
+      "atm_id": "ATM-0005",
+      "timestamp": "2025-08-17T17:30:00Z",
+      "error_codes": [
+        "CSH041",
+        "CASH_96"
+      ],
+      "expected_diagnosis": "Currency Detector Fault",
+      "expected_severity": "HIGH",
+      "notes": "Scenario C016: Currency Detector Fault. Sub-domain: Currency Detector."
+    },
+    {
+      "scenario_id": "C035",
+      "domain": "Cash Handling",
+      "sub_domain": "Counting",
+      "atm_id": "ATM-0011",
+      "timestamp": "2025-10-10T17:24:00Z",
+      "error_codes": [
+        "CSH022",
+        "CASH_24"
+      ],
+      "expected_diagnosis": "Over-Dispense Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario C012: Over-Dispense Detected. Sub-domain: Counting."
+    },
+    {
+      "scenario_id": "C036",
+      "domain": "Cash Handling",
+      "sub_domain": "Currency Detector",
+      "atm_id": "ATM-0011",
+      "timestamp": "2025-04-07T22:15:00Z",
+      "error_codes": [
+        "CSH040",
+        "CASH_51"
+      ],
+      "expected_diagnosis": "Counterfeit Note Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario C015: Counterfeit Note Detected. Sub-domain: Currency Detector."
+    },
+    {
+      "scenario_id": "C037",
+      "domain": "Cash Handling",
+      "sub_domain": "Security",
+      "atm_id": "ATM-0013",
+      "timestamp": "2025-04-30T13:02:00Z",
+      "error_codes": [
+        "CSH060",
+        "CASH_80"
+      ],
+      "expected_diagnosis": "Cash Vault Door Open Alert",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario C019: Cash Vault Door Open Alert. Sub-domain: Security."
+    },
+    {
+      "scenario_id": "C038",
+      "domain": "Cash Handling",
+      "sub_domain": "Counting",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-12-28T12:24:00Z",
+      "error_codes": [
+        "CSH021",
+        "CASH_99"
+      ],
+      "expected_diagnosis": "Short Dispense Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario C011: Short Dispense Detected. Sub-domain: Counting."
+    },
+    {
+      "scenario_id": "C039",
+      "domain": "Cash Handling",
+      "sub_domain": "Cassette",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-01-19T04:32:00Z",
+      "error_codes": [
+        "CSH005",
+        "CASH_66"
+      ],
+      "expected_diagnosis": "Cassette Lock Fault",
+      "expected_severity": "MEDIUM",
+      "notes": "Scenario C005: Cassette Lock Fault. Sub-domain: Cassette."
+    },
+    {
+      "scenario_id": "C040",
+      "domain": "Cash Handling",
+      "sub_domain": "Security",
+      "atm_id": "ATM-0011",
+      "timestamp": "2025-02-21T14:06:00Z",
+      "error_codes": [
+        "CSH060",
+        "CASH_80"
+      ],
+      "expected_diagnosis": "Cash Vault Door Open Alert",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario C019: Cash Vault Door Open Alert. Sub-domain: Security."
+    },
+    {
+      "scenario_id": "F001",
+      "domain": "Security",
+      "sub_domain": "Card Skimming",
+      "atm_id": "ATM-0017",
+      "timestamp": "2025-08-22T00:46:00Z",
+      "error_codes": [
+        "SEC001",
+        "SEC_ERR_28"
+      ],
+      "expected_diagnosis": "Card Skimmer Device Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F001: Card Skimmer Device Detected. Sub-domain: Card Skimming."
+    },
+    {
+      "scenario_id": "F002",
+      "domain": "Security",
+      "sub_domain": "Card Skimming",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-05-16T10:39:00Z",
+      "error_codes": [
+        "SEC002",
+        "SEC_ERR_98"
+      ],
+      "expected_diagnosis": "Card Reader Depth Anomaly (Possible Skimmer)",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F002: Card Reader Depth Anomaly (Possible Skimmer). Sub-domain: Card Skimming."
+    },
+    {
+      "scenario_id": "F003",
+      "domain": "Security",
+      "sub_domain": "Card Skimming",
+      "atm_id": "ATM-0018",
+      "timestamp": "2025-07-14T10:40:00Z",
+      "error_codes": [
+        "SEC003",
+        "SEC_ERR_72"
+      ],
+      "expected_diagnosis": "Unusual Card Read Failures — Possible Shimmer",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F003: Unusual Card Read Failures — Possible Shimmer. Sub-domain: Card Skimming."
+    },
+    {
+      "scenario_id": "F004",
+      "domain": "Security",
+      "sub_domain": "PIN Pad Tampering",
+      "atm_id": "ATM-0010",
+      "timestamp": "2025-04-27T23:05:00Z",
+      "error_codes": [
+        "SEC010",
+        "SEC_ERR_65"
+      ],
+      "expected_diagnosis": "PIN Pad Cover Removal Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F004: PIN Pad Cover Removal Detected. Sub-domain: PIN Pad Tampering."
+    },
+    {
+      "scenario_id": "F005",
+      "domain": "Security",
+      "sub_domain": "PIN Pad Tampering",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-08-16T05:44:00Z",
+      "error_codes": [
+        "SEC011",
+        "SEC_ERR_48"
+      ],
+      "expected_diagnosis": "PIN Pad Enclosure Breach Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F005: PIN Pad Enclosure Breach Sensor Triggered. Sub-domain: PIN Pad Tampering."
+    },
+    {
+      "scenario_id": "F006",
+      "domain": "Security",
+      "sub_domain": "PIN Pad Tampering",
+      "atm_id": "ATM-0010",
+      "timestamp": "2025-07-03T11:27:00Z",
+      "error_codes": [
+        "SEC012",
+        "SEC_ERR_28"
+      ],
+      "expected_diagnosis": "Suspicious PIN Pad Overlay Pattern",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F006: Suspicious PIN Pad Overlay Pattern. Sub-domain: PIN Pad Tampering."
+    },
+    {
+      "scenario_id": "F007",
+      "domain": "Security",
+      "sub_domain": "Transaction Fraud",
+      "atm_id": "ATM-0006",
+      "timestamp": "2025-03-29T05:05:00Z",
+      "error_codes": [
+        "SEC020",
+        "SEC_ERR_88"
+      ],
+      "expected_diagnosis": "Unusual Transaction Volume — Velocity Alert",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F007: Unusual Transaction Volume — Velocity Alert. Sub-domain: Transaction Fraud."
+    },
+    {
+      "scenario_id": "F008",
+      "domain": "Security",
+      "sub_domain": "Transaction Fraud",
+      "atm_id": "ATM-0016",
+      "timestamp": "2025-10-26T04:14:00Z",
+      "error_codes": [
+        "SEC021",
+        "SEC_ERR_69"
+      ],
+      "expected_diagnosis": "Repeated Declined Transactions — Brute Force",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F008: Repeated Declined Transactions — Brute Force. Sub-domain: Transaction Fraud."
+    },
+    {
+      "scenario_id": "F009",
+      "domain": "Security",
+      "sub_domain": "Transaction Fraud",
+      "atm_id": "ATM-0001",
+      "timestamp": "2025-08-27T09:43:00Z",
+      "error_codes": [
+        "SEC022",
+        "SEC_ERR_79"
+      ],
+      "expected_diagnosis": "High-Value Withdrawal Cluster",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F009: High-Value Withdrawal Cluster. Sub-domain: Transaction Fraud."
+    },
+    {
+      "scenario_id": "F010",
+      "domain": "Security",
+      "sub_domain": "Transaction Fraud",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-06-03T20:27:00Z",
+      "error_codes": [
+        "SEC023",
+        "SEC_ERR_98"
+      ],
+      "expected_diagnosis": "Card Present + Geolocation Mismatch",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F010: Card Present + Geolocation Mismatch. Sub-domain: Transaction Fraud."
+    },
+    {
+      "scenario_id": "F011",
+      "domain": "Security",
+      "sub_domain": "Physical Attack",
+      "atm_id": "ATM-0007",
+      "timestamp": "2025-07-16T15:06:00Z",
+      "error_codes": [
+        "SEC030",
+        "SEC_ERR_40"
+      ],
+      "expected_diagnosis": "ATM Anti-Ram Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F011: ATM Anti-Ram Sensor Triggered. Sub-domain: Physical Attack."
+    },
+    {
+      "scenario_id": "F012",
+      "domain": "Security",
+      "sub_domain": "Physical Attack",
+      "atm_id": "ATM-0010",
+      "timestamp": "2025-12-25T09:01:00Z",
+      "error_codes": [
+        "SEC031",
+        "SEC_ERR_94"
+      ],
+      "expected_diagnosis": "Explosive Gas Detection Alert",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F012: Explosive Gas Detection Alert. Sub-domain: Physical Attack."
+    },
+    {
+      "scenario_id": "F013",
+      "domain": "Security",
+      "sub_domain": "Physical Attack",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-11-07T23:31:00Z",
+      "error_codes": [
+        "SEC032",
+        "SEC_ERR_46"
+      ],
+      "expected_diagnosis": "ATM Enclosure Vibration Alert",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F013: ATM Enclosure Vibration Alert. Sub-domain: Physical Attack."
+    },
+    {
+      "scenario_id": "F014",
+      "domain": "Security",
+      "sub_domain": "Physical Attack",
+      "atm_id": "ATM-0008",
+      "timestamp": "2025-11-22T06:39:00Z",
+      "error_codes": [
+        "SEC033",
+        "SEC_ERR_42"
+      ],
+      "expected_diagnosis": "Safe Door Tamper Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F014: Safe Door Tamper Sensor Triggered. Sub-domain: Physical Attack."
+    },
+    {
+      "scenario_id": "F015",
+      "domain": "Security",
+      "sub_domain": "CCTV / Surveillance",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-06-08T14:02:00Z",
+      "error_codes": [
+        "SEC040",
+        "SEC_ERR_84"
+      ],
+      "expected_diagnosis": "ATM Camera Offline — Security Risk",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F015: ATM Camera Offline — Security Risk. Sub-domain: CCTV / Surveillance."
+    },
+    {
+      "scenario_id": "F016",
+      "domain": "Security",
+      "sub_domain": "CCTV / Surveillance",
+      "atm_id": "ATM-0010",
+      "timestamp": "2025-06-17T23:26:00Z",
+      "error_codes": [
+        "SEC041",
+        "SEC_ERR_32"
+      ],
+      "expected_diagnosis": "Camera View Obstruction Detected",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F016: Camera View Obstruction Detected. Sub-domain: CCTV / Surveillance."
+    },
+    {
+      "scenario_id": "F017",
+      "domain": "Security",
+      "sub_domain": "Logical Security",
+      "atm_id": "ATM-0012",
+      "timestamp": "2025-09-29T16:58:00Z",
+      "error_codes": [
+        "SEC050",
+        "SEC_ERR_44"
+      ],
+      "expected_diagnosis": "Failed Admin Login Attempts Threshold",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F017: Failed Admin Login Attempts Threshold. Sub-domain: Logical Security."
+    },
+    {
+      "scenario_id": "F018",
+      "domain": "Security",
+      "sub_domain": "Logical Security",
+      "atm_id": "ATM-0010",
+      "timestamp": "2025-06-23T03:29:00Z",
+      "error_codes": [
+        "SEC051",
+        "SEC_ERR_19"
+      ],
+      "expected_diagnosis": "Unauthorised Remote Access Attempt",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F018: Unauthorised Remote Access Attempt. Sub-domain: Logical Security."
+    },
+    {
+      "scenario_id": "F019",
+      "domain": "Security",
+      "sub_domain": "Logical Security",
+      "atm_id": "ATM-0013",
+      "timestamp": "2025-10-13T11:05:00Z",
+      "error_codes": [
+        "SEC052",
+        "SEC_ERR_60"
+      ],
+      "expected_diagnosis": "Malware Signature Detected on ATM OS",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F019: Malware Signature Detected on ATM OS. Sub-domain: Logical Security."
+    },
+    {
+      "scenario_id": "F020",
+      "domain": "Security",
+      "sub_domain": "Compliance",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-07-08T21:47:00Z",
+      "error_codes": [
+        "SEC060",
+        "SEC_ERR_96"
+      ],
+      "expected_diagnosis": "PCI-DSS Compliance Check Failed",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F020: PCI-DSS Compliance Check Failed. Sub-domain: Compliance."
+    },
+    {
+      "scenario_id": "F021",
+      "domain": "Security",
+      "sub_domain": "Physical Attack",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-12-12T07:30:00Z",
+      "error_codes": [
+        "SEC031",
+        "SEC_ERR_94"
+      ],
+      "expected_diagnosis": "Explosive Gas Detection Alert",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F012: Explosive Gas Detection Alert. Sub-domain: Physical Attack."
+    },
+    {
+      "scenario_id": "F022",
+      "domain": "Security",
+      "sub_domain": "Card Skimming",
+      "atm_id": "ATM-0020",
+      "timestamp": "2025-10-15T10:58:00Z",
+      "error_codes": [
+        "SEC001",
+        "SEC_ERR_28"
+      ],
+      "expected_diagnosis": "Card Skimmer Device Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F001: Card Skimmer Device Detected. Sub-domain: Card Skimming."
+    },
+    {
+      "scenario_id": "F023",
+      "domain": "Security",
+      "sub_domain": "Compliance",
+      "atm_id": "ATM-0008",
+      "timestamp": "2025-11-28T02:40:00Z",
+      "error_codes": [
+        "SEC060",
+        "SEC_ERR_96"
+      ],
+      "expected_diagnosis": "PCI-DSS Compliance Check Failed",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F020: PCI-DSS Compliance Check Failed. Sub-domain: Compliance."
+    },
+    {
+      "scenario_id": "F024",
+      "domain": "Security",
+      "sub_domain": "CCTV / Surveillance",
+      "atm_id": "ATM-0010",
+      "timestamp": "2025-11-29T13:07:00Z",
+      "error_codes": [
+        "SEC040",
+        "SEC_ERR_84"
+      ],
+      "expected_diagnosis": "ATM Camera Offline — Security Risk",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F015: ATM Camera Offline — Security Risk. Sub-domain: CCTV / Surveillance."
+    },
+    {
+      "scenario_id": "F025",
+      "domain": "Security",
+      "sub_domain": "PIN Pad Tampering",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-01-20T09:31:00Z",
+      "error_codes": [
+        "SEC011",
+        "SEC_ERR_48"
+      ],
+      "expected_diagnosis": "PIN Pad Enclosure Breach Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F005: PIN Pad Enclosure Breach Sensor Triggered. Sub-domain: PIN Pad Tampering."
+    },
+    {
+      "scenario_id": "F026",
+      "domain": "Security",
+      "sub_domain": "PIN Pad Tampering",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-05-01T17:08:00Z",
+      "error_codes": [
+        "SEC010",
+        "SEC_ERR_65"
+      ],
+      "expected_diagnosis": "PIN Pad Cover Removal Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F004: PIN Pad Cover Removal Detected. Sub-domain: PIN Pad Tampering."
+    },
+    {
+      "scenario_id": "F027",
+      "domain": "Security",
+      "sub_domain": "Physical Attack",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-07-09T21:47:00Z",
+      "error_codes": [
+        "SEC032",
+        "SEC_ERR_46"
+      ],
+      "expected_diagnosis": "ATM Enclosure Vibration Alert",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F013: ATM Enclosure Vibration Alert. Sub-domain: Physical Attack."
+    },
+    {
+      "scenario_id": "F028",
+      "domain": "Security",
+      "sub_domain": "Logical Security",
+      "atm_id": "ATM-0014",
+      "timestamp": "2025-10-28T23:46:00Z",
+      "error_codes": [
+        "SEC051",
+        "SEC_ERR_19"
+      ],
+      "expected_diagnosis": "Unauthorised Remote Access Attempt",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F018: Unauthorised Remote Access Attempt. Sub-domain: Logical Security."
+    },
+    {
+      "scenario_id": "F029",
+      "domain": "Security",
+      "sub_domain": "PIN Pad Tampering",
+      "atm_id": "ATM-0014",
+      "timestamp": "2025-12-02T03:53:00Z",
+      "error_codes": [
+        "SEC011",
+        "SEC_ERR_48"
+      ],
+      "expected_diagnosis": "PIN Pad Enclosure Breach Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F005: PIN Pad Enclosure Breach Sensor Triggered. Sub-domain: PIN Pad Tampering."
+    },
+    {
+      "scenario_id": "F030",
+      "domain": "Security",
+      "sub_domain": "CCTV / Surveillance",
+      "atm_id": "ATM-0020",
+      "timestamp": "2025-07-28T08:02:00Z",
+      "error_codes": [
+        "SEC041",
+        "SEC_ERR_32"
+      ],
+      "expected_diagnosis": "Camera View Obstruction Detected",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F016: Camera View Obstruction Detected. Sub-domain: CCTV / Surveillance."
+    },
+    {
+      "scenario_id": "F031",
+      "domain": "Security",
+      "sub_domain": "Physical Attack",
+      "atm_id": "ATM-0007",
+      "timestamp": "2025-08-16T14:15:00Z",
+      "error_codes": [
+        "SEC031",
+        "SEC_ERR_94"
+      ],
+      "expected_diagnosis": "Explosive Gas Detection Alert",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F012: Explosive Gas Detection Alert. Sub-domain: Physical Attack."
+    },
+    {
+      "scenario_id": "F032",
+      "domain": "Security",
+      "sub_domain": "Physical Attack",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-12-18T11:34:00Z",
+      "error_codes": [
+        "SEC031",
+        "SEC_ERR_94"
+      ],
+      "expected_diagnosis": "Explosive Gas Detection Alert",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F012: Explosive Gas Detection Alert. Sub-domain: Physical Attack."
+    },
+    {
+      "scenario_id": "F033",
+      "domain": "Security",
+      "sub_domain": "Physical Attack",
+      "atm_id": "ATM-0002",
+      "timestamp": "2025-07-23T08:12:00Z",
+      "error_codes": [
+        "SEC031",
+        "SEC_ERR_94"
+      ],
+      "expected_diagnosis": "Explosive Gas Detection Alert",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F012: Explosive Gas Detection Alert. Sub-domain: Physical Attack."
+    },
+    {
+      "scenario_id": "F034",
+      "domain": "Security",
+      "sub_domain": "PIN Pad Tampering",
+      "atm_id": "ATM-0015",
+      "timestamp": "2025-02-16T21:13:00Z",
+      "error_codes": [
+        "SEC010",
+        "SEC_ERR_65"
+      ],
+      "expected_diagnosis": "PIN Pad Cover Removal Detected",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F004: PIN Pad Cover Removal Detected. Sub-domain: PIN Pad Tampering."
+    },
+    {
+      "scenario_id": "F035",
+      "domain": "Security",
+      "sub_domain": "Compliance",
+      "atm_id": "ATM-0001",
+      "timestamp": "2025-01-26T10:15:00Z",
+      "error_codes": [
+        "SEC060",
+        "SEC_ERR_96"
+      ],
+      "expected_diagnosis": "PCI-DSS Compliance Check Failed",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F020: PCI-DSS Compliance Check Failed. Sub-domain: Compliance."
+    },
+    {
+      "scenario_id": "F036",
+      "domain": "Security",
+      "sub_domain": "PIN Pad Tampering",
+      "atm_id": "ATM-0019",
+      "timestamp": "2025-04-16T02:53:00Z",
+      "error_codes": [
+        "SEC011",
+        "SEC_ERR_48"
+      ],
+      "expected_diagnosis": "PIN Pad Enclosure Breach Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F005: PIN Pad Enclosure Breach Sensor Triggered. Sub-domain: PIN Pad Tampering."
+    },
+    {
+      "scenario_id": "F037",
+      "domain": "Security",
+      "sub_domain": "Logical Security",
+      "atm_id": "ATM-0007",
+      "timestamp": "2025-10-28T06:52:00Z",
+      "error_codes": [
+        "SEC051",
+        "SEC_ERR_19"
+      ],
+      "expected_diagnosis": "Unauthorised Remote Access Attempt",
+      "expected_severity": "CRITICAL",
+      "notes": "Scenario F018: Unauthorised Remote Access Attempt. Sub-domain: Logical Security."
+    },
+    {
+      "scenario_id": "F038",
+      "domain": "Security",
+      "sub_domain": "Transaction Fraud",
+      "atm_id": "ATM-0011",
+      "timestamp": "2025-03-17T19:00:00Z",
+      "error_codes": [
+        "SEC021",
+        "SEC_ERR_69"
+      ],
+      "expected_diagnosis": "Repeated Declined Transactions — Brute Force",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F008: Repeated Declined Transactions — Brute Force. Sub-domain: Transaction Fraud."
+    },
+    {
+      "scenario_id": "F039",
+      "domain": "Security",
+      "sub_domain": "Transaction Fraud",
+      "atm_id": "ATM-0005",
+      "timestamp": "2025-03-08T17:16:00Z",
+      "error_codes": [
+        "SEC022",
+        "SEC_ERR_79"
+      ],
+      "expected_diagnosis": "High-Value Withdrawal Cluster",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F009: High-Value Withdrawal Cluster. Sub-domain: Transaction Fraud."
+    },
+    {
+      "scenario_id": "F040",
+      "domain": "Security",
+      "sub_domain": "PIN Pad Tampering",
+      "atm_id": "ATM-0004",
+      "timestamp": "2025-12-05T00:08:00Z",
+      "error_codes": [
+        "SEC012",
+        "SEC_ERR_28"
+      ],
+      "expected_diagnosis": "Suspicious PIN Pad Overlay Pattern",
+      "expected_severity": "HIGH",
+      "notes": "Scenario F006: Suspicious PIN Pad Overlay Pattern. Sub-domain: PIN Pad Tampering."
+    }
+  ]
+}
