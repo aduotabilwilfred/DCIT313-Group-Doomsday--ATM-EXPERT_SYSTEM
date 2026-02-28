@@ -1,0 +1,79 @@
+[
+    {
+        "fault_id": "SW_001",
+        "domain": "Software",
+        "sub_domain": "OS",
+        "title": "OS Kernel Panic / Blue Screen",
+        "description": "Operating system has crashed and is unresponsive.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "SW001",
+            "SYS_500"
+        ],
+        "symptoms": [
+            "ATM screen frozen/blank",
+            "System ping timeout"
+        ],
+        "causes": [
+            "Driver conflict",
+            "Hardware failure",
+            "Memory corruption"
+        ],
+        "resolution_steps": [
+            "Attempt remote restart via management console",
+            "If restart fails, dispatch engineer for on-site recovery",
+            "Review crash dump logs"
+        ]
+    },
+    {
+        "fault_id": "SW_002",
+        "domain": "Software",
+        "sub_domain": "Application",
+        "title": "ATM Application Crash",
+        "description": "The primary ATM user interface software has terminated unexpectedly.",
+        "severity": "HIGH",
+        "error_codes": [
+            "SW010",
+            "SYS_123"
+        ],
+        "symptoms": [
+            "Welcome screen not visible",
+            "App logs show segfault"
+        ],
+        "causes": [
+            "Software bug",
+            "Missing configuration file",
+            "Resource exhaustion"
+        ],
+        "resolution_steps": [
+            "Restart ATM application via remote console",
+            "Review application error logs",
+            "Check for pending updates"
+        ]
+    },
+    {
+        "fault_id": "SW_003",
+        "domain": "Software",
+        "sub_domain": "Database",
+        "title": "Transaction Database Unreachable",
+        "description": "ATM cannot connect to the local or central transaction database.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "SW030"
+        ],
+        "symptoms": [
+            "Transactions declined",
+            "Connection timeout logs"
+        ],
+        "causes": [
+            "Network failure",
+            "Database service down",
+            "Credential expiry"
+        ],
+        "resolution_steps": [
+            "Check database server connectivity",
+            "Verify network path to bank core",
+            "Escalate to IT if server is down"
+        ]
+    }
+]

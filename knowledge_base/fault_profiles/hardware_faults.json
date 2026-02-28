@@ -1,0 +1,136 @@
+[
+    {
+        "fault_id": "HW_001",
+        "domain": "Hardware",
+        "sub_domain": "Card Reader",
+        "title": "Card Reader Jam",
+        "description": "Physical obstruction in the card reader preventing card movement.",
+        "severity": "HIGH",
+        "error_codes": [
+            "3A1",
+            "ICM001"
+        ],
+        "symptoms": [
+            "Card not ejected",
+            "Reader status: JAMMED"
+        ],
+        "causes": [
+            "Damaged card",
+            "Sticky rollers",
+            "Foreign object"
+        ],
+        "resolution_steps": [
+            "Take ATM out of service",
+            "Open card reader access panel",
+            "Carefully remove jammed card",
+            "Run card reader self-test",
+            "Return to service"
+        ]
+    },
+    {
+        "fault_id": "HW_002",
+        "domain": "Hardware",
+        "sub_domain": "Card Reader",
+        "title": "Card Reader Dirty / Sensor Fault",
+        "description": "Optical sensors in the reader are obscured by dust or dirt.",
+        "severity": "MEDIUM",
+        "error_codes": [
+            "3A5",
+            "ICM004"
+        ],
+        "symptoms": [
+            "Intermittent read failures",
+            "Reader status: DIRTY_SENSOR"
+        ],
+        "causes": [
+            "Accumulated dust",
+            "Worn cleaning pads"
+        ],
+        "resolution_steps": [
+            "Display maintenance alert",
+            "Run card reader cleaning cycle using cleaning card",
+            "If cleaning fails, schedule engineer visit for sensor replacement"
+        ]
+    },
+    {
+        "fault_id": "HW_003",
+        "domain": "Hardware",
+        "sub_domain": "Cash Dispenser",
+        "title": "Cash Dispenser Jam",
+        "description": "Banknotes are stuck in the transport path of the dispenser.",
+        "severity": "HIGH",
+        "error_codes": [
+            "4B1",
+            "DISP_ERR_10"
+        ],
+        "symptoms": [
+            "Dispense attempt fails",
+            "Dispenser status: DISPENSER_JAM"
+        ],
+        "causes": [
+            "Poor note quality",
+            "Mechanical misalignment",
+            "Overfilled cassette"
+        ],
+        "resolution_steps": [
+            "Take ATM out of service",
+            "Open dispenser access panel",
+            "Remove jammed notes",
+            "Check transport path",
+            "Run dispenser self-test",
+            "Return to service"
+        ]
+    },
+    {
+        "fault_id": "HW_004",
+        "domain": "Hardware",
+        "sub_domain": "Receipt Printer",
+        "title": "Printer Paper Jam",
+        "description": "Receipt paper has crumpled or stuck in the printer rollers.",
+        "severity": "MEDIUM",
+        "error_codes": [
+            "5E3"
+        ],
+        "symptoms": [
+            "Receipt not printed",
+            "Printer status: PAPER_JAM"
+        ],
+        "causes": [
+            "Incorrect paper loading",
+            "Damaged paper roll",
+            "High humidity"
+        ],
+        "resolution_steps": [
+            "Open printer access cover",
+            "Remove jammed paper",
+            "Check for torn fragments",
+            "Reload paper and run test print"
+        ]
+    },
+    {
+        "fault_id": "HW_005",
+        "domain": "Hardware",
+        "sub_domain": "Sensors",
+        "title": "ATM Enclosure Door Open",
+        "description": "The main security door of the ATM is open or the sensor is triggered.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "9D1"
+        ],
+        "symptoms": [
+            "Security alarm triggered",
+            "ATM status: DOOR_OPEN"
+        ],
+        "causes": [
+            "Unauthorised access",
+            "Maintenance in progress",
+            "Sensor failure"
+        ],
+        "resolution_steps": [
+            "Immediately alert branch security",
+            "Verify physical security",
+            "Review CCTV footage",
+            "Log security incident"
+        ]
+    }
+]

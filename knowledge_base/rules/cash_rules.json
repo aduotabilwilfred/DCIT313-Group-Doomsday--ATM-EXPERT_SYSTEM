@@ -1,0 +1,79 @@
+[
+    {
+        "rule_id": "RULE_CSH_001",
+        "description": "Detect Empty Cassette",
+        "priority": 10,
+        "conditions": [
+            {
+                "fact": "cash_level_pct",
+                "operator": "eq",
+                "value": 0
+            }
+        ],
+        "actions": [
+            {
+                "action": "assert",
+                "fact": "diagnosis",
+                "value": "CSH_001"
+            },
+            {
+                "action": "assert",
+                "fact": "requires_cash_replenishment",
+                "value": true
+            }
+        ]
+    },
+    {
+        "rule_id": "RULE_CSH_002",
+        "description": "Detect Counterfeit Note",
+        "priority": 20,
+        "conditions": [
+            {
+                "fact": "currency_detector_status",
+                "operator": "eq",
+                "value": "FAULT"
+            },
+            {
+                "fact": "error_code",
+                "operator": "contains",
+                "value": "CSH040"
+            }
+        ],
+        "actions": [
+            {
+                "action": "assert",
+                "fact": "diagnosis",
+                "value": "CSH_002"
+            },
+            {
+                "action": "assert",
+                "fact": "security_alert",
+                "value": true
+            }
+        ]
+    },
+    {
+        "rule_id": "RULE_CSH_003",
+        "description": "Detect Dispense Count Mismatch",
+        "priority": 15,
+        "conditions": [
+            {
+                "fact": "error_code",
+                "operator": "contains",
+                "value": "CSH020"
+            }
+        ],
+        "actions": [
+            {
+                "action": "assert",
+                "fact": "diagnosis",
+                "value": "CSH_003"
+            },
+            {
+                "action": "assert",
+                "fact": "compliance_alert",
+                "value": true
+            }
+        ]
+    }
+]

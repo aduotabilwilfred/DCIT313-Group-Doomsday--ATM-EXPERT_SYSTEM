@@ -1,0 +1,69 @@
+[
+    {
+        "rule_id": "RULE_NET_001",
+        "description": "Detect ATM Offline",
+        "priority": 20,
+        "conditions": [
+            {
+                "fact": "network_status",
+                "operator": "eq",
+                "value": "FAULT"
+            },
+            {
+                "fact": "error_code",
+                "operator": "contains",
+                "value": "NET001"
+            }
+        ],
+        "actions": [
+            {
+                "action": "assert",
+                "fact": "diagnosis",
+                "value": "NET_001"
+            },
+            {
+                "action": "assert",
+                "fact": "requires_network_team",
+                "value": true
+            }
+        ]
+    },
+    {
+        "rule_id": "RULE_NET_002",
+        "description": "Detect TLS Handshake Failure",
+        "priority": 10,
+        "conditions": [
+            {
+                "fact": "error_code",
+                "operator": "contains",
+                "value": "NET010"
+            }
+        ],
+        "actions": [
+            {
+                "action": "assert",
+                "fact": "diagnosis",
+                "value": "NET_002"
+            }
+        ]
+    },
+    {
+        "rule_id": "RULE_NET_003",
+        "description": "Detect VPN Tunnel Down",
+        "priority": 15,
+        "conditions": [
+            {
+                "fact": "vpn_status",
+                "operator": "eq",
+                "value": "DOWN"
+            }
+        ],
+        "actions": [
+            {
+                "action": "assert",
+                "fact": "diagnosis",
+                "value": "NET_003"
+            }
+        ]
+    }
+]

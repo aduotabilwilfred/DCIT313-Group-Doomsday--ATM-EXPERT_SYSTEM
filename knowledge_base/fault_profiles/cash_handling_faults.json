@@ -1,0 +1,77 @@
+[
+    {
+        "fault_id": "CSH_001",
+        "domain": "Cash Handling",
+        "sub_domain": "Cassette",
+        "title": "Cash Cassette Empty",
+        "description": "One or more cash cassettes have run out of banknotes.",
+        "severity": "HIGH",
+        "error_codes": [
+            "CSH001"
+        ],
+        "symptoms": [
+            "'Out of Cash' screen",
+            "Cassette status: EMPTY"
+        ],
+        "causes": [
+            "High transaction volume",
+            "Delayed replenishment"
+        ],
+        "resolution_steps": [
+            "Alert branch staff",
+            "Replenish cash following dual-control procedures",
+            "Verify cassette is correctly seated",
+            "Return to service"
+        ]
+    },
+    {
+        "fault_id": "CSH_002",
+        "domain": "Cash Handling",
+        "sub_domain": "Detection",
+        "title": "Counterfeit Note Detected",
+        "description": "The ATM's currency detector has identified a suspect banknote during deposit.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "CSH040"
+        ],
+        "symptoms": [
+            "Note retained by ATM",
+            "Fraud alert triggered"
+        ],
+        "causes": [
+            "Attempted fraud"
+        ],
+        "resolution_steps": [
+            "Retain suspect note in secure bin",
+            "Alert security and branch manager",
+            "Provide incident receipt to customer",
+            "Submit note for verification"
+        ]
+    },
+    {
+        "fault_id": "CSH_003",
+        "domain": "Cash Handling",
+        "sub_domain": "Counting",
+        "title": "Dispense Count Mismatch",
+        "description": "The number of notes dispensed does not match the system request.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "CSH020"
+        ],
+        "symptoms": [
+            "Customer reported short-change",
+            "Journal mismatch"
+        ],
+        "causes": [
+            "Note jam after counting",
+            "Sensor error",
+            "Mechanical wear"
+        ],
+        "resolution_steps": [
+            "Take ATM out of service",
+            "Perform physical cash count",
+            "Review dispense logs",
+            "Initiate dispute resolution"
+        ]
+    }
+]

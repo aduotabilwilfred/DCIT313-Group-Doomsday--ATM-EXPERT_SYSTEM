@@ -1,0 +1,51 @@
+[
+    {
+        "fault_id": "SEC_001",
+        "domain": "Security",
+        "sub_domain": "Card Skimming",
+        "title": "Card Skimmer Device Detected",
+        "description": "Anti-skimming sensors have detected an overlay or insert device on the card reader.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "SEC001"
+        ],
+        "symptoms": [
+            "Skimmer alert triggered",
+            "Anomalous card insert depth"
+        ],
+        "causes": [
+            "Physical tampering"
+        ],
+        "resolution_steps": [
+            "Take ATM out of service immediately",
+            "Alert fraud team and police",
+            "Do not touch device (preserve forensics)",
+            "Review CCTV footage"
+        ]
+    },
+    {
+        "fault_id": "SEC_002",
+        "domain": "Security",
+        "sub_domain": "Tampering",
+        "title": "PIN Pad Cover Removal",
+        "description": "The security shield over the PIN pad has been removed or tampered with.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "SEC010"
+        ],
+        "symptoms": [
+            "Tamper sensor active",
+            "Visible damage to PIN pad"
+        ],
+        "causes": [
+            "Vandalism",
+            "Skimming preparation"
+        ],
+        "resolution_steps": [
+            "Take ATM out of service",
+            "Alert branch security",
+            "Inspect for hidden cameras",
+            "Replace PIN pad shield"
+        ]
+    }
+]

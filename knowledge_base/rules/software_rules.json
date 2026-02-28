@@ -1,0 +1,69 @@
+[
+    {
+        "rule_id": "RULE_SW_001",
+        "description": "Detect OS Crash",
+        "priority": 20,
+        "conditions": [
+            {
+                "fact": "error_code",
+                "operator": "contains",
+                "value": "SW001"
+            }
+        ],
+        "actions": [
+            {
+                "action": "assert",
+                "fact": "diagnosis",
+                "value": "SW_001"
+            },
+            {
+                "action": "assert",
+                "fact": "requires_engineer",
+                "value": true
+            }
+        ]
+    },
+    {
+        "rule_id": "RULE_SW_002",
+        "description": "Detect App Crash",
+        "priority": 10,
+        "conditions": [
+            {
+                "fact": "error_code",
+                "operator": "contains",
+                "value": "SW010"
+            }
+        ],
+        "actions": [
+            {
+                "action": "assert",
+                "fact": "diagnosis",
+                "value": "SW_002"
+            },
+            {
+                "action": "assert",
+                "fact": "requires_remote_action",
+                "value": true
+            }
+        ]
+    },
+    {
+        "rule_id": "RULE_SW_003",
+        "description": "Detect DB Connection Failure",
+        "priority": 15,
+        "conditions": [
+            {
+                "fact": "error_code",
+                "operator": "contains",
+                "value": "SW030"
+            }
+        ],
+        "actions": [
+            {
+                "action": "assert",
+                "fact": "diagnosis",
+                "value": "SW_003"
+            }
+        ]
+    }
+]
