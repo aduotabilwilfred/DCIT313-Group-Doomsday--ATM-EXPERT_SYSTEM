@@ -1,0 +1,78 @@
+[
+    {
+        "fault_id": "NET_001",
+        "domain": "Network",
+        "sub_domain": "Connectivity",
+        "title": "ATM Offline",
+        "description": "The ATM has no network connectivity and cannot reach the bank server.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "NET001"
+        ],
+        "symptoms": [
+            "System status: OFFLINE",
+            "Ping timeouts"
+        ],
+        "causes": [
+            "Faulty LAN cable",
+            "Switch port failure",
+            "Router misconfiguration"
+        ],
+        "resolution_steps": [
+            "Ping ATM from operations centre",
+            "Check physical LAN cable",
+            "Verify router settings",
+            "Dispatch engineer if cable/port is damaged"
+        ]
+    },
+    {
+        "fault_id": "NET_002",
+        "domain": "Network",
+        "sub_domain": "Security",
+        "title": "TLS Handshake Failure",
+        "description": "Secure communication cannot be established due to certificate or cipher issues.",
+        "severity": "HIGH",
+        "error_codes": [
+            "NET010",
+            "TLS_ERR_403"
+        ],
+        "symptoms": [
+            "Connection rejected by core",
+            "Cert expiry warnings"
+        ],
+        "causes": [
+            "Expired SSL certificate",
+            "Incompatible cipher suite"
+        ],
+        "resolution_steps": [
+            "Check certificate validity",
+            "Renew TLS certificate",
+            "Restart network services"
+        ]
+    },
+    {
+        "fault_id": "NET_003",
+        "domain": "Network",
+        "sub_domain": "VPN",
+        "title": "VPN Tunnel Down",
+        "description": "The secure VPN tunnel used for ATM-to-bank communication has collapsed.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "NET030"
+        ],
+        "symptoms": [
+            "Remote management unreachable",
+            "VPN status: DOWN"
+        ],
+        "causes": [
+            "VPN credential expiry",
+            "ISP outage",
+            "Server-side tunnel termination"
+        ],
+        "resolution_steps": [
+            "Restart VPN client on ATM",
+            "Verify VPN server status",
+            "Re-authenticate VPN session"
+        ]
+    }
+]
