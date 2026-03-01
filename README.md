@@ -38,8 +38,7 @@ ATM-Expert encodes the diagnostic knowledge of experienced ATM engineers into an
 | Role | Member | Component |
 |---|---|---|
 | Project Lead | Adu Kelvin Brobbey | Coordination, documentation, stakeholder liaison |
-| Knowledge Engineer | Jerry Kuake | Knowledge elicitation & rule validation |
-| Knowledge Engineer | Emmanuel | Knowledge elicitation & rule validation |
+| Knowledge Engineer | Jerry Kuake Emmanuel| Knowledge elicitation & rule validation |
 | Knowledge Engineer | Didemudo PeterPaul | Knowledge elicitation & rule validation |
 | Developer 1 | Shadrack Dorkenoo | Inference Engine |
 | Developer 2 | Otabil Wilfred Adu | Knowledge Base |
