@@ -1,80 +1,49 @@
-# Knowledge Base Schema Spec
+# Knowledge Base Schema Spec (Prolog)
 
-This document defines the JSON structure for **Fault Profiles** and **Inference Rules** used by the ATM-Expert system.
+This document defines the Prolog predicates used for **Fault Profiles** and **Diagnostic Rules** in the ATM-Expert system.
 
 ## 1. Fault Profiles
 
-Fault profiles represent the canonical definition of a specific ATM issue.
+Fault profiles are represented as Prolog facts in `knowledge_base/atm_kb.pl`.
 
-**Path:** `knowledge_base/fault_profiles/*.json`
+### Predicates
 
-| Field | Type | Description |
+| Predicate | Arity | Description |
 |---|---|---|
-| `fault_id` | String | Unique identifier (e.g., `HW_001`, `SW_002`) |
-| `domain` | String | One of: `Hardware`, `Software`, `Network`, `Cash Handling`, `Security` |
-| `sub_domain` | String | Specific component (e.g., `Card Reader`, `VPN`) |
-| `title` | String | Human-readable name of the fault |
-| `description` | String | Detailed explanation of the fault |
-| `severity` | String | `LOW`, `MEDIUM`, `HIGH`, `CRITICAL` |
-| `error_codes` | Array[String] | Vendor-specific codes associated with this fault |
-| `symptoms` | Array[String] | Observables (e.g., "dispenser shutter stuck") |
-| `causes` | Array[String] | Potential root causes |
-| `resolution_steps` | Array[String] | Ordered list of actions to resolve the fault |
+| `fault_profile/5` | `(ID, Domain, Subdomain, Title, Severity)` | Core identity of a fault. |
+| `fault_description/2` | `(ID, Description)` | Detailed explanation of the fault. |
+| `has_error_code/2` | `(ID, Code)` | Associated vendor-specific codes. |
+| `has_symptom/2` | `(ID, Symptom)` | Observed behaviors that trigger this fault. |
+| `has_cause/2` | `(ID, Cause)` | Potential root causes for the fault. |
+| `resolution_step/3` | `(ID, Order, Step)` | Ordered list of recovery actions. |
 
-### Example Fault Profile
+### Example Fact Set
 
-```json
-{
-  "fault_id": "HW_001",
-  "domain": "Hardware",
-  "sub_domain": "Card Reader",
-  "title": "Card Reader Jam",
-  "description": "A physical obstruction (usually a card) is stuck in the reader mechanism.",
-  "severity": "HIGH",
-  "error_codes": ["3A1", "ICM001"],
-  "symptoms": ["Card not ejected", "Reader status: JAMMED"],
-  "causes": ["Damaged card", "Sticky rollers", "Foreign object insertion"],
-  "resolution_steps": [
-    "Take ATM out of service",
-    "Open card reader access panel",
-    "Carefully remove jammed card using extraction tool",
-    "Inspect reader rollers for damage",
-    "Run card reader self-test",
-    "Return ATM to service and monitor"
-  ]
-}
+```prolog
+fault_profile('HW_001', 'Hardware', 'Card Reader', 'Card Reader Jam', 'HIGH').
+fault_description('HW_001', 'Physical obstruction in the card reader.').
+has_error_code('HW_001', '3A1').
+has_symptom('HW_001', 'Card not ejected').
+resolution_step('HW_001', 1, 'Take ATM out of service').
 ```
 
 ---
 
-## 2. Inference Rules
+## 2. Diagnostic Rules
 
-Rules are `IF-THEN` statements processed by the forward-chaining engine.
+Rules are implemented as Prolog predicates that perform logical matching between observations (symptoms/error codes) and fault profiles.
 
-**Path:** `knowledge_base/rules/*.json`
+### Key Predicates
 
-| Field | Type | Description |
+| Predicate | Usage | Description |
 |---|---|---|
-| `rule_id` | String | Unique identifier (e.g., `RULE_HW_001`) |
-| `description` | String | What this rule detects |
-| `priority` | Integer | Salience (higher numbers fire first) |
-| `conditions` | Array[Object] | List of facts that must be true (AND logic) |
-| `actions` | Array[Object] | List of facts to assert or actions to take if conditions are met |
+| `diagnose/2` | `diagnose(FaultID, Observations)` | Matches a list of observations (symptom/1 or error_code/1) to a fault. |
+| `match_observation/2`| `match_observation(ID, Obs)` | Helper that matches single observations against KB facts. |
+| `get_fault_details/7`| `get_fault_details(...)` | Retreives all metadata and resolution steps for a specific FaultID. |
 
-### Example Rule
+### Example Query
 
-```json
-{
-  "rule_id": "RULE_HW_001",
-  "description": "Diagnose Card Reader Jam",
-  "priority": 10,
-  "conditions": [
-    { "fact": "error_code", "operator": "contains", "value": "3A1" },
-    { "fact": "card_reader_status", "operator": "eq", "value": "JAMMED" }
-  ],
-  "actions": [
-    { "action": "assert", "fact": "diagnosis", "value": "HW_001" },
-    { "action": "assert", "fact": "requires_engineer", "value": true }
-  ]
-}
+```prolog
+?- diagnose(FaultID, [symptom('Card not ejected'), error_code('3A1')]).
+% Returns: FaultID = 'HW_001'
 ```
