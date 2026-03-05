@@ -6,6 +6,13 @@
 :- dynamic has_cause/2.
 :- dynamic resolution_step/3.
 
+:- discontiguous fault_profile/5.
+:- discontiguous fault_description/2.
+:- discontiguous has_error_code/2.
+:- discontiguous has_symptom/2.
+:- discontiguous has_cause/2.
+:- discontiguous resolution_step/3.
+
 fault_profile('CSH_001', 'Cash Handling', 'Cassette', 'Cash Cassette Empty', 'HIGH').
 fault_description('CSH_001', 'One or more cash cassettes have run out of banknotes.').
 has_error_code('CSH_001', 'CSH001').
@@ -209,6 +216,7 @@ resolution_step('SW_003', 1, 'Check database server connectivity').
 resolution_step('SW_003', 2, 'Verify network path to bank core').
 resolution_step('SW_003', 3, 'Escalate to IT if server is down').
 
+
 % --- Diagnostic Rules ---
 
 % Match a fault based on a list of observations.
@@ -218,8 +226,11 @@ diagnose(FaultID, Observations) :-
     findall(Obs, (member(Obs, Observations), match_observation(FaultID, Obs)), Matches),
     Matches \= []. % At least one match
 
-match_observation(FaultID, symptom(S)) :- has_symptom(FaultID, S).
-match_observation(FaultID, error_code(C)) :- has_error_code(FaultID, C).
+% Helper to match observations (handles atoms and strings)
+match_observation(FaultID, symptom(S)) :-
+    (atom(S) -> has_symptom(FaultID, S) ; (string(S), atom_string(SA, S), has_symptom(FaultID, SA))).
+match_observation(FaultID, error_code(C)) :-
+    (atom(C) -> has_error_code(FaultID, C) ; (string(C), atom_string(CA, C), has_error_code(FaultID, CA))).
 
 % Get full details for a fault
 get_fault_details(FaultID, Domain, Subdomain, Title, Severity, Description, ResolutionSteps) :-
@@ -227,6 +238,6 @@ get_fault_details(FaultID, Domain, Subdomain, Title, Severity, Description, Reso
     fault_description(FaultID, Description),
     findall(Step, resolution_step(FaultID, _, Step), ResolutionSteps).
 
-% testing
+% Test predicate for verification
 test_diagnose(FaultID) :-
     diagnose(FaultID, [symptom('Card not ejected'), error_code('3A1')]).
