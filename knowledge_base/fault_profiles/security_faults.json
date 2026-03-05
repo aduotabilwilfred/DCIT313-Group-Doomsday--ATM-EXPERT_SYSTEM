@@ -47,5 +47,330 @@
             "Inspect for hidden cameras",
             "Replace PIN pad shield"
         ]
+    },
+    {
+        "fault_id": "SEC_003",
+        "domain": "Security",
+        "sub_domain": "Unauthorized Access",
+        "title": "Unauthorized Admin Access Attempt",
+        "description": "Multiple failed attempts to access administrative functions without valid credentials.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "SEC020",
+            "AUTH_FAIL_001"
+        ],
+        "symptoms": [
+            "Invalid admin credentials detected",
+            "Repeated access denied logs",
+            "Authentication threshold exceeded"
+        ],
+        "causes": [
+            "Brute force attack",
+            "Credential compromise",
+            "Malicious insider attempt"
+        ],
+        "resolution_steps": [
+            "Lock ATM admin functions immediately",
+            "Alert security operations center",
+            "Review access logs for last 24 hours",
+            "Verify admin credential integrity",
+            "Change all admin passwords",
+            "Investigate source IP if remotely attempted"
+        ]
+    },
+    {
+        "fault_id": "SEC_004",
+        "domain": "Security",
+        "sub_domain": "Encryption",
+        "title": "Encryption/Communication Failure",
+        "description": "SSL/TLS encryption has failed or been compromised during network communication.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "SEC030",
+            "SSL_ERR_001",
+            "TLS_FAIL_002"
+        ],
+        "symptoms": [
+            "Encryption handshake failure",
+            "Certificate validation error",
+            "Secure communication channel lost"
+        ],
+        "causes": [
+            "Expired SSL certificate",
+            "Man-in-the-middle attack",
+            "Network interface compromise",
+            "Firewall interference"
+        ],
+        "resolution_steps": [
+            "Disconnect ATM from network immediately",
+            "Do not process any transactions",
+            "Alert network security team",
+            "Verify SSL certificate validity",
+            "Check for unauthorized network devices",
+            "Review network traffic logs"
+        ]
+    },
+    {
+        "fault_id": "SEC_005",
+        "domain": "Security",
+        "sub_domain": "Fraud Detection",
+        "title": "Suspicious Transaction Pattern Detected",
+        "description": "Unusual transaction patterns detected that may indicate fraud or money laundering.",
+        "severity": "HIGH",
+        "error_codes": [
+            "SEC040",
+            "FRAUD_ALERT_001"
+        ],
+        "symptoms": [
+            "Multiple rapid withdrawals",
+            "Unusual withdrawal amounts",
+            "Transactions from unfamiliar cards",
+            "Late-night high-value withdrawals"
+        ],
+        "causes": [
+            "Compromised card credentials",
+            "Money laundering attempt",
+            "Organized fraud ring",
+            "Testing stolen card details"
+        ],
+        "resolution_steps": [
+            "Flag all cards used in suspicious transactions",
+            "Alert fraud investigation team",
+            "Review transaction history for patterns",
+            "Contact cardholders for verification",
+            "Block cards in real-time if confirmed",
+            "Report to financial intelligence unit"
+        ]
+    },
+    {
+        "fault_id": "SEC_006",
+        "domain": "Security",
+        "sub_domain": "Network",
+        "title": "Network Interface Tampering Detected",
+        "description": "Physical or logical tampering with network interfaces detected.",
+        "severity": "HIGH",
+        "error_codes": [
+            "SEC050",
+            "NET_TAMPER_001"
+        ],
+        "symptoms": [
+            "Network cable detached",
+            "Unauthorized device connected",
+            "Network interface disabled",
+            "Routing configuration altered"
+        ],
+        "causes": [
+            "Physical cable removal",
+            "Unauthorized network tap installed",
+            "Configuration tampering",
+            "Malicious network access"
+        ],
+        "resolution_steps": [
+            "Verify physical network cable connections",
+            "Check for unauthorized devices on network",
+            "Review network configuration",
+            "Inspect network ports for tampering",
+            "Contact IT security to audit network",
+            "Restore network configuration from backup"
+        ]
+    },
+    {
+        "fault_id": "SEC_007",
+        "domain": "Security",
+        "sub_domain": "Physical Security",
+        "title": "Cash Box Breach Attempt",
+        "description": "Physical security sensors indicate attempted breach of cash cassette compartment.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "SEC060",
+            "CASH_BREACH_001"
+        ],
+        "symptoms": [
+            "Cash box tamper switch triggered",
+            "Forcible entry detected",
+            "Lock integrity compromised",
+            "Access panel forced open"
+        ],
+        "causes": [
+            "Armed robbery attempt",
+            "Forced entry for theft",
+            "Technical malfunction of lock"
+        ],
+        "resolution_steps": [
+            "Cease all cash dispensing immediately",
+            "Alert police and branch security",
+            "Lock down ATM physical access",
+            "Document all visible damage with photos",
+            "Retrieve cash box and secure in vault",
+            "Investigate if cash is missing or tampered",
+            "Schedule engineer for lock system repair"
+        ]
+    },
+    {
+        "fault_id": "SEC_008",
+        "domain": "Security",
+        "sub_domain": "Authentication",
+        "title": "Biometric Authentication Failure",
+        "description": "Fingerprint or other biometric authentication system malfunction or compromise.",
+        "severity": "HIGH",
+        "error_codes": [
+            "SEC070",
+            "BIO_AUTH_FAIL"
+        ],
+        "symptoms": [
+            "Fingerprint sensor not responding",
+            "Biometric read errors",
+            "Authentication consistently failing",
+            "Sensor cover damaged or dirty"
+        ],
+        "causes": [
+            "Sensor hardware failure",
+            "Damaged fingerprint reader",
+            "Spoofing attempt with fake fingerprint",
+            "Contaminated sensor surface"
+        ],
+        "resolution_steps": [
+            "Disable biometric authentication temporarily",
+            "Switch to PIN-only mode",
+            "Clean biometric sensor with appropriate material",
+            "Test sensor functionality",
+            "If still failing, schedule engineer replacement",
+            "Notify branch staff of authentication method change"
+        ]
+    },
+    {
+        "fault_id": "SEC_009",
+        "domain": "Security",
+        "sub_domain": "Software",
+        "title": "Malware/Software Tampering Detected",
+        "description": "Suspicious code execution, unauthorized software, or signs of malware detected.",
+        "severity": "CRITICAL",
+        "error_codes": [
+            "SEC080",
+            "MALWARE_ALERT"
+        ],
+        "symptoms": [
+            "Unexpected process execution",
+            "Memory corruption detected",
+            "Unauthorized file modifications",
+            "Checksum verification failed"
+        ],
+        "causes": [
+            "Malware infection",
+            "Unauthorized software installation",
+            "Rootkit attack",
+            "Software injection attack"
+        ],
+        "resolution_steps": [
+            "Take ATM offline immediately",
+            "Isolate from network",
+            "Do not process any transactions",
+            "Alert information security team",
+            "Perform full integrity scan",
+            "Restore from verified clean image if compromised",
+            "Investigate all recent network access logs"
+        ]
+    },
+    {
+        "fault_id": "SEC_010",
+        "domain": "Security",
+        "sub_domain": "Access Control",
+        "title": "Door Lock Status Anomaly",
+        "description": "ATM access panel or service door lock is in an unexpected state.",
+        "severity": "HIGH",
+        "error_codes": [
+            "SEC090",
+            "DOOR_LOCK_FAIL"
+        ],
+        "symptoms": [
+            "Service door lock disengaged unexpectedly",
+            "Door ajar sensor triggered",
+            "Lock actuator failure",
+            "Security panel opened without authorization"
+        ],
+        "causes": [
+            "Attempted unauthorized access",
+            "Lock mechanism failure",
+            "Electronic lock failure",
+            "Forced entry attempt"
+        ],
+        "resolution_steps": [
+            "Verify no unauthorized access occurred",
+            "Check all security seals and tape",
+            "Inspect for signs of forced entry",
+            "Test door lock mechanism",
+            "If lock faulty, schedule replacement",
+            "Review CCTV footage",
+            "Document all findings in maintenance log"
+        ]
+    },
+    {
+        "fault_id": "SEC_011",
+        "domain": "Security",
+        "sub_domain": "Authentication",
+        "title": "Invalid PIN Length Detected",
+        "description": "Cardholder attempted to enter a PIN with incorrect length (not 4 digits).",
+        "severity": "MEDIUM",
+        "error_codes": [
+            "SEC_PIN_INVALID",
+            "PIN_LEN_ERR"
+        ],
+        "symptoms": [
+            "PIN entry attempt with 3 digits",
+            "PIN entry attempt with more than 4 digits",
+            "PIN format validation failed",
+            "Invalid PIN length error"
+        ],
+        "causes": [
+            "User input error",
+            "PIN pad malfunction sending incorrect input",
+            "Card cloning with altered PIN requirements",
+            "System accepting invalid PIN format"
+        ],
+        "resolution_steps": [
+            "Prompt user to re-enter PIN with exactly 4 digits",
+            "Verify PIN pad is functioning correctly",
+            "If repeated failures, inspect PIN pad for hardware issues",
+            "Check system logs for PIN entry validation errors",
+            "Alert user of correct PIN format if needed",
+            "Consider temporary PIN format override if legitimately needed"
+        ]
+    },
+    {
+        "fault_id": "SEC_012",
+        "domain": "Security",
+        "sub_domain": "Card Validation",
+        "title": "Foreign Or Unrecognized Card Used",
+        "description": "Cardholder used a card that is not recognized by the system or issued by an unauthorized card network.",
+        "severity": "HIGH",
+        "error_codes": [
+            "SEC_CARD_UNKNOWN",
+            "CARD_NOT_RECOGNIZED",
+            "FOREIGN_CARD_DETECTED"
+        ],
+        "symptoms": [
+            "Card not recognized by system",
+            "Card issuer not in accepted network list",
+            "Card type not supported",
+            "Card validation check failed",
+            "Unknown card BIN detected"
+        ],
+        "causes": [
+            "Counterfeit card used",
+            "Card from unsupported issuer",
+            "Card from different country not accepted",
+            "Card network not provisioned in ATM",
+            "Card data has been forged or altered"
+        ],
+        "resolution_steps": [
+            "Retain card in secure bin immediately",
+            "Display message: Card cannot be processed",
+            "Alert fraud team if suspected counterfeit",
+            "Record card details in security log",
+            "Check card network provisioning settings",
+            "Verify against card issuer database if available",
+            "Contact cardholder to verify card legitimacy",
+            "Report to card network if fraud suspected"
+        ]
     }
 ]
