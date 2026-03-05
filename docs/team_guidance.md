@@ -6,7 +6,7 @@ This document outlines the interfaces and steps needed from each team member fol
 
 ---
 
-## 🏗️ Knowledge Base Structure (NEW)
+## Knowledge Base Structure (NEW)
 
 The KB is now modular. Do not load `atm_kb.pl` directly. Instead, point to `loader.pl`.
 
@@ -16,9 +16,9 @@ The KB is now modular. Do not load `atm_kb.pl` directly. Instead, point to `load
 
 ---
 
-## 🛠️ Action Items for Team Members
+## Action Items for Team Members
 
-### 👨‍💻 Dev 1: Inference Engine (Shadrack)
+### Dev 1: Inference Engine (Shadrack)
 
 **Goal:** Update the Python-Prolog bridge to use the new loader.
 
@@ -26,7 +26,7 @@ The KB is now modular. Do not load `atm_kb.pl` directly. Instead, point to `load
 2. Update the `kb_path` logic to point to `knowledge_base/loader.pl` instead of `atm_kb.pl`.
 3. Verify that the `diagnose` and `get_details` methods still work as expected.
 
-### 🎨 Dev 3: User Interface (Joel)
+### Dev 3: User Interface (Joel)
 
 **Goal:** Ensure symptoms and error codes are captured correctly.
 
@@ -39,7 +39,7 @@ The `get_details` query returns these fields which your UI should display:
 
 - `domain`, `sub_domain`, `title`, `severity`, `description`, `resolution_steps` (as a list).
 
-### 🛡️ Dev 4: Integration & Security (Gadri)
+### Dev 4: Integration & Security (Gadri)
 
 **Goal:** Hook security-specific logic into the diagnostic rules.
 
@@ -50,6 +50,6 @@ If you have specific security sensors or protocols to add:
 
 ---
 
-## ✅ Verification
+## Verification
 
 Otabil has verified that running `python knowledge_base/json_to_prolog.py` now generated a clean fact file, and the rules are safely modularized.
