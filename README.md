@@ -20,7 +20,7 @@
 
 ATM-Expert encodes the diagnostic knowledge of experienced ATM engineers into an intelligent decision-support engine. It uses a hybrid **Python-Prolog** architecture:
 
-1. **Knowledge Base (Prolog):** 100+ fault profiles encoded as Prolog facts and rules for high-performance symbolic reasoning.
+1. **Knowledge Base (Prolog):** 100+ fault profiles encoded as Prolog facts and modular diagnostic rules for high-performance symbolic reasoning.
 2. **Inference Engine (Python-Prolog Bridge):** A Python-based bridge that interacts with the SWI-Prolog engine to perform diagnoses and retrieve resolution steps.
 
 **Key capabilities:**
@@ -65,8 +65,10 @@ atm-expert/
 │
 ├── knowledge_base/                   # Dev 2 — Otabil Wilfred Adu
 │   ├── fault_profiles/               # Source JSON fault profiles by domain
-│   ├── atm_kb.pl                     # [GENERATED] Compiled Prolog knowledge base
-│   ├── json_to_prolog.py             # Script to compile JSON profiles into Prolog
+│   ├── atm_kb.pl                     # [GENERATED] Prolog facts (generated from JSON)
+│   ├── rules.pl                      # Diagnostic logic and inference rules
+│   ├── loader.pl                     # Master loader for facts and rules
+│   ├── json_to_prolog.py             # Script to compile JSON profiles into atm_kb.pl
 │   └── schema.md                     # Rule and fault profile schema documentation
 │
 ├── inference_engine/                 # Dev 1 — Shadrack Dorkenoo
@@ -105,8 +107,8 @@ atm-expert/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-org/atm-expert.git
-cd atm-expert
+git clone https://github.com/owills004/DCIT313-Group-Doomsday--ATM-EXPERT_SYSTEM.git
+cd DCIT313-Group-Doomsday--ATM-EXPERT_SYSTEM
 
 # 2. Install Python dependencies
 pip install -r requirements.txt
