@@ -41,12 +41,14 @@ The `get_details` query returns these fields which your UI should display:
 
 ### Dev 4: Integration & Security (Gadri)
 
-**Goal:** Hook security-specific logic into the diagnostic rules.
+**Goal:** Integrate security-specific faults into the system.
 
-If you have specific security sensors or protocols to add:
+If you have new security sensors or fraud-detection scenarios:
 
-1. Add new JSON profiles to `knowledge_base/fault_profiles/`.
-2. If you need custom Prolog rules for complex security logic (e.g., "if 3 failed PINs AND card is foreign"), we can add them to `knowledge_base/rules.pl`.
+1. **Data:** Add new JSON profiles to `knowledge_base/fault_profiles/`. Otabil's generator will automatically ingest these into the KB.
+2. **Logic:** If your security scenarios require complex logic (e.g., cross-referencing multiple failed PINs), **coordinate with Otabil (Dev 2)**. He will implement the necessary Prolog rules in `rules.pl`.
+
+*Note: Otabil maintains ownership of the Knowledge Base scripts and core logic.*
 
 ---
 
