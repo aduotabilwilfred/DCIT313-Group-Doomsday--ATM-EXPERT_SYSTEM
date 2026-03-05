@@ -37,13 +37,13 @@ Rules are implemented as Prolog predicates that perform logical matching between
 
 | Predicate | Usage | Description |
 |---|---|---|
-| `diagnose/2` | `diagnose(FaultID, Observations)` | Matches a list of observations (symptom/1 or error_code/1) to a fault. |
-| `match_observation/2`| `match_observation(ID, Obs)` | Helper that matches single observations against KB facts. |
-| `get_fault_details/7`| `get_fault_details(...)` | Retreives all metadata and resolution steps for a specific FaultID. |
+| `diagnose/2` | `diagnose(FID, Observations)` | Matches a list of observations (symptom/1 or error_code/1) to a fault. |
+| `match_observation/2`| `match_observation(FID, Obs)` | Helper that matches single observations against KB facts (handles atoms and strings). |
+| `get_fault_details/7`| `get_fault_details(FID, D, SD, T, S, Desc, RS)` | Retrieves all metadata and resolution steps for a specific Fault ID. |
 
 ### Example Query
 
 ```prolog
-?- diagnose(FaultID, [symptom('Card not ejected'), error_code('3A1')]).
-% Returns: FaultID = 'HW_001'
+?- diagnose(FID, [symptom("Card not ejected"), error_code("3A1")]).
+% FID = 'HW_001'
 ```
