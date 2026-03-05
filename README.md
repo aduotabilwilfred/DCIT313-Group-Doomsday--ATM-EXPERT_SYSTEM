@@ -61,7 +61,8 @@ atm-expert/
 │
 ├── docs/                             # Project documentation
 │   ├── architecture_overview.md      # System architecture and component description
-│   └── knowledge_base_schema.md      # Rule format specification
+│   ├── knowledge_base_schema.md      # Rule format specification
+│   └── team_guidance.md              # [NEW] Developer handover & integration instructions
 │
 ├── knowledge_base/                   # Dev 2 — Otabil Wilfred Adu
 │   ├── fault_profiles/               # Source JSON fault profiles by domain
@@ -74,11 +75,17 @@ atm-expert/
 ├── inference_engine/                 # Dev 1 — Shadrack Dorkenoo
 │   └── prolog_bridge.py              # Python bridge to the SWI-Prolog engine
 │
-├── integration/                      # Dev 4 — Gadri Wisdom (Placeholder)
+├── integration/                      # Dev 4 — Gadri Wisdom
 │   └── .gitkeep
 │
-├── ui/                               # Dev 3 — Joel Adom Opoku (Placeholder)
-│   └── .gitkeep
+├── ui/                               # Dev 3 — Joel Adom Opoku
+│   ├── src/                          # React source code
+│   │   ├── components/               # UI components (DiagnosticConsole, etc.)
+│   │   ├── views/                    # Role-specific dashboard views
+│   │   ├── App.jsx                   # Main application routing
+│   │   └── main.jsx                  # Application entry point
+│   ├── index.html                    # HTML template
+│   └── package.json                  # UI dependencies and scripts
 │
 ├── benchmark/                        # Accuracy testing
 │   ├── atm_benchmark_scenarios.json  # 200-scenario benchmark dataset
