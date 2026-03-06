@@ -48,6 +48,13 @@ If you have new security sensors or fraud-detection scenarios:
 1. **Data:** Add new JSON profiles to `knowledge_base/fault_profiles/`. Otabil's generator will automatically ingest these into the KB.
 2. **Logic:** If your security scenarios require complex logic (e.g., cross-referencing multiple failed PINs), **coordinate with Otabil (Dev 2)**. He will implement the necessary Prolog rules in `rules.pl`.
 
+**New Tool: ATM Simulator (`simulator/atm_simulator.py`)**
+I have built a foundation for the ATM Simulator to help you with integration testing.
+
+- **Usage:** Run `python simulator/atm_simulator.py`.
+- **Function:** It allows you to select a fault profile and "emits" the hardware signals (error codes and symptoms) that your integration scripts should be processing.
+- **Your Task:** Expand this simulator if you need it to talk to your log-processing scripts or the API layer Shadrack is building.
+
 *Note: Otabil maintains ownership of the Knowledge Base scripts and core logic.*
 
 ---
