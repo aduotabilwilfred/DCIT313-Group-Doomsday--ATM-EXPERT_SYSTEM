@@ -18,18 +18,20 @@
 
 ## Project Overview
 
-ATM-Expert encodes the diagnostic knowledge of experienced ATM engineers into an intelligent decision-support engine. It uses a structured knowledge base of 100+ fault profiles processed through a forward-chaining inference engine to deliver real-time fault diagnosis, guided remediation, and predictive maintenance alerts — without requiring a physical ATM to develop or test against.
+ATM-Expert encodes the diagnostic knowledge of experienced ATM engineers into an intelligent decision-support engine. It uses a hybrid **Python-Prolog** architecture:
+
+1. **Knowledge Base (Prolog):** 100+ fault profiles encoded as Prolog facts and modular diagnostic rules for high-performance symbolic reasoning.
+2. **Inference Engine (Python-Prolog Bridge):** A Python-based bridge that interacts with the SWI-Prolog engine to perform diagnoses and retrieve resolution steps.
 
 **Key capabilities:**
 
 - Automated ingestion of ATM error logs, sensor data, and transaction failure codes
 - 100+ fault profiles across hardware, software, network, cash handling, and security domains
-- Forward-chaining inference engine with plain-language explanation of every diagnosis
+- Symbolic reasoning engine with plain-language explanation of every diagnosis
 - Step-by-step guided remediation workflows for branch staff and field engineers
 - Fraud detection rules for card skimming, PIN pad tampering, and anomalous transactions
 - Predictive maintenance alerts based on component usage thresholds
 - Role-based access for operations teams, field engineers, branch staff, and management
-- Escalation logic to route unresolved faults to Tier-2 engineering teams
 
 ---
 
@@ -38,8 +40,7 @@ ATM-Expert encodes the diagnostic knowledge of experienced ATM engineers into an
 | Role | Member | Component |
 |---|---|---|
 | Project Lead | Adu Kelvin Brobbey | Coordination, documentation, stakeholder liaison |
-| Knowledge Engineer | Jerry Kuake | Knowledge elicitation & rule validation |
-| Knowledge Engineer | Emmanuel | Knowledge elicitation & rule validation |
+| Knowledge Engineer | Jerry Kuake Emmanuel| Knowledge elicitation & rule validation |
 | Knowledge Engineer | Didemudo PeterPaul | Knowledge elicitation & rule validation |
 | Developer 1 | Shadrack Dorkenoo | Inference Engine |
 | Developer 2 | Otabil Wilfred Adu | Knowledge Base |
@@ -54,101 +55,47 @@ ATM-Expert encodes the diagnostic knowledge of experienced ATM engineers into an
 atm-expert/
 │
 ├── .github/                          # GitHub configuration
-│   ├── workflows/
-│   │   ├── ci.yml                    # Runs tests on every push and pull request
-│   │   └── benchmark.yml             # Runs the 200-scenario accuracy benchmark
-│   ├── PULL_REQUEST_TEMPLATE.md      # Checklist every PR must complete before merge
-│   └── ISSUE_TEMPLATE.md             # Template for bug reports and feature requests
+│   ├── workflows/                    # CI/CD and Benchmark workflows
+│   ├── PULL_REQUEST_TEMPLATE.md      # Checklist for PRs
+│   └── ISSUE_TEMPLATE.md             # Bug reports and feature requests
 │
-├── docs/                             # All project documentation
-│   ├── project_brief.pdf             # Original ATM-Expert project brief
-│   ├── task_breakdown.docx           # Developer task breakdown and role responsibilities
-│   ├── knowledge_base_schema.md      # Knowledge base schema and rule format specification
-│   ├── inference_engine_api.md       # Inference engine session API specification (Dev 1)
-│   ├── integration_api.md            # ATM data feed and RBAC API specification (Dev 4)
-│   ├── user_guide.md                 # Branch staff and field engineer user guide (Dev 3)
-│   ├── maintenance_manual.md         # System maintenance and rule update procedures
-│   └── architecture_overview.md      # System architecture diagram and component description
+├── docs/                             # Project documentation
+│   ├── architecture_overview.md      # System architecture and component description
+│   ├── knowledge_base_schema.md      # Rule format specification
+│   └── team_guidance.md              # [NEW] Developer handover & integration instructions
 │
 ├── knowledge_base/                   # Dev 2 — Otabil Wilfred Adu
-│   ├── fault_profiles/               # Encoded ATM fault profiles by domain
-│   │   ├── hardware_faults.json      # Card reader, dispenser, printer, and sensor faults
-│   │   ├── software_faults.json      # OS, application, firmware, and database faults
-│   │   ├── network_faults.json       # Connectivity, TLS, VPN, and firewall faults
-│   │   ├── cash_handling_faults.json # Cassette, note jam, and dispense mismatch faults
-│   │   └── security_faults.json      # Skimming, tamper, fraud, and physical attack faults
-│   ├── rules/                        # IF-THEN rule definitions consumed by the engine
-│   │   ├── hardware_rules.json
-│   │   ├── software_rules.json
-│   │   ├── network_rules.json
-│   │   ├── cash_rules.json
-│   │   └── security_rules.json
-│   ├── rule_loader.py                # Loads and parses rules into engine-ready format
-│   ├── rule_validator.py             # Checks rule syntax, conflicts, and circular dependencies
-│   ├── seed.py                       # Seeds the knowledge base from fault profile JSON files
+│   ├── fault_profiles/               # Source JSON fault profiles by domain
+│   ├── atm_kb.pl                     # [GENERATED] Prolog facts (generated from JSON)
+│   ├── rules.pl                      # Diagnostic logic and inference rules
+│   ├── loader.pl                     # Master loader for facts and rules
+│   ├── json_to_prolog.py             # Script to compile JSON profiles into atm_kb.pl
 │   └── schema.md                     # Rule and fault profile schema documentation
 │
 ├── inference_engine/                 # Dev 1 — Shadrack Dorkenoo
-│   ├── engine.py                     # Main forward-chaining inference engine
-│   ├── working_memory.py             # Dynamic fact store for a diagnostic session
-│   ├── conflict_resolver.py          # Salience and priority-based conflict resolution
-│   ├── explanation.py                # Builds plain-language explanation traces per diagnosis
-│   ├── session.py                    # Session lifecycle: assertFact(), run(), getDiagnosis()
-│   ├── escalation.py                 # Triggers escalation facts when no diagnosis is reached
-│   └── tests/
-│       ├── test_engine.py            # Unit tests for rule matching and firing cycles
-│       ├── test_working_memory.py    # Fact store unit tests
-│       ├── test_conflict_resolver.py # Conflict resolution strategy tests
-│       └── test_harness.py           # Seeded diagnostic scenario test runner
+│   └── prolog_bridge.py              # Python bridge to the SWI-Prolog engine
 │
 ├── integration/                      # Dev 4 — Gadri Wisdom
-│   ├── data_ingestion.py             # Normalises ATM feed data into inference engine facts
-│   ├── error_code_parser.py          # Translates vendor error codes into canonical fact schema
-│   ├── rbac.py                       # Role-based access control and token issuer
-│   ├── fraud_detection.py            # Injects skimming, tamper, and anomaly facts into engine
-│   ├── predictive_alerts.py          # Component usage thresholds and maintenance alert generator
-│   ├── escalation_router.py          # Routes Tier-2 handovers via email, ticket, or SMS
-│   ├── audit_log.py                  # Records all sessions, resolutions, and escalations
-│   ├── api.py                        # Secure REST API endpoints for the UI and engine
-│   └── tests/
-│       ├── test_ingestion.py         # Data normalisation and fact mapping tests
-│       ├── test_rbac.py              # Role access control tests
-│       └── test_escalation_router.py # Escalation routing logic tests
+│   └── .gitkeep
 │
 ├── ui/                               # Dev 3 — Joel Adom Opoku
-│   ├── src/
-│   │   ├── components/               # Reusable UI components
-│   │   │   ├── DiagnosticConsole.jsx # Main ATM diagnostic session screen
-│   │   │   ├── RemediationWorkflow.jsx # Step-by-step guided resolution interface
-│   │   │   ├── ExplanationPanel.jsx  # Plain-language reasoning display from engine trace
-│   │   │   ├── EscalationScreen.jsx  # Tier-2 handover summary form
-│   │   │   ├── KPIDashboard.jsx      # Management analytics and KPI view
-│   │   │   └── AlertBanner.jsx       # Critical and high severity alert banner
-│   │   ├── views/                    # Role-based page views
-│   │   │   ├── BranchStaffView.jsx   # Simplified guided workflow for branch staff
-│   │   │   ├── EngineerView.jsx      # Full technical detail view for field engineers
-│   │   │   ├── ManagementView.jsx    # KPI-only view for bank management
-│   │   │   └── FraudTeamView.jsx     # Security and fraud monitoring view
-│   │   ├── App.jsx                   # Root app component and role-based routing
-│   │   └── api.js                    # API call helpers to the integration layer
-│   ├── public/                       # Static assets (icons, logos)
-│   └── package.json                  # UI dependencies
+│   ├── src/                          # React source code
+│   │   ├── components/               # UI components (DiagnosticConsole, etc.)
+│   │   ├── views/                    # Role-specific dashboard views
+│   │   ├── App.jsx                   # Main application routing
+│   │   └── main.jsx                  # Application entry point
+│   ├── index.html                    # HTML template
+│   └── package.json                  # UI dependencies and scripts
 │
-├── benchmark/                        # Accuracy testing — shared by all developers
-│   ├── generate_benchmark_scenarios.py # Script that generated the 200 test scenarios
-│   ├── atm_benchmark_scenarios.json  # Full 200-scenario benchmark dataset with ground truth
-│   ├── atm_benchmark_index.json      # Lightweight scenario index for quick browsing
-│   ├── run_benchmark.py              # Runs all 200 scenarios and reports accuracy percentage
-│   └── benchmark_results.json        # Latest benchmark run output
+├── benchmark/                        # Accuracy testing
+│   ├── atm_benchmark_scenarios.json  # 200-scenario benchmark dataset
+│   └── generate_benchmark_scenarios.py # Scenario generation script
 │
-├── simulator/                        # ATM hardware simulator — no physical ATM required
-│   ├── atm_simulator.py              # Simulates live ATM error feeds from scenario files
-│   ├── scenario_player.py            # Injects scenario facts into the engine on demand
-│   └── mock_atm_config.json          # Configuration for 20 virtual ATM unit definitions
+├── simulator/                        # ATM hardware simulator (Placeholder)
+│   └── .gitkeep
 │
-├── .env.example                      # Environment variable template — copy to .env to configure
-├── .gitignore                        # Ignores .env, __pycache__, node_modules, and build output
-├── requirements.txt                  # Python dependencies for the backend
+├── .env.example                      # Environment variable template
+├── .gitignore                        # Global ignore list
 └── README.md                         # This file
 ```
 
@@ -158,16 +105,17 @@ atm-expert/
 
 ### Prerequisites
 
-- Python 3.10+
-- Node.js 18+ (for the UI)
-- Git
+- **Python 3.10+**
+- **SWI-Prolog 9.0+** (Ensure `swipl` is in your system PATH)
+- **Node.js 18+** (for the UI)
+- **Git**
 
 ### Installation
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-org/atm-expert.git
-cd atm-expert
+git clone https://github.com/owills004/DCIT313-Group-Doomsday--ATM-EXPERT_SYSTEM.git
+cd DCIT313-Group-Doomsday--ATM-EXPERT_SYSTEM
 
 # 2. Install Python dependencies
 pip install -r requirements.txt
