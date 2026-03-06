@@ -1,0 +1,4086 @@
+{
+  "timestamp": "2026-03-05T17:09:27.243271",
+  "total_scenarios": 200,
+  "exact_matches": 35,
+  "top_3_matches": 35,
+  "errors": 0,
+  "accuracy_exact": 17.5,
+  "accuracy_top_3": 17.5,
+  "target_accuracy": 85.0,
+  "target_met": false,
+  "domain_breakdown": {
+    "Hardware": {
+      "total": 50,
+      "correct": 15,
+      "accuracy": 30.0
+    },
+    "Software": {
+      "total": 35,
+      "correct": 7,
+      "accuracy": 20.0
+    },
+    "Network": {
+      "total": 35,
+      "correct": 5,
+      "accuracy": 14.29
+    },
+    "Cash Handling": {
+      "total": 40,
+      "correct": 6,
+      "accuracy": 15.0
+    },
+    "Security": {
+      "total": 40,
+      "correct": 2,
+      "accuracy": 5.0
+    }
+  },
+  "severity_breakdown": {
+    "HIGH": {
+      "total": 96,
+      "correct": 12,
+      "accuracy": 12.5
+    },
+    "MEDIUM": {
+      "total": 46,
+      "correct": 7,
+      "accuracy": 15.22
+    },
+    "LOW": {
+      "total": 6,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "CRITICAL": {
+      "total": 52,
+      "correct": 16,
+      "accuracy": 30.77
+    }
+  },
+  "detailed_results": [
+    {
+      "scenario_id": "H001",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Card Reader Jam",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "Card Reader Jam",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Reader status: JAMMED",
+          "Card not ejected",
+          "Card not ejected"
+        ],
+        "error_codes": [
+          "3A1",
+          "ICM001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H002",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Card Reader Jam",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "Card Reader Jam",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Reader status: JAMMED",
+          "Card not ejected",
+          "Card not ejected"
+        ],
+        "error_codes": [
+          "3A1",
+          "ICM001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H003",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Card Reader Jam",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "Card Reader Jam",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Reader status: JAMMED",
+          "Card not ejected",
+          "Card not ejected"
+        ],
+        "error_codes": [
+          "3A1",
+          "ICM001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H004",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Card Reader Jam",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "Card Reader Jam",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Reader status: JAMMED",
+          "Card not ejected",
+          "Card not ejected"
+        ],
+        "error_codes": [
+          "3A1",
+          "ICM001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H005",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "actual_severity": "MEDIUM",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Reader status: DIRTY_SENSOR"
+        ],
+        "error_codes": [
+          "3A5",
+          "ICM004"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H006",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "actual_severity": "MEDIUM",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Reader status: DIRTY_SENSOR"
+        ],
+        "error_codes": [
+          "3A5",
+          "ICM004"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H007",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "actual_severity": "MEDIUM",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Reader status: DIRTY_SENSOR"
+        ],
+        "error_codes": [
+          "3A5",
+          "ICM004"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H008",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": "Card Reader Dirty / Sensor Fault",
+      "actual_severity": "MEDIUM",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Reader status: DIRTY_SENSOR"
+        ],
+        "error_codes": [
+          "3A5",
+          "ICM004"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H009",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Cash Dispenser Jam",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "Cash Dispenser Jam",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Dispenser status: DISPENSER_JAM"
+        ],
+        "error_codes": [
+          "4B1",
+          "DISP_ERR_56"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H010",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Dispenser Actuator Wear Warning",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Dispenser status: ACTUATOR_WORN"
+        ],
+        "error_codes": [
+          "4B8",
+          "DISP_ERR_19"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H011",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Reject Bin Full",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Dispenser status: REJECT_BIN_FULL"
+        ],
+        "error_codes": [
+          "4C2",
+          "DISP_ERR_44"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H012",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Cash Presenter Fault",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Dispenser status: PRESENTER_FAULT"
+        ],
+        "error_codes": [
+          "4D1",
+          "DISP_ERR_50"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H013",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Cash Dispenser Jam",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "Cash Dispenser Jam",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Dispenser status: DISPENSER_JAM"
+        ],
+        "error_codes": [
+          "4B1",
+          "DISP_ERR_73"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H014",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Dispenser Actuator Wear Warning",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Dispenser status: ACTUATOR_WORN"
+        ],
+        "error_codes": [
+          "4B8",
+          "DISP_ERR_78"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H015",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Reject Bin Full",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Dispenser status: REJECT_BIN_FULL"
+        ],
+        "error_codes": [
+          "4C2",
+          "DISP_ERR_73"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H016",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Cash Presenter Fault",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Dispenser status: PRESENTER_FAULT"
+        ],
+        "error_codes": [
+          "4D1",
+          "DISP_ERR_18"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H017",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Printer Paper Out",
+      "expected_severity": "LOW",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Printer status: PAPER_OUT"
+        ],
+        "error_codes": [
+          "5E1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H018",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Printer Paper Jam",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": "Printer Paper Jam",
+      "actual_severity": "MEDIUM",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Printer status: PAPER_JAM"
+        ],
+        "error_codes": [
+          "5E3"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H019",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Print Head Failure",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Printer status: PRINT_HEAD_FAIL"
+        ],
+        "error_codes": [
+          "5E7"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H020",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Printer Paper Out",
+      "expected_severity": "LOW",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Printer status: PAPER_OUT"
+        ],
+        "error_codes": [
+          "5E1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H021",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Printer Paper Jam",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": "Printer Paper Jam",
+      "actual_severity": "MEDIUM",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Printer status: PAPER_JAM"
+        ],
+        "error_codes": [
+          "5E3"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H022",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Print Head Failure",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Printer status: PRINT_HEAD_FAIL"
+        ],
+        "error_codes": [
+          "5E7"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H023",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Printer Paper Out",
+      "expected_severity": "LOW",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Printer status: PAPER_OUT"
+        ],
+        "error_codes": [
+          "5E1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H024",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Printer Paper Jam",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": "Printer Paper Jam",
+      "actual_severity": "MEDIUM",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [
+          "Printer status: PAPER_JAM"
+        ],
+        "error_codes": [
+          "5E3"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H025",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Print Head Failure",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [
+          "Printer status: PRINT_HEAD_FAIL"
+        ],
+        "error_codes": [
+          "5E7"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H026",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Overheating \u00e2\u20ac\u201d Temperature Critical",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9T1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H027",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "ATM Enclosure Door Open",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "ATM Enclosure Door Open",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9D1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H028",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "General Sensor Malfunction",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9S2"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H029",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Power / Voltage Instability",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9V3"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H030",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Cooling Fan Failure",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9F1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H031",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Overheating \u00e2\u20ac\u201d Temperature Critical",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9T1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H032",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "ATM Enclosure Door Open",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "ATM Enclosure Door Open",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9D1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H033",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "General Sensor Malfunction",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9S2"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H034",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Power / Voltage Instability",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9V3"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H035",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Cooling Fan Failure",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9F1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H036",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "PIN Pad Unresponsive",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6P1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H037",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Display Screen Failure",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6S2"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H038",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "ATM Camera Offline",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6C1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H039",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "UPS Battery Low \u00e2\u20ac\u201d Replace Soon",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9U1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H040",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Barcode / QR Reader Fault",
+      "expected_severity": "LOW",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6B3"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H041",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "PIN Pad Unresponsive",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6P1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H042",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Display Screen Failure",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6S2"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H043",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "ATM Camera Offline",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6C1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H044",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "UPS Battery Low \u00e2\u20ac\u201d Replace Soon",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9U1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H045",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Barcode / QR Reader Fault",
+      "expected_severity": "LOW",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6B3"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H046",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "PIN Pad Unresponsive",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6P1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H047",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Display Screen Failure",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6S2"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H048",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "ATM Camera Offline",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6C1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H049",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "UPS Battery Low \u00e2\u20ac\u201d Replace Soon",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "9U1"
+        ]
+      }
+    },
+    {
+      "scenario_id": "H050",
+      "domain": "Hardware",
+      "status": "OK",
+      "expected_diagnosis": "Barcode / QR Reader Fault",
+      "expected_severity": "LOW",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "6B3"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S001",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "OS Kernel Panic / Blue Screen",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "OS Kernel Panic / Blue Screen",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW001",
+          "SYS_421"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S002",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "OS Disk Space Critical",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW002",
+          "SYS_736"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S003",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "ATM Application Crash",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "ATM Application Crash",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW010",
+          "SYS_350"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S004",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Application Version Mismatch",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW011",
+          "SYS_999"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S005",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Application Deadlock Detected",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW012",
+          "SYS_451"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S006",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Configuration File Corrupt",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW013",
+          "SYS_949"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S007",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Firmware Update Failed",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW020",
+          "SYS_537"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S008",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Firmware Version Mismatch",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW021",
+          "SYS_540"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S009",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Transaction Database Unreachable",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "Transaction Database Unreachable",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW030",
+          "SYS_205"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S010",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Transaction Log Full",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW031",
+          "SYS_283"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S011",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Anti-Tamper Software Alert",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW040",
+          "SYS_993"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S012",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Certificate / TLS Expiry",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW041",
+          "SYS_775"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S013",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Encryption Key Rotation Overdue",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW042",
+          "SYS_795"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S014",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Self-Test Failure at Startup",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW050",
+          "SYS_710"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S015",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Scheduled Maintenance Mode Stuck",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW051",
+          "SYS_825"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S016",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Remote Management Agent Offline",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW060",
+          "SYS_438"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S017",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Software Patch Failed to Apply",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW061",
+          "SYS_667"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S018",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Watchdog Timer Restart Loop",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW070",
+          "SYS_661"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S019",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Memory Leak Detected",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW071",
+          "SYS_318"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S020",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "ATM Failed to Boot",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW080",
+          "SYS_443"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S021",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "OS Kernel Panic / Blue Screen",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "OS Kernel Panic / Blue Screen",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW001",
+          "SYS_421"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S022",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "ATM Application Crash",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "ATM Application Crash",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW010",
+          "SYS_350"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S023",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Firmware Update Failed",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW020",
+          "SYS_537"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S024",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Application Deadlock Detected",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW012",
+          "SYS_451"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S025",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Configuration File Corrupt",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW013",
+          "SYS_949"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S026",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Firmware Version Mismatch",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW021",
+          "SYS_540"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S027",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Scheduled Maintenance Mode Stuck",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW051",
+          "SYS_825"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S028",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Scheduled Maintenance Mode Stuck",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW051",
+          "SYS_825"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S029",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Watchdog Timer Restart Loop",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW070",
+          "SYS_661"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S030",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Remote Management Agent Offline",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW060",
+          "SYS_438"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S031",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Transaction Database Unreachable",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "Transaction Database Unreachable",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW030",
+          "SYS_205"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S032",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Transaction Database Unreachable",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "Transaction Database Unreachable",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW030",
+          "SYS_205"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S033",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Firmware Version Mismatch",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW021",
+          "SYS_540"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S034",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Watchdog Timer Restart Loop",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW070",
+          "SYS_661"
+        ]
+      }
+    },
+    {
+      "scenario_id": "S035",
+      "domain": "Software",
+      "status": "OK",
+      "expected_diagnosis": "Encryption Key Rotation Overdue",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SW042",
+          "SYS_795"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N001",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "ATM Offline \u00e2\u20ac\u201d No Network Response",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "ATM Offline",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET001",
+          "NET_ERR_69"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N002",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Intermittent Network Drops",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET002",
+          "NET_ERR_84"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N003",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "High Network Latency",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET003",
+          "NET_ERR_55"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N004",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "DNS Resolution Failure",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET004",
+          "NET_ERR_79"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N005",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "TLS Handshake Failure",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "TLS Handshake Failure",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET010",
+          "NET_ERR_72"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N006",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "SSL Certificate Mismatch",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET011",
+          "NET_ERR_61"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N007",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Man-in-the-Middle Warning",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET012",
+          "NET_ERR_13"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N008",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Cannot Reach Bank Core System",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET020",
+          "NET_ERR_69"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N009",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Connection Timeout to Core System",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET021",
+          "NET_ERR_68"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N010",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Authentication Rejected by Core",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET022",
+          "NET_ERR_20"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N011",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "VPN Tunnel Down",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "VPN Tunnel Down",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET030",
+          "NET_ERR_93"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N012",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "VPN Authentication Failed",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET031",
+          "NET_ERR_12"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N013",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "ATM Traffic Blocked by Firewall",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET040",
+          "NET_ERR_24"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N014",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "IP Address Conflict",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET041",
+          "NET_ERR_57"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N015",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Network Switch Port Down",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET050",
+          "NET_ERR_13"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N016",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Router Unreachable",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET051",
+          "NET_ERR_98"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N017",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Bandwidth Saturation",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET060",
+          "NET_ERR_97"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N018",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Packet Loss Exceeding Threshold",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET061",
+          "NET_ERR_64"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N019",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Clock Sync Failure (NTP)",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET070",
+          "NET_ERR_11"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N020",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "ATM Clock Drift Detected",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET071",
+          "NET_ERR_91"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N021",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "TLS Handshake Failure",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "TLS Handshake Failure",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET010",
+          "NET_ERR_72"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N022",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Connection Timeout to Core System",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET021",
+          "NET_ERR_68"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N023",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "IP Address Conflict",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET041",
+          "NET_ERR_57"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N024",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Cannot Reach Bank Core System",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET020",
+          "NET_ERR_69"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N025",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Network Switch Port Down",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET050",
+          "NET_ERR_13"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N026",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "VPN Tunnel Down",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "VPN Tunnel Down",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET030",
+          "NET_ERR_93"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N027",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Router Unreachable",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET051",
+          "NET_ERR_98"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N028",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Connection Timeout to Core System",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET021",
+          "NET_ERR_68"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N029",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "ATM Offline \u00e2\u20ac\u201d No Network Response",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "ATM Offline",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET001",
+          "NET_ERR_69"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N030",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "IP Address Conflict",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET041",
+          "NET_ERR_57"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N031",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Router Unreachable",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET051",
+          "NET_ERR_98"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N032",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Authentication Rejected by Core",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET022",
+          "NET_ERR_20"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N033",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Authentication Rejected by Core",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET022",
+          "NET_ERR_20"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N034",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "Bandwidth Saturation",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET060",
+          "NET_ERR_97"
+        ]
+      }
+    },
+    {
+      "scenario_id": "N035",
+      "domain": "Network",
+      "status": "OK",
+      "expected_diagnosis": "VPN Tunnel Down",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "VPN Tunnel Down",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "NET030",
+          "NET_ERR_93"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C001",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cash Cassette Empty",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "Cash Cassette Empty",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH001",
+          "CASH_34"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C002",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cash Cassette Low \u00e2\u20ac\u201d Alert",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH002",
+          "CASH_77"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C003",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cassette Not Detected / Not Seated",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH003",
+          "CASH_48"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C004",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Wrong Cassette Denomination Loaded",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH004",
+          "CASH_26"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C005",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cassette Lock Fault",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH005",
+          "CASH_66"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C006",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Note Jam in Transport Path",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH010",
+          "CASH_19"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C007",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Multiple Note Feed (Double Take)",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH011",
+          "CASH_25"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C008",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Torn / Mutilated Note Detected",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH012",
+          "CASH_85"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C009",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "High Reject Rate \u00e2\u20ac\u201d Notes",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH013",
+          "CASH_94"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C010",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Dispense Count Mismatch",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "Dispense Count Mismatch",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH020",
+          "CASH_67"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C011",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Short Dispense Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH021",
+          "CASH_99"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C012",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Over-Dispense Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH022",
+          "CASH_24"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C013",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cash Balance Discrepancy at EOD",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH030",
+          "CASH_49"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C014",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cassette Inventory Mismatch",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH031",
+          "CASH_61"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C015",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Counterfeit Note Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "Counterfeit Note Detected",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH040",
+          "CASH_51"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C016",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Currency Detector Fault",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH041",
+          "CASH_96"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C017",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Recycler Module Fault",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH050",
+          "CASH_45"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C018",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Recycled Note Rejected by Validator",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH051",
+          "CASH_52"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C019",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cash Vault Door Open Alert",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH060",
+          "CASH_80"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C020",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cash Replenishment Anomaly",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH061",
+          "CASH_75"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C021",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Multiple Note Feed (Double Take)",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH011",
+          "CASH_25"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C022",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Currency Detector Fault",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH041",
+          "CASH_96"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C023",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Recycled Note Rejected by Validator",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH051",
+          "CASH_52"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C024",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Currency Detector Fault",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH041",
+          "CASH_96"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C025",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Torn / Mutilated Note Detected",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH012",
+          "CASH_85"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C026",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Recycled Note Rejected by Validator",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH051",
+          "CASH_52"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C027",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Wrong Cassette Denomination Loaded",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH004",
+          "CASH_26"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C028",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cassette Lock Fault",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH005",
+          "CASH_66"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C029",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "High Reject Rate \u00e2\u20ac\u201d Notes",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH013",
+          "CASH_94"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C030",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Counterfeit Note Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "Counterfeit Note Detected",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH040",
+          "CASH_51"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C031",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cash Replenishment Anomaly",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH061",
+          "CASH_75"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C032",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cassette Inventory Mismatch",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH031",
+          "CASH_61"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C033",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cash Cassette Empty",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": "Cash Cassette Empty",
+      "actual_severity": "HIGH",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH001",
+          "CASH_34"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C034",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Currency Detector Fault",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH041",
+          "CASH_96"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C035",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Over-Dispense Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH022",
+          "CASH_24"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C036",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Counterfeit Note Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "Counterfeit Note Detected",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH040",
+          "CASH_51"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C037",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cash Vault Door Open Alert",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH060",
+          "CASH_80"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C038",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Short Dispense Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH021",
+          "CASH_99"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C039",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cassette Lock Fault",
+      "expected_severity": "MEDIUM",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH005",
+          "CASH_66"
+        ]
+      }
+    },
+    {
+      "scenario_id": "C040",
+      "domain": "Cash Handling",
+      "status": "OK",
+      "expected_diagnosis": "Cash Vault Door Open Alert",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "CSH060",
+          "CASH_80"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F001",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Card Skimmer Device Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "Card Skimmer Device Detected",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC001",
+          "SEC_ERR_28"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F002",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Card Reader Depth Anomaly (Possible Skimmer)",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC002",
+          "SEC_ERR_98"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F003",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Unusual Card Read Failures \u00e2\u20ac\u201d Possible Shimmer",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC003",
+          "SEC_ERR_72"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F004",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "PIN Pad Cover Removal Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "PIN Pad Cover Removal",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC010",
+          "SEC_ERR_65"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F005",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "PIN Pad Enclosure Breach Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC011",
+          "SEC_ERR_48"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F006",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Suspicious PIN Pad Overlay Pattern",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC012",
+          "SEC_ERR_28"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F007",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Unusual Transaction Volume \u00e2\u20ac\u201d Velocity Alert",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC020",
+          "SEC_ERR_88"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F008",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Repeated Declined Transactions \u00e2\u20ac\u201d Brute Force",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC021",
+          "SEC_ERR_69"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F009",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "High-Value Withdrawal Cluster",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC022",
+          "SEC_ERR_79"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F010",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Card Present + Geolocation Mismatch",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC023",
+          "SEC_ERR_98"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F011",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "ATM Anti-Ram Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC030",
+          "SEC_ERR_40"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F012",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Explosive Gas Detection Alert",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC031",
+          "SEC_ERR_94"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F013",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "ATM Enclosure Vibration Alert",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC032",
+          "SEC_ERR_46"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F014",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Safe Door Tamper Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC033",
+          "SEC_ERR_42"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F015",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "ATM Camera Offline \u00e2\u20ac\u201d Security Risk",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC040",
+          "SEC_ERR_84"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F016",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Camera View Obstruction Detected",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC041",
+          "SEC_ERR_32"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F017",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Failed Admin Login Attempts Threshold",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC050",
+          "SEC_ERR_44"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F018",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Unauthorised Remote Access Attempt",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC051",
+          "SEC_ERR_19"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F019",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Malware Signature Detected on ATM OS",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC052",
+          "SEC_ERR_60"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F020",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "PCI-DSS Compliance Check Failed",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC060",
+          "SEC_ERR_96"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F021",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Explosive Gas Detection Alert",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC031",
+          "SEC_ERR_94"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F022",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Card Skimmer Device Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "Card Skimmer Device Detected",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": true,
+      "top_3_match": true,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC001",
+          "SEC_ERR_28"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F023",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "PCI-DSS Compliance Check Failed",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC060",
+          "SEC_ERR_96"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F024",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "ATM Camera Offline \u00e2\u20ac\u201d Security Risk",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC040",
+          "SEC_ERR_84"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F025",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "PIN Pad Enclosure Breach Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC011",
+          "SEC_ERR_48"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F026",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "PIN Pad Cover Removal Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "PIN Pad Cover Removal",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC010",
+          "SEC_ERR_65"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F027",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "ATM Enclosure Vibration Alert",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC032",
+          "SEC_ERR_46"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F028",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Unauthorised Remote Access Attempt",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC051",
+          "SEC_ERR_19"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F029",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "PIN Pad Enclosure Breach Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC011",
+          "SEC_ERR_48"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F030",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Camera View Obstruction Detected",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC041",
+          "SEC_ERR_32"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F031",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Explosive Gas Detection Alert",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC031",
+          "SEC_ERR_94"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F032",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Explosive Gas Detection Alert",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC031",
+          "SEC_ERR_94"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F033",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Explosive Gas Detection Alert",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC031",
+          "SEC_ERR_94"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F034",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "PIN Pad Cover Removal Detected",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": "PIN Pad Cover Removal",
+      "actual_severity": "CRITICAL",
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 1,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC010",
+          "SEC_ERR_65"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F035",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "PCI-DSS Compliance Check Failed",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC060",
+          "SEC_ERR_96"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F036",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "PIN Pad Enclosure Breach Sensor Triggered",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC011",
+          "SEC_ERR_48"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F037",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Unauthorised Remote Access Attempt",
+      "expected_severity": "CRITICAL",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC051",
+          "SEC_ERR_19"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F038",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Repeated Declined Transactions \u00e2\u20ac\u201d Brute Force",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC021",
+          "SEC_ERR_69"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F039",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "High-Value Withdrawal Cluster",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC022",
+          "SEC_ERR_79"
+        ]
+      }
+    },
+    {
+      "scenario_id": "F040",
+      "domain": "Security",
+      "status": "OK",
+      "expected_diagnosis": "Suspicious PIN Pad Overlay Pattern",
+      "expected_severity": "HIGH",
+      "actual_diagnosis": null,
+      "actual_severity": null,
+      "confidence": 0,
+      "matched": false,
+      "top_3_match": false,
+      "total_diagnoses": 0,
+      "observations_used": {
+        "symptoms": [],
+        "error_codes": [
+          "SEC012",
+          "SEC_ERR_28"
+        ]
+      }
+    }
+  ]
+}
