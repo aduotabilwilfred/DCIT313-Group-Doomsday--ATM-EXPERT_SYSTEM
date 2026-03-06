@@ -5,8 +5,8 @@ from pathlib import Path
 class PrologInferenceEngine:
     def __init__(self, kb_path=None):
         if kb_path is None:
-            # Default to the generated KB file
-            kb_path = Path(__file__).parent.parent / "knowledge_base" / "atm_kb.pl"
+            # Default to the master KB loader
+            kb_path = Path(__file__).parent.parent / "knowledge_base" / "loader.pl"
         self.kb_path = kb_path
 
     def _query(self, query_str):

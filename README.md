@@ -76,7 +76,7 @@ atm-expert/
 │   └── prolog_bridge.py              # Python bridge to the SWI-Prolog engine
 │
 ├── integration/                      # Dev 4 — Gadri Wisdom
-│   └── .gitkeep
+│   └── .gitkeep                      # Integration scripts and log parsers
 │
 ├── ui/                               # Dev 3 — Joel Adom Opoku
 │   ├── src/                          # React source code
@@ -91,7 +91,8 @@ atm-expert/
 │   ├── atm_benchmark_scenarios.json  # 200-scenario benchmark dataset
 │   └── generate_benchmark_scenarios.py # Scenario generation script
 │
-├── simulator/                        # ATM hardware simulator (Placeholder)
+├── simulator/                        # ATM hardware simulator
+│   ├── atm_simulator.py              # [NEW] CLI-based fault simulation tool
 │   └── .gitkeep
 │
 ├── .env.example                      # Environment variable template
