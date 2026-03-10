@@ -9,7 +9,7 @@ def sanitize(text):
     return text.replace("'", "''").replace("\n", " ")
 
 def json_to_prolog():
-    kb_path = Path("knowledge_base")
+    kb_path = Path(__file__).parent
     profiles_dir = kb_path / "fault_profiles"
     output_file = kb_path / "atm_kb.pl"
 
