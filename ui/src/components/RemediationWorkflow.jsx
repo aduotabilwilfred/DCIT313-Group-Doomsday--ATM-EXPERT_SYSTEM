@@ -61,6 +61,7 @@ const RemediationWorkflow = ({ steps = [], faultTitle = "Unknown Fault" }) => {
             padding: "16px",
             marginBottom: "16px",
             fontSize: "15px",
+            color: "red"
           }}>
             {steps[currentStep] || "No steps available."}
           </div>
