@@ -10,6 +10,10 @@ class ATMSimulator:
             self.profiles_dir = Path(profiles_dir)
         self.faults = {}
         self._load_profiles()
+        if self.faults:
+            print(f"✓ Total of {len(self.faults)} fault profiles loaded from: {self.profiles_dir}")
+        else:
+            print(f"⚠ Warning: No fault profiles found in {self.profiles_dir}")
 
     def _load_profiles(self):
         """Load all fault profiles from JSON files."""
