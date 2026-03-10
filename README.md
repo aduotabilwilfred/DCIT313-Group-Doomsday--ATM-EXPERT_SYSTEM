@@ -76,16 +76,19 @@ atm-expert/
 │   └── prolog_bridge.py              # Python bridge to the SWI-Prolog engine
 │
 ├── integration/                      # Dev 4 — Gadri Wisdom
+│   ├── api.py                        # [NEW] Flask REST API serving Prolog logic
 │   └── .gitkeep                      # Integration scripts and log parsers
 │
 ├── ui/                               # Dev 3 — Joel Adom Opoku
 │   ├── src/                          # React source code
 │   │   ├── components/               # UI components (DiagnosticConsole, etc.)
+│   │   ├── services/                 # [NEW] Backend API integration (api.js)
 │   │   ├── views/                    # Role-specific dashboard views
 │   │   ├── App.jsx                   # Main application routing
 │   │   └── main.jsx                  # Application entry point
 │   ├── index.html                    # HTML template
-│   └── package.json                  # UI dependencies and scripts
+│   ├── package.json                  # UI dependencies and scripts
+│   └── vite.config.js                # [NEW] Build tool configuration
 │
 ├── benchmark/                        # Accuracy testing
 │   ├── atm_benchmark_scenarios.json  # 200-scenario benchmark dataset
