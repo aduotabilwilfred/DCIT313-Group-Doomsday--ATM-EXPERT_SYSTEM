@@ -1,136 +1,332 @@
 [
-    {
-        "fault_id": "HW_001",
-        "domain": "Hardware",
-        "sub_domain": "Card Reader",
-        "title": "Card Reader Jam",
-        "description": "Physical obstruction in the card reader preventing card movement.",
-        "severity": "HIGH",
-        "error_codes": [
-            "3A1",
-            "ICM001"
-        ],
-        "symptoms": [
-            "Card not ejected",
-            "Reader status: JAMMED"
-        ],
-        "causes": [
-            "Damaged card",
-            "Sticky rollers",
-            "Foreign object"
-        ],
-        "resolution_steps": [
-            "Take ATM out of service",
-            "Open card reader access panel",
-            "Carefully remove jammed card",
-            "Run card reader self-test",
-            "Return to service"
-        ]
-    },
-    {
-        "fault_id": "HW_002",
-        "domain": "Hardware",
-        "sub_domain": "Card Reader",
-        "title": "Card Reader Dirty / Sensor Fault",
-        "description": "Optical sensors in the reader are obscured by dust or dirt.",
-        "severity": "MEDIUM",
-        "error_codes": [
-            "3A5",
-            "ICM004"
-        ],
-        "symptoms": [
-            "Intermittent read failures",
-            "Reader status: DIRTY_SENSOR"
-        ],
-        "causes": [
-            "Accumulated dust",
-            "Worn cleaning pads"
-        ],
-        "resolution_steps": [
-            "Display maintenance alert",
-            "Run card reader cleaning cycle using cleaning card",
-            "If cleaning fails, schedule engineer visit for sensor replacement"
-        ]
-    },
-    {
-        "fault_id": "HW_003",
-        "domain": "Hardware",
-        "sub_domain": "Cash Dispenser",
-        "title": "Cash Dispenser Jam",
-        "description": "Banknotes are stuck in the transport path of the dispenser.",
-        "severity": "HIGH",
-        "error_codes": [
-            "4B1",
-            "DISP_ERR_10"
-        ],
-        "symptoms": [
-            "Dispense attempt fails",
-            "Dispenser status: DISPENSER_JAM"
-        ],
-        "causes": [
-            "Poor note quality",
-            "Mechanical misalignment",
-            "Overfilled cassette"
-        ],
-        "resolution_steps": [
-            "Take ATM out of service",
-            "Open dispenser access panel",
-            "Remove jammed notes",
-            "Check transport path",
-            "Run dispenser self-test",
-            "Return to service"
-        ]
-    },
-    {
-        "fault_id": "HW_004",
-        "domain": "Hardware",
-        "sub_domain": "Receipt Printer",
-        "title": "Printer Paper Jam",
-        "description": "Receipt paper has crumpled or stuck in the printer rollers.",
-        "severity": "MEDIUM",
-        "error_codes": [
-            "5E3"
-        ],
-        "symptoms": [
-            "Receipt not printed",
-            "Printer status: PAPER_JAM"
-        ],
-        "causes": [
-            "Incorrect paper loading",
-            "Damaged paper roll",
-            "High humidity"
-        ],
-        "resolution_steps": [
-            "Open printer access cover",
-            "Remove jammed paper",
-            "Check for torn fragments",
-            "Reload paper and run test print"
-        ]
-    },
-    {
-        "fault_id": "HW_005",
-        "domain": "Hardware",
-        "sub_domain": "Sensors",
-        "title": "ATM Enclosure Door Open",
-        "description": "The main security door of the ATM is open or the sensor is triggered.",
-        "severity": "CRITICAL",
-        "error_codes": [
-            "9D1"
-        ],
-        "symptoms": [
-            "Security alarm triggered",
-            "ATM status: DOOR_OPEN"
-        ],
-        "causes": [
-            "Unauthorised access",
-            "Maintenance in progress",
-            "Sensor failure"
-        ],
-        "resolution_steps": [
-            "Immediately alert branch security",
-            "Verify physical security",
-            "Review CCTV footage",
-            "Log security incident"
-        ]
-    }
+  {
+    "fault_id": "H_CR_001",
+    "domain": "Hardware",
+    "sub_domain": "Card Reader",
+    "title": "Card Reader Jam",
+    "severity": "HIGH",
+    "description": "Card Reader Jam",
+    "error_codes": [
+      "3A1",
+      "ICM001"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": [
+      "Reader status: JAMMED",
+      "Card not ejected"
+    ]
+  },
+  {
+    "fault_id": "H_CR_002",
+    "domain": "Hardware",
+    "sub_domain": "Card Reader",
+    "title": "Card Reader Dirty / Sensor Fault",
+    "severity": "MEDIUM",
+    "description": "Card Reader Dirty / Sensor Fault",
+    "error_codes": [
+      "3A5",
+      "ICM004"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": [
+      "Reader status: DIRTY_SENSOR"
+    ]
+  },
+  {
+    "fault_id": "H_CD_001",
+    "domain": "Hardware",
+    "sub_domain": "Cash Dispenser",
+    "title": "Cash Dispenser Jam",
+    "severity": "HIGH",
+    "description": "Cash Dispenser Jam",
+    "error_codes": [
+      "4B1"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": [
+      "Dispense attempt fails",
+      "Dispenser status: DISPENSER_JAM"
+    ]
+  },
+  {
+    "fault_id": "H_CD_002",
+    "domain": "Hardware",
+    "sub_domain": "Cash Dispenser",
+    "title": "Dispenser Actuator Wear Warning",
+    "severity": "MEDIUM",
+    "description": "Dispenser Actuator Wear Warning",
+    "error_codes": [
+      "4B8"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": [
+      "Dispenser status: ACTUATOR_WORN"
+    ]
+  },
+  {
+    "fault_id": "H_CD_003",
+    "domain": "Hardware",
+    "sub_domain": "Cash Dispenser",
+    "title": "Reject Bin Full",
+    "severity": "MEDIUM",
+    "description": "Reject Bin Full",
+    "error_codes": [
+      "4C2"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": [
+      "Dispenser status: REJECT_BIN_FULL",
+      "Dispense attempt fails"
+    ]
+  },
+  {
+    "fault_id": "H_CD_004",
+    "domain": "Hardware",
+    "sub_domain": "Cash Dispenser",
+    "title": "Cash Presenter Fault",
+    "severity": "HIGH",
+    "description": "Cash Presenter Fault",
+    "error_codes": [
+      "4D1"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": [
+      "Dispenser status: PRESENTER_FAULT",
+      "Dispense attempt fails"
+    ]
+  },
+  {
+    "fault_id": "H_PR_001",
+    "domain": "Hardware",
+    "sub_domain": "Receipt Printer",
+    "title": "Printer Paper Out",
+    "severity": "LOW",
+    "description": "Printer Paper Out",
+    "error_codes": [
+      "5E1"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": [
+      "Printer status: PAPER_OUT"
+    ]
+  },
+  {
+    "fault_id": "H_PR_002",
+    "domain": "Hardware",
+    "sub_domain": "Receipt Printer",
+    "title": "Printer Paper Jam",
+    "severity": "MEDIUM",
+    "description": "Printer Paper Jam",
+    "error_codes": [
+      "5E3"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": [
+      "Printer status: PAPER_JAM"
+    ]
+  },
+  {
+    "fault_id": "H_PR_003",
+    "domain": "Hardware",
+    "sub_domain": "Receipt Printer",
+    "title": "Print Head Failure",
+    "severity": "HIGH",
+    "description": "Print Head Failure",
+    "error_codes": [
+      "5E7"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": [
+      "Printer status: PRINT_HEAD_FAIL"
+    ]
+  },
+  {
+    "fault_id": "H_ENV_001",
+    "domain": "Hardware",
+    "sub_domain": "Sensors & Environment",
+    "title": "Overheating \u2014 Temperature Critical",
+    "severity": "HIGH",
+    "description": "Overheating \u2014 Temperature Critical",
+    "error_codes": [
+      "9T1"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": []
+  },
+  {
+    "fault_id": "H_ENV_002",
+    "domain": "Hardware",
+    "sub_domain": "Sensors & Environment",
+    "title": "ATM Enclosure Door Open",
+    "severity": "CRITICAL",
+    "description": "ATM Enclosure Door Open",
+    "error_codes": [
+      "9D1"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": []
+  },
+  {
+    "fault_id": "H_ENV_003",
+    "domain": "Hardware",
+    "sub_domain": "Sensors & Environment",
+    "title": "General Sensor Malfunction",
+    "severity": "MEDIUM",
+    "description": "General Sensor Malfunction",
+    "error_codes": [
+      "9S2"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": []
+  },
+  {
+    "fault_id": "H_ENV_004",
+    "domain": "Hardware",
+    "sub_domain": "Sensors & Environment",
+    "title": "Power / Voltage Instability",
+    "severity": "HIGH",
+    "description": "Power / Voltage Instability",
+    "error_codes": [
+      "9V3"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": []
+  },
+  {
+    "fault_id": "H_ENV_005",
+    "domain": "Hardware",
+    "sub_domain": "Sensors & Environment",
+    "title": "Cooling Fan Failure",
+    "severity": "HIGH",
+    "description": "Cooling Fan Failure",
+    "error_codes": [
+      "9F1"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": []
+  },
+  {
+    "fault_id": "H_PER_001",
+    "domain": "Hardware",
+    "sub_domain": "Peripherals",
+    "title": "PIN Pad Unresponsive",
+    "severity": "HIGH",
+    "description": "PIN Pad Unresponsive",
+    "error_codes": [
+      "6P1"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": [
+      "PIN pad status: PINPAD_UNRESPONSIVE"
+    ]
+  },
+  {
+    "fault_id": "H_PER_002",
+    "domain": "Hardware",
+    "sub_domain": "Peripherals",
+    "title": "Display Screen Failure",
+    "severity": "HIGH",
+    "description": "Display Screen Failure",
+    "error_codes": [
+      "6S2"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": []
+  },
+  {
+    "fault_id": "H_PER_003",
+    "domain": "Hardware",
+    "sub_domain": "Peripherals",
+    "title": "ATM Camera Offline",
+    "severity": "MEDIUM",
+    "description": "ATM Camera Offline",
+    "error_codes": [
+      "6C1"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": []
+  },
+  {
+    "fault_id": "H_PER_004",
+    "domain": "Hardware",
+    "sub_domain": "Peripherals",
+    "title": "UPS Battery Low \u2014 Replace Soon",
+    "severity": "MEDIUM",
+    "description": "UPS Battery Low \u2014 Replace Soon",
+    "error_codes": [
+      "9U1"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": []
+  },
+  {
+    "fault_id": "H_PER_005",
+    "domain": "Hardware",
+    "sub_domain": "Peripherals",
+    "title": "Barcode / QR Reader Fault",
+    "severity": "LOW",
+    "description": "Barcode / QR Reader Fault",
+    "error_codes": [
+      "6B3"
+    ],
+    "resolution_steps": [
+      "Inspect component",
+      "Test/Reset"
+    ],
+    "symptoms": []
+  }
 ]

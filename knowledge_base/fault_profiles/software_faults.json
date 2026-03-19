@@ -1,79 +1,362 @@
 [
-    {
-        "fault_id": "SW_001",
-        "domain": "Software",
-        "sub_domain": "OS",
-        "title": "OS Kernel Panic / Blue Screen",
-        "description": "Operating system has crashed and is unresponsive.",
-        "severity": "CRITICAL",
-        "error_codes": [
-            "SW001",
-            "SYS_500"
-        ],
-        "symptoms": [
-            "ATM screen frozen/blank",
-            "System ping timeout"
-        ],
-        "causes": [
-            "Driver conflict",
-            "Hardware failure",
-            "Memory corruption"
-        ],
-        "resolution_steps": [
-            "Attempt remote restart via management console",
-            "If restart fails, dispatch engineer for on-site recovery",
-            "Review crash dump logs"
-        ]
-    },
-    {
-        "fault_id": "SW_002",
-        "domain": "Software",
-        "sub_domain": "Application",
-        "title": "ATM Application Crash",
-        "description": "The primary ATM user interface software has terminated unexpectedly.",
-        "severity": "HIGH",
-        "error_codes": [
-            "SW010",
-            "SYS_123"
-        ],
-        "symptoms": [
-            "Welcome screen not visible",
-            "App logs show segfault"
-        ],
-        "causes": [
-            "Software bug",
-            "Missing configuration file",
-            "Resource exhaustion"
-        ],
-        "resolution_steps": [
-            "Restart ATM application via remote console",
-            "Review application error logs",
-            "Check for pending updates"
-        ]
-    },
-    {
-        "fault_id": "SW_003",
-        "domain": "Software",
-        "sub_domain": "Database",
-        "title": "Transaction Database Unreachable",
-        "description": "ATM cannot connect to the local or central transaction database.",
-        "severity": "CRITICAL",
-        "error_codes": [
-            "SW030"
-        ],
-        "symptoms": [
-            "Transactions declined",
-            "Connection timeout logs"
-        ],
-        "causes": [
-            "Network failure",
-            "Database service down",
-            "Credential expiry"
-        ],
-        "resolution_steps": [
-            "Check database server connectivity",
-            "Verify network path to bank core",
-            "Escalate to IT if server is down"
-        ]
-    }
+  {
+    "fault_id": "S_SW_000",
+    "domain": "Software",
+    "sub_domain": "OS",
+    "title": "OS Kernel Panic / Blue Screen",
+    "severity": "CRITICAL",
+    "description": "OS Kernel Panic / Blue Screen",
+    "error_codes": [
+      "SW001"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_001",
+    "domain": "Software",
+    "sub_domain": "OS",
+    "title": "OS Disk Space Critical",
+    "severity": "HIGH",
+    "description": "OS Disk Space Critical",
+    "error_codes": [
+      "SW002"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_002",
+    "domain": "Software",
+    "sub_domain": "Application",
+    "title": "ATM Application Crash",
+    "severity": "HIGH",
+    "description": "ATM Application Crash",
+    "error_codes": [
+      "SW010"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_003",
+    "domain": "Software",
+    "sub_domain": "Application",
+    "title": "Application Version Mismatch",
+    "severity": "MEDIUM",
+    "description": "Application Version Mismatch",
+    "error_codes": [
+      "SW011"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_004",
+    "domain": "Software",
+    "sub_domain": "Application",
+    "title": "Application Deadlock Detected",
+    "severity": "HIGH",
+    "description": "Application Deadlock Detected",
+    "error_codes": [
+      "SW012"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_005",
+    "domain": "Software",
+    "sub_domain": "Application",
+    "title": "Configuration File Corrupt",
+    "severity": "HIGH",
+    "description": "Configuration File Corrupt",
+    "error_codes": [
+      "SW013"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_006",
+    "domain": "Software",
+    "sub_domain": "Firmware",
+    "title": "Firmware Update Failed",
+    "severity": "HIGH",
+    "description": "Firmware Update Failed",
+    "error_codes": [
+      "SW020"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_007",
+    "domain": "Software",
+    "sub_domain": "Firmware",
+    "title": "Firmware Version Mismatch",
+    "severity": "MEDIUM",
+    "description": "Firmware Version Mismatch",
+    "error_codes": [
+      "SW021"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_008",
+    "domain": "Software",
+    "sub_domain": "Database",
+    "title": "Transaction Database Unreachable",
+    "severity": "CRITICAL",
+    "description": "Transaction Database Unreachable",
+    "error_codes": [
+      "SW030"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_009",
+    "domain": "Software",
+    "sub_domain": "Database",
+    "title": "Transaction Log Full",
+    "severity": "HIGH",
+    "description": "Transaction Log Full",
+    "error_codes": [
+      "SW031"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_010",
+    "domain": "Software",
+    "sub_domain": "Security Software",
+    "title": "Anti-Tamper Software Alert",
+    "severity": "CRITICAL",
+    "description": "Anti-Tamper Software Alert",
+    "error_codes": [
+      "SW040"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_011",
+    "domain": "Software",
+    "sub_domain": "Security Software",
+    "title": "Certificate / TLS Expiry",
+    "severity": "HIGH",
+    "description": "Certificate / TLS Expiry",
+    "error_codes": [
+      "SW041"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_012",
+    "domain": "Software",
+    "sub_domain": "Security Software",
+    "title": "Encryption Key Rotation Overdue",
+    "severity": "HIGH",
+    "description": "Encryption Key Rotation Overdue",
+    "error_codes": [
+      "SW042"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_013",
+    "domain": "Software",
+    "sub_domain": "Diagnostics",
+    "title": "Self-Test Failure at Startup",
+    "severity": "HIGH",
+    "description": "Self-Test Failure at Startup",
+    "error_codes": [
+      "SW050"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_014",
+    "domain": "Software",
+    "sub_domain": "Diagnostics",
+    "title": "Scheduled Maintenance Mode Stuck",
+    "severity": "MEDIUM",
+    "description": "Scheduled Maintenance Mode Stuck",
+    "error_codes": [
+      "SW051"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_015",
+    "domain": "Software",
+    "sub_domain": "Remote Management",
+    "title": "Remote Management Agent Offline",
+    "severity": "MEDIUM",
+    "description": "Remote Management Agent Offline",
+    "error_codes": [
+      "SW060"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_016",
+    "domain": "Software",
+    "sub_domain": "Remote Management",
+    "title": "Software Patch Failed to Apply",
+    "severity": "MEDIUM",
+    "description": "Software Patch Failed to Apply",
+    "error_codes": [
+      "SW061"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_017",
+    "domain": "Software",
+    "sub_domain": "Watchdog",
+    "title": "Watchdog Timer Restart Loop",
+    "severity": "HIGH",
+    "description": "Watchdog Timer Restart Loop",
+    "error_codes": [
+      "SW070"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_018",
+    "domain": "Software",
+    "sub_domain": "Watchdog",
+    "title": "Memory Leak Detected",
+    "severity": "HIGH",
+    "description": "Memory Leak Detected",
+    "error_codes": [
+      "SW071"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "S_SW_019",
+    "domain": "Software",
+    "sub_domain": "Startup",
+    "title": "ATM Failed to Boot",
+    "severity": "CRITICAL",
+    "description": "ATM Failed to Boot",
+    "error_codes": [
+      "SW080"
+    ],
+    "resolution_steps": [
+      "Restart",
+      "Remote Maintenance"
+    ],
+    "symptoms": [
+      "Software status: FAULT"
+    ]
+  }
 ]

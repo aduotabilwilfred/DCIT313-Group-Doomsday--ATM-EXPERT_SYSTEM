@@ -1,77 +1,362 @@
 [
-    {
-        "fault_id": "CSH_001",
-        "domain": "Cash Handling",
-        "sub_domain": "Cassette",
-        "title": "Cash Cassette Empty",
-        "description": "One or more cash cassettes have run out of banknotes.",
-        "severity": "HIGH",
-        "error_codes": [
-            "CSH001"
-        ],
-        "symptoms": [
-            "'Out of Cash' screen",
-            "Cassette status: EMPTY"
-        ],
-        "causes": [
-            "High transaction volume",
-            "Delayed replenishment"
-        ],
-        "resolution_steps": [
-            "Alert branch staff",
-            "Replenish cash following dual-control procedures",
-            "Verify cassette is correctly seated",
-            "Return to service"
-        ]
-    },
-    {
-        "fault_id": "CSH_002",
-        "domain": "Cash Handling",
-        "sub_domain": "Detection",
-        "title": "Counterfeit Note Detected",
-        "description": "The ATM's currency detector has identified a suspect banknote during deposit.",
-        "severity": "CRITICAL",
-        "error_codes": [
-            "CSH040"
-        ],
-        "symptoms": [
-            "Note retained by ATM",
-            "Fraud alert triggered"
-        ],
-        "causes": [
-            "Attempted fraud"
-        ],
-        "resolution_steps": [
-            "Retain suspect note in secure bin",
-            "Alert security and branch manager",
-            "Provide incident receipt to customer",
-            "Submit note for verification"
-        ]
-    },
-    {
-        "fault_id": "CSH_003",
-        "domain": "Cash Handling",
-        "sub_domain": "Counting",
-        "title": "Dispense Count Mismatch",
-        "description": "The number of notes dispensed does not match the system request.",
-        "severity": "CRITICAL",
-        "error_codes": [
-            "CSH020"
-        ],
-        "symptoms": [
-            "Customer reported short-change",
-            "Journal mismatch"
-        ],
-        "causes": [
-            "Note jam after counting",
-            "Sensor error",
-            "Mechanical wear"
-        ],
-        "resolution_steps": [
-            "Take ATM out of service",
-            "Perform physical cash count",
-            "Review dispense logs",
-            "Initiate dispute resolution"
-        ]
-    }
+  {
+    "fault_id": "C_CSH_000",
+    "domain": "Cash Handling",
+    "sub_domain": "Cassette",
+    "title": "Cash Cassette Empty",
+    "severity": "HIGH",
+    "description": "Cash Cassette Empty",
+    "error_codes": [
+      "CSH001"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_001",
+    "domain": "Cash Handling",
+    "sub_domain": "Cassette",
+    "title": "Cash Cassette Low \u2014 Alert",
+    "severity": "MEDIUM",
+    "description": "Cash Cassette Low \u2014 Alert",
+    "error_codes": [
+      "CSH002"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_002",
+    "domain": "Cash Handling",
+    "sub_domain": "Cassette",
+    "title": "Cassette Not Detected / Not Seated",
+    "severity": "HIGH",
+    "description": "Cassette Not Detected / Not Seated",
+    "error_codes": [
+      "CSH003"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_003",
+    "domain": "Cash Handling",
+    "sub_domain": "Cassette",
+    "title": "Wrong Cassette Denomination Loaded",
+    "severity": "HIGH",
+    "description": "Wrong Cassette Denomination Loaded",
+    "error_codes": [
+      "CSH004"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_004",
+    "domain": "Cash Handling",
+    "sub_domain": "Cassette",
+    "title": "Cassette Lock Fault",
+    "severity": "MEDIUM",
+    "description": "Cassette Lock Fault",
+    "error_codes": [
+      "CSH005"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_005",
+    "domain": "Cash Handling",
+    "sub_domain": "Note Handling",
+    "title": "Note Jam in Transport Path",
+    "severity": "HIGH",
+    "description": "Note Jam in Transport Path",
+    "error_codes": [
+      "CSH010"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_006",
+    "domain": "Cash Handling",
+    "sub_domain": "Note Handling",
+    "title": "Multiple Note Feed (Double Take)",
+    "severity": "HIGH",
+    "description": "Multiple Note Feed (Double Take)",
+    "error_codes": [
+      "CSH011"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_007",
+    "domain": "Cash Handling",
+    "sub_domain": "Note Handling",
+    "title": "Torn / Mutilated Note Detected",
+    "severity": "MEDIUM",
+    "description": "Torn / Mutilated Note Detected",
+    "error_codes": [
+      "CSH012"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_008",
+    "domain": "Cash Handling",
+    "sub_domain": "Note Handling",
+    "title": "High Reject Rate \u2014 Notes",
+    "severity": "HIGH",
+    "description": "High Reject Rate \u2014 Notes",
+    "error_codes": [
+      "CSH013"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_009",
+    "domain": "Cash Handling",
+    "sub_domain": "Counting",
+    "title": "Dispense Count Mismatch",
+    "severity": "CRITICAL",
+    "description": "Dispense Count Mismatch",
+    "error_codes": [
+      "CSH020"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_010",
+    "domain": "Cash Handling",
+    "sub_domain": "Counting",
+    "title": "Short Dispense Detected",
+    "severity": "CRITICAL",
+    "description": "Short Dispense Detected",
+    "error_codes": [
+      "CSH021"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_011",
+    "domain": "Cash Handling",
+    "sub_domain": "Counting",
+    "title": "Over-Dispense Detected",
+    "severity": "CRITICAL",
+    "description": "Over-Dispense Detected",
+    "error_codes": [
+      "CSH022"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_012",
+    "domain": "Cash Handling",
+    "sub_domain": "Balancing",
+    "title": "Cash Balance Discrepancy at EOD",
+    "severity": "HIGH",
+    "description": "Cash Balance Discrepancy at EOD",
+    "error_codes": [
+      "CSH030"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_013",
+    "domain": "Cash Handling",
+    "sub_domain": "Balancing",
+    "title": "Cassette Inventory Mismatch",
+    "severity": "HIGH",
+    "description": "Cassette Inventory Mismatch",
+    "error_codes": [
+      "CSH031"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_014",
+    "domain": "Cash Handling",
+    "sub_domain": "Currency Detector",
+    "title": "Counterfeit Note Detected",
+    "severity": "CRITICAL",
+    "description": "Counterfeit Note Detected",
+    "error_codes": [
+      "CSH040"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_015",
+    "domain": "Cash Handling",
+    "sub_domain": "Currency Detector",
+    "title": "Currency Detector Fault",
+    "severity": "HIGH",
+    "description": "Currency Detector Fault",
+    "error_codes": [
+      "CSH041"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_016",
+    "domain": "Cash Handling",
+    "sub_domain": "Recycling",
+    "title": "Recycler Module Fault",
+    "severity": "HIGH",
+    "description": "Recycler Module Fault",
+    "error_codes": [
+      "CSH050"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_017",
+    "domain": "Cash Handling",
+    "sub_domain": "Recycling",
+    "title": "Recycled Note Rejected by Validator",
+    "severity": "MEDIUM",
+    "description": "Recycled Note Rejected by Validator",
+    "error_codes": [
+      "CSH051"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_018",
+    "domain": "Cash Handling",
+    "sub_domain": "Security",
+    "title": "Cash Vault Door Open Alert",
+    "severity": "CRITICAL",
+    "description": "Cash Vault Door Open Alert",
+    "error_codes": [
+      "CSH060"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "C_CSH_019",
+    "domain": "Cash Handling",
+    "sub_domain": "Security",
+    "title": "Cash Replenishment Anomaly",
+    "severity": "HIGH",
+    "description": "Cash Replenishment Anomaly",
+    "error_codes": [
+      "CSH061"
+    ],
+    "resolution_steps": [
+      "Refill/Check Cassette",
+      "Balance"
+    ],
+    "symptoms": [
+      "Dispenser status: FAULT"
+    ]
+  }
 ]

@@ -13,400 +13,673 @@
 :- discontiguous has_cause/2.
 :- discontiguous resolution_step/3.
 
-fault_profile('CSH_001', 'Cash Handling', 'Cassette', 'Cash Cassette Empty', 'HIGH').
-fault_description('CSH_001', 'One or more cash cassettes have run out of banknotes.').
-has_error_code('CSH_001', 'CSH001').
-has_symptom('CSH_001', '''Out of Cash'' screen').
-has_symptom('CSH_001', 'Cassette status: EMPTY').
-has_cause('CSH_001', 'High transaction volume').
-has_cause('CSH_001', 'Delayed replenishment').
-resolution_step('CSH_001', 1, 'Alert branch staff').
-resolution_step('CSH_001', 2, 'Replenish cash following dual-control procedures').
-resolution_step('CSH_001', 3, 'Verify cassette is correctly seated').
-resolution_step('CSH_001', 4, 'Return to service').
+fault_profile('C_CSH_000', 'Cash Handling', 'Cassette', 'Cash Cassette Empty', 'HIGH').
+fault_description('C_CSH_000', 'Cash Cassette Empty').
+has_error_code('C_CSH_000', 'CSH001').
+has_symptom('C_CSH_000', 'Dispenser status: FAULT').
+resolution_step('C_CSH_000', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_000', 2, 'Balance').
 
-fault_profile('CSH_002', 'Cash Handling', 'Detection', 'Counterfeit Note Detected', 'CRITICAL').
-fault_description('CSH_002', 'The ATM''s currency detector has identified a suspect banknote during deposit.').
-has_error_code('CSH_002', 'CSH040').
-has_symptom('CSH_002', 'Note retained by ATM').
-has_symptom('CSH_002', 'Fraud alert triggered').
-has_cause('CSH_002', 'Attempted fraud').
-resolution_step('CSH_002', 1, 'Retain suspect note in secure bin').
-resolution_step('CSH_002', 2, 'Alert security and branch manager').
-resolution_step('CSH_002', 3, 'Provide incident receipt to customer').
-resolution_step('CSH_002', 4, 'Submit note for verification').
+fault_profile('C_CSH_001', 'Cash Handling', 'Cassette', 'Cash Cassette Low — Alert', 'MEDIUM').
+fault_description('C_CSH_001', 'Cash Cassette Low — Alert').
+has_error_code('C_CSH_001', 'CSH002').
+has_symptom('C_CSH_001', 'Dispenser status: FAULT').
+resolution_step('C_CSH_001', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_001', 2, 'Balance').
 
-fault_profile('CSH_003', 'Cash Handling', 'Counting', 'Dispense Count Mismatch', 'CRITICAL').
-fault_description('CSH_003', 'The number of notes dispensed does not match the system request.').
-has_error_code('CSH_003', 'CSH020').
-has_symptom('CSH_003', 'Customer reported short-change').
-has_symptom('CSH_003', 'Journal mismatch').
-has_cause('CSH_003', 'Note jam after counting').
-has_cause('CSH_003', 'Sensor error').
-has_cause('CSH_003', 'Mechanical wear').
-resolution_step('CSH_003', 1, 'Take ATM out of service').
-resolution_step('CSH_003', 2, 'Perform physical cash count').
-resolution_step('CSH_003', 3, 'Review dispense logs').
-resolution_step('CSH_003', 4, 'Initiate dispute resolution').
+fault_profile('C_CSH_002', 'Cash Handling', 'Cassette', 'Cassette Not Detected / Not Seated', 'HIGH').
+fault_description('C_CSH_002', 'Cassette Not Detected / Not Seated').
+has_error_code('C_CSH_002', 'CSH003').
+has_symptom('C_CSH_002', 'Dispenser status: FAULT').
+resolution_step('C_CSH_002', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_002', 2, 'Balance').
 
-fault_profile('HW_001', 'Hardware', 'Card Reader', 'Card Reader Jam', 'HIGH').
-fault_description('HW_001', 'Physical obstruction in the card reader preventing card movement.').
-has_error_code('HW_001', '3A1').
-has_error_code('HW_001', 'ICM001').
-has_symptom('HW_001', 'Card not ejected').
-has_symptom('HW_001', 'Reader status: JAMMED').
-has_cause('HW_001', 'Damaged card').
-has_cause('HW_001', 'Sticky rollers').
-has_cause('HW_001', 'Foreign object').
-resolution_step('HW_001', 1, 'Take ATM out of service').
-resolution_step('HW_001', 2, 'Open card reader access panel').
-resolution_step('HW_001', 3, 'Carefully remove jammed card').
-resolution_step('HW_001', 4, 'Run card reader self-test').
-resolution_step('HW_001', 5, 'Return to service').
+fault_profile('C_CSH_003', 'Cash Handling', 'Cassette', 'Wrong Cassette Denomination Loaded', 'HIGH').
+fault_description('C_CSH_003', 'Wrong Cassette Denomination Loaded').
+has_error_code('C_CSH_003', 'CSH004').
+has_symptom('C_CSH_003', 'Dispenser status: FAULT').
+resolution_step('C_CSH_003', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_003', 2, 'Balance').
 
-fault_profile('HW_002', 'Hardware', 'Card Reader', 'Card Reader Dirty / Sensor Fault', 'MEDIUM').
-fault_description('HW_002', 'Optical sensors in the reader are obscured by dust or dirt.').
-has_error_code('HW_002', '3A5').
-has_error_code('HW_002', 'ICM004').
-has_symptom('HW_002', 'Intermittent read failures').
-has_symptom('HW_002', 'Reader status: DIRTY_SENSOR').
-has_cause('HW_002', 'Accumulated dust').
-has_cause('HW_002', 'Worn cleaning pads').
-resolution_step('HW_002', 1, 'Display maintenance alert').
-resolution_step('HW_002', 2, 'Run card reader cleaning cycle using cleaning card').
-resolution_step('HW_002', 3, 'If cleaning fails, schedule engineer visit for sensor replacement').
+fault_profile('C_CSH_004', 'Cash Handling', 'Cassette', 'Cassette Lock Fault', 'MEDIUM').
+fault_description('C_CSH_004', 'Cassette Lock Fault').
+has_error_code('C_CSH_004', 'CSH005').
+has_symptom('C_CSH_004', 'Dispenser status: FAULT').
+resolution_step('C_CSH_004', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_004', 2, 'Balance').
 
-fault_profile('HW_003', 'Hardware', 'Cash Dispenser', 'Cash Dispenser Jam', 'HIGH').
-fault_description('HW_003', 'Banknotes are stuck in the transport path of the dispenser.').
-has_error_code('HW_003', '4B1').
-has_error_code('HW_003', 'DISP_ERR_10').
-has_symptom('HW_003', 'Dispense attempt fails').
-has_symptom('HW_003', 'Dispenser status: DISPENSER_JAM').
-has_cause('HW_003', 'Poor note quality').
-has_cause('HW_003', 'Mechanical misalignment').
-has_cause('HW_003', 'Overfilled cassette').
-resolution_step('HW_003', 1, 'Take ATM out of service').
-resolution_step('HW_003', 2, 'Open dispenser access panel').
-resolution_step('HW_003', 3, 'Remove jammed notes').
-resolution_step('HW_003', 4, 'Check transport path').
-resolution_step('HW_003', 5, 'Run dispenser self-test').
-resolution_step('HW_003', 6, 'Return to service').
+fault_profile('C_CSH_005', 'Cash Handling', 'Note Handling', 'Note Jam in Transport Path', 'HIGH').
+fault_description('C_CSH_005', 'Note Jam in Transport Path').
+has_error_code('C_CSH_005', 'CSH010').
+has_symptom('C_CSH_005', 'Dispenser status: FAULT').
+resolution_step('C_CSH_005', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_005', 2, 'Balance').
 
-fault_profile('HW_004', 'Hardware', 'Receipt Printer', 'Printer Paper Jam', 'MEDIUM').
-fault_description('HW_004', 'Receipt paper has crumpled or stuck in the printer rollers.').
-has_error_code('HW_004', '5E3').
-has_symptom('HW_004', 'Receipt not printed').
-has_symptom('HW_004', 'Printer status: PAPER_JAM').
-has_cause('HW_004', 'Incorrect paper loading').
-has_cause('HW_004', 'Damaged paper roll').
-has_cause('HW_004', 'High humidity').
-resolution_step('HW_004', 1, 'Open printer access cover').
-resolution_step('HW_004', 2, 'Remove jammed paper').
-resolution_step('HW_004', 3, 'Check for torn fragments').
-resolution_step('HW_004', 4, 'Reload paper and run test print').
+fault_profile('C_CSH_006', 'Cash Handling', 'Note Handling', 'Multiple Note Feed (Double Take)', 'HIGH').
+fault_description('C_CSH_006', 'Multiple Note Feed (Double Take)').
+has_error_code('C_CSH_006', 'CSH011').
+has_symptom('C_CSH_006', 'Dispenser status: FAULT').
+resolution_step('C_CSH_006', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_006', 2, 'Balance').
 
-fault_profile('HW_005', 'Hardware', 'Sensors', 'ATM Enclosure Door Open', 'CRITICAL').
-fault_description('HW_005', 'The main security door of the ATM is open or the sensor is triggered.').
-has_error_code('HW_005', '9D1').
-has_symptom('HW_005', 'Security alarm triggered').
-has_symptom('HW_005', 'ATM status: DOOR_OPEN').
-has_cause('HW_005', 'Unauthorised access').
-has_cause('HW_005', 'Maintenance in progress').
-has_cause('HW_005', 'Sensor failure').
-resolution_step('HW_005', 1, 'Immediately alert branch security').
-resolution_step('HW_005', 2, 'Verify physical security').
-resolution_step('HW_005', 3, 'Review CCTV footage').
-resolution_step('HW_005', 4, 'Log security incident').
+fault_profile('C_CSH_007', 'Cash Handling', 'Note Handling', 'Torn / Mutilated Note Detected', 'MEDIUM').
+fault_description('C_CSH_007', 'Torn / Mutilated Note Detected').
+has_error_code('C_CSH_007', 'CSH012').
+has_symptom('C_CSH_007', 'Dispenser status: FAULT').
+resolution_step('C_CSH_007', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_007', 2, 'Balance').
 
-fault_profile('NET_001', 'Network', 'Connectivity', 'ATM Offline', 'CRITICAL').
-fault_description('NET_001', 'The ATM has no network connectivity and cannot reach the bank server.').
-has_error_code('NET_001', 'NET001').
-has_symptom('NET_001', 'System status: OFFLINE').
-has_symptom('NET_001', 'Ping timeouts').
-has_cause('NET_001', 'Faulty LAN cable').
-has_cause('NET_001', 'Switch port failure').
-has_cause('NET_001', 'Router misconfiguration').
-resolution_step('NET_001', 1, 'Ping ATM from operations centre').
-resolution_step('NET_001', 2, 'Check physical LAN cable').
-resolution_step('NET_001', 3, 'Verify router settings').
-resolution_step('NET_001', 4, 'Dispatch engineer if cable/port is damaged').
+fault_profile('C_CSH_008', 'Cash Handling', 'Note Handling', 'High Reject Rate — Notes', 'HIGH').
+fault_description('C_CSH_008', 'High Reject Rate — Notes').
+has_error_code('C_CSH_008', 'CSH013').
+has_symptom('C_CSH_008', 'Dispenser status: FAULT').
+resolution_step('C_CSH_008', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_008', 2, 'Balance').
 
-fault_profile('NET_002', 'Network', 'Security', 'TLS Handshake Failure', 'HIGH').
-fault_description('NET_002', 'Secure communication cannot be established due to certificate or cipher issues.').
-has_error_code('NET_002', 'NET010').
-has_error_code('NET_002', 'TLS_ERR_403').
-has_symptom('NET_002', 'Connection rejected by core').
-has_symptom('NET_002', 'Cert expiry warnings').
-has_cause('NET_002', 'Expired SSL certificate').
-has_cause('NET_002', 'Incompatible cipher suite').
-resolution_step('NET_002', 1, 'Check certificate validity').
-resolution_step('NET_002', 2, 'Renew TLS certificate').
-resolution_step('NET_002', 3, 'Restart network services').
+fault_profile('C_CSH_009', 'Cash Handling', 'Counting', 'Dispense Count Mismatch', 'CRITICAL').
+fault_description('C_CSH_009', 'Dispense Count Mismatch').
+has_error_code('C_CSH_009', 'CSH020').
+has_symptom('C_CSH_009', 'Dispenser status: FAULT').
+resolution_step('C_CSH_009', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_009', 2, 'Balance').
 
-fault_profile('NET_003', 'Network', 'VPN', 'VPN Tunnel Down', 'CRITICAL').
-fault_description('NET_003', 'The secure VPN tunnel used for ATM-to-bank communication has collapsed.').
-has_error_code('NET_003', 'NET030').
-has_symptom('NET_003', 'Remote management unreachable').
-has_symptom('NET_003', 'VPN status: DOWN').
-has_cause('NET_003', 'VPN credential expiry').
-has_cause('NET_003', 'ISP outage').
-has_cause('NET_003', 'Server-side tunnel termination').
-resolution_step('NET_003', 1, 'Restart VPN client on ATM').
-resolution_step('NET_003', 2, 'Verify VPN server status').
-resolution_step('NET_003', 3, 'Re-authenticate VPN session').
+fault_profile('C_CSH_010', 'Cash Handling', 'Counting', 'Short Dispense Detected', 'CRITICAL').
+fault_description('C_CSH_010', 'Short Dispense Detected').
+has_error_code('C_CSH_010', 'CSH021').
+has_symptom('C_CSH_010', 'Dispenser status: FAULT').
+resolution_step('C_CSH_010', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_010', 2, 'Balance').
 
-fault_profile('SEC_001', 'Security', 'Card Skimming', 'Card Skimmer Device Detected', 'CRITICAL').
-fault_description('SEC_001', 'Anti-skimming sensors have detected an overlay or insert device on the card reader.').
-has_error_code('SEC_001', 'SEC001').
-has_symptom('SEC_001', 'Skimmer alert triggered').
-has_symptom('SEC_001', 'Anomalous card insert depth').
-has_cause('SEC_001', 'Physical tampering').
-resolution_step('SEC_001', 1, 'Take ATM out of service immediately').
-resolution_step('SEC_001', 2, 'Alert fraud team and police').
-resolution_step('SEC_001', 3, 'Do not touch device (preserve forensics)').
-resolution_step('SEC_001', 4, 'Review CCTV footage').
+fault_profile('C_CSH_011', 'Cash Handling', 'Counting', 'Over-Dispense Detected', 'CRITICAL').
+fault_description('C_CSH_011', 'Over-Dispense Detected').
+has_error_code('C_CSH_011', 'CSH022').
+has_symptom('C_CSH_011', 'Dispenser status: FAULT').
+resolution_step('C_CSH_011', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_011', 2, 'Balance').
 
-fault_profile('SEC_002', 'Security', 'Tampering', 'PIN Pad Cover Removal', 'CRITICAL').
-fault_description('SEC_002', 'The security shield over the PIN pad has been removed or tampered with.').
-has_error_code('SEC_002', 'SEC010').
-has_symptom('SEC_002', 'Tamper sensor active').
-has_symptom('SEC_002', 'Visible damage to PIN pad').
-has_cause('SEC_002', 'Vandalism').
-has_cause('SEC_002', 'Skimming preparation').
-resolution_step('SEC_002', 1, 'Take ATM out of service').
-resolution_step('SEC_002', 2, 'Alert branch security').
-resolution_step('SEC_002', 3, 'Inspect for hidden cameras').
-resolution_step('SEC_002', 4, 'Replace PIN pad shield').
+fault_profile('C_CSH_012', 'Cash Handling', 'Balancing', 'Cash Balance Discrepancy at EOD', 'HIGH').
+fault_description('C_CSH_012', 'Cash Balance Discrepancy at EOD').
+has_error_code('C_CSH_012', 'CSH030').
+has_symptom('C_CSH_012', 'Dispenser status: FAULT').
+resolution_step('C_CSH_012', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_012', 2, 'Balance').
 
-fault_profile('SEC_003', 'Security', 'Unauthorized Access', 'Unauthorized Admin Access Attempt', 'CRITICAL').
-fault_description('SEC_003', 'Multiple failed attempts to access administrative functions without valid credentials.').
-has_error_code('SEC_003', 'SEC020').
-has_error_code('SEC_003', 'AUTH_FAIL_001').
-has_symptom('SEC_003', 'Invalid admin credentials detected').
-has_symptom('SEC_003', 'Repeated access denied logs').
-has_symptom('SEC_003', 'Authentication threshold exceeded').
-has_cause('SEC_003', 'Brute force attack').
-has_cause('SEC_003', 'Credential compromise').
-has_cause('SEC_003', 'Malicious insider attempt').
-resolution_step('SEC_003', 1, 'Lock ATM admin functions immediately').
-resolution_step('SEC_003', 2, 'Alert security operations center').
-resolution_step('SEC_003', 3, 'Review access logs for last 24 hours').
-resolution_step('SEC_003', 4, 'Verify admin credential integrity').
-resolution_step('SEC_003', 5, 'Change all admin passwords').
-resolution_step('SEC_003', 6, 'Investigate source IP if remotely attempted').
+fault_profile('C_CSH_013', 'Cash Handling', 'Balancing', 'Cassette Inventory Mismatch', 'HIGH').
+fault_description('C_CSH_013', 'Cassette Inventory Mismatch').
+has_error_code('C_CSH_013', 'CSH031').
+has_symptom('C_CSH_013', 'Dispenser status: FAULT').
+resolution_step('C_CSH_013', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_013', 2, 'Balance').
 
-fault_profile('SEC_004', 'Security', 'Encryption', 'Encryption/Communication Failure', 'CRITICAL').
-fault_description('SEC_004', 'SSL/TLS encryption has failed or been compromised during network communication.').
-has_error_code('SEC_004', 'SEC030').
-has_error_code('SEC_004', 'SSL_ERR_001').
-has_error_code('SEC_004', 'TLS_FAIL_002').
-has_symptom('SEC_004', 'Encryption handshake failure').
-has_symptom('SEC_004', 'Certificate validation error').
-has_symptom('SEC_004', 'Secure communication channel lost').
-has_cause('SEC_004', 'Expired SSL certificate').
-has_cause('SEC_004', 'Man-in-the-middle attack').
-has_cause('SEC_004', 'Network interface compromise').
-has_cause('SEC_004', 'Firewall interference').
-resolution_step('SEC_004', 1, 'Disconnect ATM from network immediately').
-resolution_step('SEC_004', 2, 'Do not process any transactions').
-resolution_step('SEC_004', 3, 'Alert network security team').
-resolution_step('SEC_004', 4, 'Verify SSL certificate validity').
-resolution_step('SEC_004', 5, 'Check for unauthorized network devices').
-resolution_step('SEC_004', 6, 'Review network traffic logs').
+fault_profile('C_CSH_014', 'Cash Handling', 'Currency Detector', 'Counterfeit Note Detected', 'CRITICAL').
+fault_description('C_CSH_014', 'Counterfeit Note Detected').
+has_error_code('C_CSH_014', 'CSH040').
+has_symptom('C_CSH_014', 'Dispenser status: FAULT').
+resolution_step('C_CSH_014', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_014', 2, 'Balance').
 
-fault_profile('SEC_005', 'Security', 'Fraud Detection', 'Suspicious Transaction Pattern Detected', 'HIGH').
-fault_description('SEC_005', 'Unusual transaction patterns detected that may indicate fraud or money laundering.').
-has_error_code('SEC_005', 'SEC040').
-has_error_code('SEC_005', 'FRAUD_ALERT_001').
-has_symptom('SEC_005', 'Multiple rapid withdrawals').
-has_symptom('SEC_005', 'Unusual withdrawal amounts').
-has_symptom('SEC_005', 'Transactions from unfamiliar cards').
-has_symptom('SEC_005', 'Late-night high-value withdrawals').
-has_cause('SEC_005', 'Compromised card credentials').
-has_cause('SEC_005', 'Money laundering attempt').
-has_cause('SEC_005', 'Organized fraud ring').
-has_cause('SEC_005', 'Testing stolen card details').
-resolution_step('SEC_005', 1, 'Flag all cards used in suspicious transactions').
-resolution_step('SEC_005', 2, 'Alert fraud investigation team').
-resolution_step('SEC_005', 3, 'Review transaction history for patterns').
-resolution_step('SEC_005', 4, 'Contact cardholders for verification').
-resolution_step('SEC_005', 5, 'Block cards in real-time if confirmed').
-resolution_step('SEC_005', 6, 'Report to financial intelligence unit').
+fault_profile('C_CSH_015', 'Cash Handling', 'Currency Detector', 'Currency Detector Fault', 'HIGH').
+fault_description('C_CSH_015', 'Currency Detector Fault').
+has_error_code('C_CSH_015', 'CSH041').
+has_symptom('C_CSH_015', 'Dispenser status: FAULT').
+resolution_step('C_CSH_015', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_015', 2, 'Balance').
 
-fault_profile('SEC_006', 'Security', 'Network', 'Network Interface Tampering Detected', 'HIGH').
-fault_description('SEC_006', 'Physical or logical tampering with network interfaces detected.').
-has_error_code('SEC_006', 'SEC050').
-has_error_code('SEC_006', 'NET_TAMPER_001').
-has_symptom('SEC_006', 'Network cable detached').
-has_symptom('SEC_006', 'Unauthorized device connected').
-has_symptom('SEC_006', 'Network interface disabled').
-has_symptom('SEC_006', 'Routing configuration altered').
-has_cause('SEC_006', 'Physical cable removal').
-has_cause('SEC_006', 'Unauthorized network tap installed').
-has_cause('SEC_006', 'Configuration tampering').
-has_cause('SEC_006', 'Malicious network access').
-resolution_step('SEC_006', 1, 'Verify physical network cable connections').
-resolution_step('SEC_006', 2, 'Check for unauthorized devices on network').
-resolution_step('SEC_006', 3, 'Review network configuration').
-resolution_step('SEC_006', 4, 'Inspect network ports for tampering').
-resolution_step('SEC_006', 5, 'Contact IT security to audit network').
-resolution_step('SEC_006', 6, 'Restore network configuration from backup').
+fault_profile('C_CSH_016', 'Cash Handling', 'Recycling', 'Recycler Module Fault', 'HIGH').
+fault_description('C_CSH_016', 'Recycler Module Fault').
+has_error_code('C_CSH_016', 'CSH050').
+has_symptom('C_CSH_016', 'Dispenser status: FAULT').
+resolution_step('C_CSH_016', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_016', 2, 'Balance').
 
-fault_profile('SEC_007', 'Security', 'Physical Security', 'Cash Box Breach Attempt', 'CRITICAL').
-fault_description('SEC_007', 'Physical security sensors indicate attempted breach of cash cassette compartment.').
-has_error_code('SEC_007', 'SEC060').
-has_error_code('SEC_007', 'CASH_BREACH_001').
-has_symptom('SEC_007', 'Cash box tamper switch triggered').
-has_symptom('SEC_007', 'Forcible entry detected').
-has_symptom('SEC_007', 'Lock integrity compromised').
-has_symptom('SEC_007', 'Access panel forced open').
-has_cause('SEC_007', 'Armed robbery attempt').
-has_cause('SEC_007', 'Forced entry for theft').
-has_cause('SEC_007', 'Technical malfunction of lock').
-resolution_step('SEC_007', 1, 'Cease all cash dispensing immediately').
-resolution_step('SEC_007', 2, 'Alert police and branch security').
-resolution_step('SEC_007', 3, 'Lock down ATM physical access').
-resolution_step('SEC_007', 4, 'Document all visible damage with photos').
-resolution_step('SEC_007', 5, 'Retrieve cash box and secure in vault').
-resolution_step('SEC_007', 6, 'Investigate if cash is missing or tampered').
-resolution_step('SEC_007', 7, 'Schedule engineer for lock system repair').
+fault_profile('C_CSH_017', 'Cash Handling', 'Recycling', 'Recycled Note Rejected by Validator', 'MEDIUM').
+fault_description('C_CSH_017', 'Recycled Note Rejected by Validator').
+has_error_code('C_CSH_017', 'CSH051').
+has_symptom('C_CSH_017', 'Dispenser status: FAULT').
+resolution_step('C_CSH_017', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_017', 2, 'Balance').
 
-fault_profile('SEC_008', 'Security', 'Authentication', 'Biometric Authentication Failure', 'HIGH').
-fault_description('SEC_008', 'Fingerprint or other biometric authentication system malfunction or compromise.').
-has_error_code('SEC_008', 'SEC070').
-has_error_code('SEC_008', 'BIO_AUTH_FAIL').
-has_symptom('SEC_008', 'Fingerprint sensor not responding').
-has_symptom('SEC_008', 'Biometric read errors').
-has_symptom('SEC_008', 'Authentication consistently failing').
-has_symptom('SEC_008', 'Sensor cover damaged or dirty').
-has_cause('SEC_008', 'Sensor hardware failure').
-has_cause('SEC_008', 'Damaged fingerprint reader').
-has_cause('SEC_008', 'Spoofing attempt with fake fingerprint').
-has_cause('SEC_008', 'Contaminated sensor surface').
-resolution_step('SEC_008', 1, 'Disable biometric authentication temporarily').
-resolution_step('SEC_008', 2, 'Switch to PIN-only mode').
-resolution_step('SEC_008', 3, 'Clean biometric sensor with appropriate material').
-resolution_step('SEC_008', 4, 'Test sensor functionality').
-resolution_step('SEC_008', 5, 'If still failing, schedule engineer replacement').
-resolution_step('SEC_008', 6, 'Notify branch staff of authentication method change').
+fault_profile('C_CSH_018', 'Cash Handling', 'Security', 'Cash Vault Door Open Alert', 'CRITICAL').
+fault_description('C_CSH_018', 'Cash Vault Door Open Alert').
+has_error_code('C_CSH_018', 'CSH060').
+has_symptom('C_CSH_018', 'Dispenser status: FAULT').
+resolution_step('C_CSH_018', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_018', 2, 'Balance').
 
-fault_profile('SEC_009', 'Security', 'Software', 'Malware/Software Tampering Detected', 'CRITICAL').
-fault_description('SEC_009', 'Suspicious code execution, unauthorized software, or signs of malware detected.').
-has_error_code('SEC_009', 'SEC080').
-has_error_code('SEC_009', 'MALWARE_ALERT').
-has_symptom('SEC_009', 'Unexpected process execution').
-has_symptom('SEC_009', 'Memory corruption detected').
-has_symptom('SEC_009', 'Unauthorized file modifications').
-has_symptom('SEC_009', 'Checksum verification failed').
-has_cause('SEC_009', 'Malware infection').
-has_cause('SEC_009', 'Unauthorized software installation').
-has_cause('SEC_009', 'Rootkit attack').
-has_cause('SEC_009', 'Software injection attack').
-resolution_step('SEC_009', 1, 'Take ATM offline immediately').
-resolution_step('SEC_009', 2, 'Isolate from network').
-resolution_step('SEC_009', 3, 'Do not process any transactions').
-resolution_step('SEC_009', 4, 'Alert information security team').
-resolution_step('SEC_009', 5, 'Perform full integrity scan').
-resolution_step('SEC_009', 6, 'Restore from verified clean image if compromised').
-resolution_step('SEC_009', 7, 'Investigate all recent network access logs').
+fault_profile('C_CSH_019', 'Cash Handling', 'Security', 'Cash Replenishment Anomaly', 'HIGH').
+fault_description('C_CSH_019', 'Cash Replenishment Anomaly').
+has_error_code('C_CSH_019', 'CSH061').
+has_symptom('C_CSH_019', 'Dispenser status: FAULT').
+resolution_step('C_CSH_019', 1, 'Refill/Check Cassette').
+resolution_step('C_CSH_019', 2, 'Balance').
 
-fault_profile('SEC_010', 'Security', 'Access Control', 'Door Lock Status Anomaly', 'HIGH').
-fault_description('SEC_010', 'ATM access panel or service door lock is in an unexpected state.').
-has_error_code('SEC_010', 'SEC090').
-has_error_code('SEC_010', 'DOOR_LOCK_FAIL').
-has_symptom('SEC_010', 'Service door lock disengaged unexpectedly').
-has_symptom('SEC_010', 'Door ajar sensor triggered').
-has_symptom('SEC_010', 'Lock actuator failure').
-has_symptom('SEC_010', 'Security panel opened without authorization').
-has_cause('SEC_010', 'Attempted unauthorized access').
-has_cause('SEC_010', 'Lock mechanism failure').
-has_cause('SEC_010', 'Electronic lock failure').
-has_cause('SEC_010', 'Forced entry attempt').
-resolution_step('SEC_010', 1, 'Verify no unauthorized access occurred').
-resolution_step('SEC_010', 2, 'Check all security seals and tape').
-resolution_step('SEC_010', 3, 'Inspect for signs of forced entry').
-resolution_step('SEC_010', 4, 'Test door lock mechanism').
-resolution_step('SEC_010', 5, 'If lock faulty, schedule replacement').
-resolution_step('SEC_010', 6, 'Review CCTV footage').
-resolution_step('SEC_010', 7, 'Document all findings in maintenance log').
+fault_profile('H_CR_001', 'Hardware', 'Card Reader', 'Card Reader Jam', 'HIGH').
+fault_description('H_CR_001', 'Card Reader Jam').
+has_error_code('H_CR_001', '3A1').
+has_error_code('H_CR_001', 'ICM001').
+has_symptom('H_CR_001', 'Reader status: JAMMED').
+has_symptom('H_CR_001', 'Card not ejected').
+resolution_step('H_CR_001', 1, 'Inspect component').
+resolution_step('H_CR_001', 2, 'Test/Reset').
 
-fault_profile('SEC_011', 'Security', 'Authentication', 'Invalid PIN Length Detected', 'MEDIUM').
-fault_description('SEC_011', 'Cardholder attempted to enter a PIN with incorrect length (not 4 digits).').
-has_error_code('SEC_011', 'SEC_PIN_INVALID').
-has_error_code('SEC_011', 'PIN_LEN_ERR').
-has_symptom('SEC_011', 'PIN entry attempt with 3 digits').
-has_symptom('SEC_011', 'PIN entry attempt with more than 4 digits').
-has_symptom('SEC_011', 'PIN format validation failed').
-has_symptom('SEC_011', 'Invalid PIN length error').
-has_cause('SEC_011', 'User input error').
-has_cause('SEC_011', 'PIN pad malfunction sending incorrect input').
-has_cause('SEC_011', 'Card cloning with altered PIN requirements').
-has_cause('SEC_011', 'System accepting invalid PIN format').
-resolution_step('SEC_011', 1, 'Prompt user to re-enter PIN with exactly 4 digits').
-resolution_step('SEC_011', 2, 'Verify PIN pad is functioning correctly').
-resolution_step('SEC_011', 3, 'If repeated failures, inspect PIN pad for hardware issues').
-resolution_step('SEC_011', 4, 'Check system logs for PIN entry validation errors').
-resolution_step('SEC_011', 5, 'Alert user of correct PIN format if needed').
-resolution_step('SEC_011', 6, 'Consider temporary PIN format override if legitimately needed').
+fault_profile('H_CR_002', 'Hardware', 'Card Reader', 'Card Reader Dirty / Sensor Fault', 'MEDIUM').
+fault_description('H_CR_002', 'Card Reader Dirty / Sensor Fault').
+has_error_code('H_CR_002', '3A5').
+has_error_code('H_CR_002', 'ICM004').
+has_symptom('H_CR_002', 'Reader status: DIRTY_SENSOR').
+resolution_step('H_CR_002', 1, 'Inspect component').
+resolution_step('H_CR_002', 2, 'Test/Reset').
 
-fault_profile('SEC_012', 'Security', 'Card Validation', 'Foreign Or Unrecognized Card Used', 'HIGH').
-fault_description('SEC_012', 'Cardholder used a card that is not recognized by the system or issued by an unauthorized card network.').
-has_error_code('SEC_012', 'SEC_CARD_UNKNOWN').
-has_error_code('SEC_012', 'CARD_NOT_RECOGNIZED').
-has_error_code('SEC_012', 'FOREIGN_CARD_DETECTED').
-has_symptom('SEC_012', 'Card not recognized by system').
-has_symptom('SEC_012', 'Card issuer not in accepted network list').
-has_symptom('SEC_012', 'Card type not supported').
-has_symptom('SEC_012', 'Card validation check failed').
-has_symptom('SEC_012', 'Unknown card BIN detected').
-has_cause('SEC_012', 'Counterfeit card used').
-has_cause('SEC_012', 'Card from unsupported issuer').
-has_cause('SEC_012', 'Card from different country not accepted').
-has_cause('SEC_012', 'Card network not provisioned in ATM').
-has_cause('SEC_012', 'Card data has been forged or altered').
-resolution_step('SEC_012', 1, 'Retain card in secure bin immediately').
-resolution_step('SEC_012', 2, 'Display message: Card cannot be processed').
-resolution_step('SEC_012', 3, 'Alert fraud team if suspected counterfeit').
-resolution_step('SEC_012', 4, 'Record card details in security log').
-resolution_step('SEC_012', 5, 'Check card network provisioning settings').
-resolution_step('SEC_012', 6, 'Verify against card issuer database if available').
-resolution_step('SEC_012', 7, 'Contact cardholder to verify card legitimacy').
-resolution_step('SEC_012', 8, 'Report to card network if fraud suspected').
+fault_profile('H_CD_001', 'Hardware', 'Cash Dispenser', 'Cash Dispenser Jam', 'HIGH').
+fault_description('H_CD_001', 'Cash Dispenser Jam').
+has_error_code('H_CD_001', '4B1').
+has_symptom('H_CD_001', 'Dispense attempt fails').
+has_symptom('H_CD_001', 'Dispenser status: DISPENSER_JAM').
+resolution_step('H_CD_001', 1, 'Inspect component').
+resolution_step('H_CD_001', 2, 'Test/Reset').
 
-fault_profile('SW_001', 'Software', 'OS', 'OS Kernel Panic / Blue Screen', 'CRITICAL').
-fault_description('SW_001', 'Operating system has crashed and is unresponsive.').
-has_error_code('SW_001', 'SW001').
-has_error_code('SW_001', 'SYS_500').
-has_symptom('SW_001', 'ATM screen frozen/blank').
-has_symptom('SW_001', 'System ping timeout').
-has_cause('SW_001', 'Driver conflict').
-has_cause('SW_001', 'Hardware failure').
-has_cause('SW_001', 'Memory corruption').
-resolution_step('SW_001', 1, 'Attempt remote restart via management console').
-resolution_step('SW_001', 2, 'If restart fails, dispatch engineer for on-site recovery').
-resolution_step('SW_001', 3, 'Review crash dump logs').
+fault_profile('H_CD_002', 'Hardware', 'Cash Dispenser', 'Dispenser Actuator Wear Warning', 'MEDIUM').
+fault_description('H_CD_002', 'Dispenser Actuator Wear Warning').
+has_error_code('H_CD_002', '4B8').
+has_symptom('H_CD_002', 'Dispenser status: ACTUATOR_WORN').
+resolution_step('H_CD_002', 1, 'Inspect component').
+resolution_step('H_CD_002', 2, 'Test/Reset').
 
-fault_profile('SW_002', 'Software', 'Application', 'ATM Application Crash', 'HIGH').
-fault_description('SW_002', 'The primary ATM user interface software has terminated unexpectedly.').
-has_error_code('SW_002', 'SW010').
-has_error_code('SW_002', 'SYS_123').
-has_symptom('SW_002', 'Welcome screen not visible').
-has_symptom('SW_002', 'App logs show segfault').
-has_cause('SW_002', 'Software bug').
-has_cause('SW_002', 'Missing configuration file').
-has_cause('SW_002', 'Resource exhaustion').
-resolution_step('SW_002', 1, 'Restart ATM application via remote console').
-resolution_step('SW_002', 2, 'Review application error logs').
-resolution_step('SW_002', 3, 'Check for pending updates').
+fault_profile('H_CD_003', 'Hardware', 'Cash Dispenser', 'Reject Bin Full', 'MEDIUM').
+fault_description('H_CD_003', 'Reject Bin Full').
+has_error_code('H_CD_003', '4C2').
+has_symptom('H_CD_003', 'Dispenser status: REJECT_BIN_FULL').
+has_symptom('H_CD_003', 'Dispense attempt fails').
+resolution_step('H_CD_003', 1, 'Inspect component').
+resolution_step('H_CD_003', 2, 'Test/Reset').
 
-fault_profile('SW_003', 'Software', 'Database', 'Transaction Database Unreachable', 'CRITICAL').
-fault_description('SW_003', 'ATM cannot connect to the local or central transaction database.').
-has_error_code('SW_003', 'SW030').
-has_symptom('SW_003', 'Transactions declined').
-has_symptom('SW_003', 'Connection timeout logs').
-has_cause('SW_003', 'Network failure').
-has_cause('SW_003', 'Database service down').
-has_cause('SW_003', 'Credential expiry').
-resolution_step('SW_003', 1, 'Check database server connectivity').
-resolution_step('SW_003', 2, 'Verify network path to bank core').
-resolution_step('SW_003', 3, 'Escalate to IT if server is down').
+fault_profile('H_CD_004', 'Hardware', 'Cash Dispenser', 'Cash Presenter Fault', 'HIGH').
+fault_description('H_CD_004', 'Cash Presenter Fault').
+has_error_code('H_CD_004', '4D1').
+has_symptom('H_CD_004', 'Dispenser status: PRESENTER_FAULT').
+has_symptom('H_CD_004', 'Dispense attempt fails').
+resolution_step('H_CD_004', 1, 'Inspect component').
+resolution_step('H_CD_004', 2, 'Test/Reset').
+
+fault_profile('H_PR_001', 'Hardware', 'Receipt Printer', 'Printer Paper Out', 'LOW').
+fault_description('H_PR_001', 'Printer Paper Out').
+has_error_code('H_PR_001', '5E1').
+has_symptom('H_PR_001', 'Printer status: PAPER_OUT').
+resolution_step('H_PR_001', 1, 'Inspect component').
+resolution_step('H_PR_001', 2, 'Test/Reset').
+
+fault_profile('H_PR_002', 'Hardware', 'Receipt Printer', 'Printer Paper Jam', 'MEDIUM').
+fault_description('H_PR_002', 'Printer Paper Jam').
+has_error_code('H_PR_002', '5E3').
+has_symptom('H_PR_002', 'Printer status: PAPER_JAM').
+resolution_step('H_PR_002', 1, 'Inspect component').
+resolution_step('H_PR_002', 2, 'Test/Reset').
+
+fault_profile('H_PR_003', 'Hardware', 'Receipt Printer', 'Print Head Failure', 'HIGH').
+fault_description('H_PR_003', 'Print Head Failure').
+has_error_code('H_PR_003', '5E7').
+has_symptom('H_PR_003', 'Printer status: PRINT_HEAD_FAIL').
+resolution_step('H_PR_003', 1, 'Inspect component').
+resolution_step('H_PR_003', 2, 'Test/Reset').
+
+fault_profile('H_ENV_001', 'Hardware', 'Sensors & Environment', 'Overheating — Temperature Critical', 'HIGH').
+fault_description('H_ENV_001', 'Overheating — Temperature Critical').
+has_error_code('H_ENV_001', '9T1').
+resolution_step('H_ENV_001', 1, 'Inspect component').
+resolution_step('H_ENV_001', 2, 'Test/Reset').
+
+fault_profile('H_ENV_002', 'Hardware', 'Sensors & Environment', 'ATM Enclosure Door Open', 'CRITICAL').
+fault_description('H_ENV_002', 'ATM Enclosure Door Open').
+has_error_code('H_ENV_002', '9D1').
+resolution_step('H_ENV_002', 1, 'Inspect component').
+resolution_step('H_ENV_002', 2, 'Test/Reset').
+
+fault_profile('H_ENV_003', 'Hardware', 'Sensors & Environment', 'General Sensor Malfunction', 'MEDIUM').
+fault_description('H_ENV_003', 'General Sensor Malfunction').
+has_error_code('H_ENV_003', '9S2').
+resolution_step('H_ENV_003', 1, 'Inspect component').
+resolution_step('H_ENV_003', 2, 'Test/Reset').
+
+fault_profile('H_ENV_004', 'Hardware', 'Sensors & Environment', 'Power / Voltage Instability', 'HIGH').
+fault_description('H_ENV_004', 'Power / Voltage Instability').
+has_error_code('H_ENV_004', '9V3').
+resolution_step('H_ENV_004', 1, 'Inspect component').
+resolution_step('H_ENV_004', 2, 'Test/Reset').
+
+fault_profile('H_ENV_005', 'Hardware', 'Sensors & Environment', 'Cooling Fan Failure', 'HIGH').
+fault_description('H_ENV_005', 'Cooling Fan Failure').
+has_error_code('H_ENV_005', '9F1').
+resolution_step('H_ENV_005', 1, 'Inspect component').
+resolution_step('H_ENV_005', 2, 'Test/Reset').
+
+fault_profile('H_PER_001', 'Hardware', 'Peripherals', 'PIN Pad Unresponsive', 'HIGH').
+fault_description('H_PER_001', 'PIN Pad Unresponsive').
+has_error_code('H_PER_001', '6P1').
+has_symptom('H_PER_001', 'PIN pad status: PINPAD_UNRESPONSIVE').
+resolution_step('H_PER_001', 1, 'Inspect component').
+resolution_step('H_PER_001', 2, 'Test/Reset').
+
+fault_profile('H_PER_002', 'Hardware', 'Peripherals', 'Display Screen Failure', 'HIGH').
+fault_description('H_PER_002', 'Display Screen Failure').
+has_error_code('H_PER_002', '6S2').
+resolution_step('H_PER_002', 1, 'Inspect component').
+resolution_step('H_PER_002', 2, 'Test/Reset').
+
+fault_profile('H_PER_003', 'Hardware', 'Peripherals', 'ATM Camera Offline', 'MEDIUM').
+fault_description('H_PER_003', 'ATM Camera Offline').
+has_error_code('H_PER_003', '6C1').
+resolution_step('H_PER_003', 1, 'Inspect component').
+resolution_step('H_PER_003', 2, 'Test/Reset').
+
+fault_profile('H_PER_004', 'Hardware', 'Peripherals', 'UPS Battery Low — Replace Soon', 'MEDIUM').
+fault_description('H_PER_004', 'UPS Battery Low — Replace Soon').
+has_error_code('H_PER_004', '9U1').
+resolution_step('H_PER_004', 1, 'Inspect component').
+resolution_step('H_PER_004', 2, 'Test/Reset').
+
+fault_profile('H_PER_005', 'Hardware', 'Peripherals', 'Barcode / QR Reader Fault', 'LOW').
+fault_description('H_PER_005', 'Barcode / QR Reader Fault').
+has_error_code('H_PER_005', '6B3').
+resolution_step('H_PER_005', 1, 'Inspect component').
+resolution_step('H_PER_005', 2, 'Test/Reset').
+
+fault_profile('N_NET_000', 'Network', 'Connectivity', 'ATM Offline — No Network Response', 'CRITICAL').
+fault_description('N_NET_000', 'ATM Offline — No Network Response').
+has_error_code('N_NET_000', 'NET001').
+has_symptom('N_NET_000', 'Network status: DOWN').
+has_symptom('N_NET_000', 'Network connection lost').
+resolution_step('N_NET_000', 1, 'Check LAN').
+resolution_step('N_NET_000', 2, 'Network Reset').
+
+fault_profile('N_NET_001', 'Network', 'Connectivity', 'Intermittent Network Drops', 'HIGH').
+fault_description('N_NET_001', 'Intermittent Network Drops').
+has_error_code('N_NET_001', 'NET002').
+has_symptom('N_NET_001', 'Network status: FAULT').
+resolution_step('N_NET_001', 1, 'Check LAN').
+resolution_step('N_NET_001', 2, 'Network Reset').
+
+fault_profile('N_NET_002', 'Network', 'Connectivity', 'High Network Latency', 'MEDIUM').
+fault_description('N_NET_002', 'High Network Latency').
+has_error_code('N_NET_002', 'NET003').
+has_symptom('N_NET_002', 'Network status: FAULT').
+resolution_step('N_NET_002', 1, 'Check LAN').
+resolution_step('N_NET_002', 2, 'Network Reset').
+
+fault_profile('N_NET_003', 'Network', 'Connectivity', 'DNS Resolution Failure', 'HIGH').
+fault_description('N_NET_003', 'DNS Resolution Failure').
+has_error_code('N_NET_003', 'NET004').
+has_symptom('N_NET_003', 'Network status: FAULT').
+resolution_step('N_NET_003', 1, 'Check LAN').
+resolution_step('N_NET_003', 2, 'Network Reset').
+
+fault_profile('N_NET_004', 'Network', 'TLS/Security', 'TLS Handshake Failure', 'HIGH').
+fault_description('N_NET_004', 'TLS Handshake Failure').
+has_error_code('N_NET_004', 'NET010').
+has_symptom('N_NET_004', 'Network status: FAULT').
+resolution_step('N_NET_004', 1, 'Check LAN').
+resolution_step('N_NET_004', 2, 'Network Reset').
+
+fault_profile('N_NET_005', 'Network', 'TLS/Security', 'SSL Certificate Mismatch', 'HIGH').
+fault_description('N_NET_005', 'SSL Certificate Mismatch').
+has_error_code('N_NET_005', 'NET011').
+has_symptom('N_NET_005', 'Network status: FAULT').
+resolution_step('N_NET_005', 1, 'Check LAN').
+resolution_step('N_NET_005', 2, 'Network Reset').
+
+fault_profile('N_NET_006', 'Network', 'TLS/Security', 'Man-in-the-Middle Warning', 'CRITICAL').
+fault_description('N_NET_006', 'Man-in-the-Middle Warning').
+has_error_code('N_NET_006', 'NET012').
+has_symptom('N_NET_006', 'Network status: FAULT').
+resolution_step('N_NET_006', 1, 'Check LAN').
+resolution_step('N_NET_006', 2, 'Network Reset').
+
+fault_profile('N_NET_007', 'Network', 'Host Connectivity', 'Cannot Reach Bank Core System', 'CRITICAL').
+fault_description('N_NET_007', 'Cannot Reach Bank Core System').
+has_error_code('N_NET_007', 'NET020').
+has_symptom('N_NET_007', 'Network status: FAULT').
+resolution_step('N_NET_007', 1, 'Check LAN').
+resolution_step('N_NET_007', 2, 'Network Reset').
+
+fault_profile('N_NET_008', 'Network', 'Host Connectivity', 'Connection Timeout to Core System', 'HIGH').
+fault_description('N_NET_008', 'Connection Timeout to Core System').
+has_error_code('N_NET_008', 'NET021').
+has_symptom('N_NET_008', 'Network status: FAULT').
+resolution_step('N_NET_008', 1, 'Check LAN').
+resolution_step('N_NET_008', 2, 'Network Reset').
+
+fault_profile('N_NET_009', 'Network', 'Host Connectivity', 'Authentication Rejected by Core', 'HIGH').
+fault_description('N_NET_009', 'Authentication Rejected by Core').
+has_error_code('N_NET_009', 'NET022').
+has_symptom('N_NET_009', 'Network status: FAULT').
+resolution_step('N_NET_009', 1, 'Check LAN').
+resolution_step('N_NET_009', 2, 'Network Reset').
+
+fault_profile('N_NET_010', 'Network', 'VPN', 'VPN Tunnel Down', 'CRITICAL').
+fault_description('N_NET_010', 'VPN Tunnel Down').
+has_error_code('N_NET_010', 'NET030').
+has_symptom('N_NET_010', 'Network status: FAULT').
+resolution_step('N_NET_010', 1, 'Check LAN').
+resolution_step('N_NET_010', 2, 'Network Reset').
+
+fault_profile('N_NET_011', 'Network', 'VPN', 'VPN Authentication Failed', 'HIGH').
+fault_description('N_NET_011', 'VPN Authentication Failed').
+has_error_code('N_NET_011', 'NET031').
+has_symptom('N_NET_011', 'Network status: FAULT').
+resolution_step('N_NET_011', 1, 'Check LAN').
+resolution_step('N_NET_011', 2, 'Network Reset').
+
+fault_profile('N_NET_012', 'Network', 'Firewall', 'ATM Traffic Blocked by Firewall', 'HIGH').
+fault_description('N_NET_012', 'ATM Traffic Blocked by Firewall').
+has_error_code('N_NET_012', 'NET040').
+has_symptom('N_NET_012', 'Network status: FAULT').
+resolution_step('N_NET_012', 1, 'Check LAN').
+resolution_step('N_NET_012', 2, 'Network Reset').
+
+fault_profile('N_NET_013', 'Network', 'Firewall', 'IP Address Conflict', 'MEDIUM').
+fault_description('N_NET_013', 'IP Address Conflict').
+has_error_code('N_NET_013', 'NET041').
+has_symptom('N_NET_013', 'Network status: FAULT').
+resolution_step('N_NET_013', 1, 'Check LAN').
+resolution_step('N_NET_013', 2, 'Network Reset').
+
+fault_profile('N_NET_014', 'Network', 'Switch/Router', 'Network Switch Port Down', 'HIGH').
+fault_description('N_NET_014', 'Network Switch Port Down').
+has_error_code('N_NET_014', 'NET050').
+has_symptom('N_NET_014', 'Network status: FAULT').
+resolution_step('N_NET_014', 1, 'Check LAN').
+resolution_step('N_NET_014', 2, 'Network Reset').
+
+fault_profile('N_NET_015', 'Network', 'Switch/Router', 'Router Unreachable', 'CRITICAL').
+fault_description('N_NET_015', 'Router Unreachable').
+has_error_code('N_NET_015', 'NET051').
+has_symptom('N_NET_015', 'Network status: FAULT').
+resolution_step('N_NET_015', 1, 'Check LAN').
+resolution_step('N_NET_015', 2, 'Network Reset').
+
+fault_profile('N_NET_016', 'Network', 'Bandwidth', 'Bandwidth Saturation', 'MEDIUM').
+fault_description('N_NET_016', 'Bandwidth Saturation').
+has_error_code('N_NET_016', 'NET060').
+has_symptom('N_NET_016', 'Network status: FAULT').
+resolution_step('N_NET_016', 1, 'Check LAN').
+resolution_step('N_NET_016', 2, 'Network Reset').
+
+fault_profile('N_NET_017', 'Network', 'Bandwidth', 'Packet Loss Exceeding Threshold', 'HIGH').
+fault_description('N_NET_017', 'Packet Loss Exceeding Threshold').
+has_error_code('N_NET_017', 'NET061').
+has_symptom('N_NET_017', 'Network status: FAULT').
+resolution_step('N_NET_017', 1, 'Check LAN').
+resolution_step('N_NET_017', 2, 'Network Reset').
+
+fault_profile('N_NET_018', 'Network', 'NTP', 'Clock Sync Failure (NTP)', 'MEDIUM').
+fault_description('N_NET_018', 'Clock Sync Failure (NTP)').
+has_error_code('N_NET_018', 'NET070').
+has_symptom('N_NET_018', 'Network status: FAULT').
+resolution_step('N_NET_018', 1, 'Check LAN').
+resolution_step('N_NET_018', 2, 'Network Reset').
+
+fault_profile('N_NET_019', 'Network', 'NTP', 'ATM Clock Drift Detected', 'MEDIUM').
+fault_description('N_NET_019', 'ATM Clock Drift Detected').
+has_error_code('N_NET_019', 'NET071').
+has_symptom('N_NET_019', 'Network status: FAULT').
+resolution_step('N_NET_019', 1, 'Check LAN').
+resolution_step('N_NET_019', 2, 'Network Reset').
+
+fault_profile('SEC_000', 'Security', 'Card Skimming', 'Card Skimmer Device Detected', 'CRITICAL').
+fault_description('SEC_000', 'Card Skimmer Device Detected').
+has_error_code('SEC_000', 'SEC001').
+resolution_step('SEC_000', 1, 'Security Alert').
+resolution_step('SEC_000', 2, 'Forensics').
+
+fault_profile('SEC_001', 'Security', 'Card Skimming', 'Card Reader Depth Anomaly (Possible Skimmer)', 'CRITICAL').
+fault_description('SEC_001', 'Card Reader Depth Anomaly (Possible Skimmer)').
+has_error_code('SEC_001', 'SEC002').
+resolution_step('SEC_001', 1, 'Security Alert').
+resolution_step('SEC_001', 2, 'Forensics').
+
+fault_profile('SEC_002', 'Security', 'Card Skimming', 'Unusual Card Read Failures — Possible Shimmer', 'HIGH').
+fault_description('SEC_002', 'Unusual Card Read Failures — Possible Shimmer').
+has_error_code('SEC_002', 'SEC003').
+resolution_step('SEC_002', 1, 'Security Alert').
+resolution_step('SEC_002', 2, 'Forensics').
+
+fault_profile('SEC_003', 'Security', 'PIN Pad Tampering', 'PIN Pad Cover Removal Detected', 'CRITICAL').
+fault_description('SEC_003', 'PIN Pad Cover Removal Detected').
+has_error_code('SEC_003', 'SEC010').
+resolution_step('SEC_003', 1, 'Security Alert').
+resolution_step('SEC_003', 2, 'Forensics').
+
+fault_profile('SEC_004', 'Security', 'PIN Pad Tampering', 'PIN Pad Enclosure Breach Sensor Triggered', 'CRITICAL').
+fault_description('SEC_004', 'PIN Pad Enclosure Breach Sensor Triggered').
+has_error_code('SEC_004', 'SEC011').
+resolution_step('SEC_004', 1, 'Security Alert').
+resolution_step('SEC_004', 2, 'Forensics').
+
+fault_profile('SEC_005', 'Security', 'PIN Pad Tampering', 'Suspicious PIN Pad Overlay Pattern', 'HIGH').
+fault_description('SEC_005', 'Suspicious PIN Pad Overlay Pattern').
+has_error_code('SEC_005', 'SEC012').
+resolution_step('SEC_005', 1, 'Security Alert').
+resolution_step('SEC_005', 2, 'Forensics').
+
+fault_profile('SEC_006', 'Security', 'Transaction Fraud', 'Unusual Transaction Volume — Velocity Alert', 'HIGH').
+fault_description('SEC_006', 'Unusual Transaction Volume — Velocity Alert').
+has_error_code('SEC_006', 'SEC020').
+resolution_step('SEC_006', 1, 'Security Alert').
+resolution_step('SEC_006', 2, 'Forensics').
+
+fault_profile('SEC_007', 'Security', 'Transaction Fraud', 'Repeated Declined Transactions — Brute Force', 'HIGH').
+fault_description('SEC_007', 'Repeated Declined Transactions — Brute Force').
+has_error_code('SEC_007', 'SEC021').
+resolution_step('SEC_007', 1, 'Security Alert').
+resolution_step('SEC_007', 2, 'Forensics').
+
+fault_profile('SEC_008', 'Security', 'Transaction Fraud', 'High-Value Withdrawal Cluster', 'HIGH').
+fault_description('SEC_008', 'High-Value Withdrawal Cluster').
+has_error_code('SEC_008', 'SEC022').
+resolution_step('SEC_008', 1, 'Security Alert').
+resolution_step('SEC_008', 2, 'Forensics').
+
+fault_profile('SEC_009', 'Security', 'Transaction Fraud', 'Card Present + Geolocation Mismatch', 'HIGH').
+fault_description('SEC_009', 'Card Present + Geolocation Mismatch').
+has_error_code('SEC_009', 'SEC023').
+resolution_step('SEC_009', 1, 'Security Alert').
+resolution_step('SEC_009', 2, 'Forensics').
+
+fault_profile('SEC_010', 'Security', 'Physical Attack', 'ATM Anti-Ram Sensor Triggered', 'CRITICAL').
+fault_description('SEC_010', 'ATM Anti-Ram Sensor Triggered').
+has_error_code('SEC_010', 'SEC030').
+resolution_step('SEC_010', 1, 'Security Alert').
+resolution_step('SEC_010', 2, 'Forensics').
+
+fault_profile('SEC_011', 'Security', 'Physical Attack', 'Explosive Gas Detection Alert', 'CRITICAL').
+fault_description('SEC_011', 'Explosive Gas Detection Alert').
+has_error_code('SEC_011', 'SEC031').
+resolution_step('SEC_011', 1, 'Security Alert').
+resolution_step('SEC_011', 2, 'Forensics').
+
+fault_profile('SEC_012', 'Security', 'Physical Attack', 'ATM Enclosure Vibration Alert', 'HIGH').
+fault_description('SEC_012', 'ATM Enclosure Vibration Alert').
+has_error_code('SEC_012', 'SEC032').
+resolution_step('SEC_012', 1, 'Security Alert').
+resolution_step('SEC_012', 2, 'Forensics').
+
+fault_profile('SEC_013', 'Security', 'Physical Attack', 'Safe Door Tamper Sensor Triggered', 'CRITICAL').
+fault_description('SEC_013', 'Safe Door Tamper Sensor Triggered').
+has_error_code('SEC_013', 'SEC033').
+resolution_step('SEC_013', 1, 'Security Alert').
+resolution_step('SEC_013', 2, 'Forensics').
+
+fault_profile('SEC_014', 'Security', 'CCTV / Surveillance', 'ATM Camera Offline — Security Risk', 'HIGH').
+fault_description('SEC_014', 'ATM Camera Offline — Security Risk').
+has_error_code('SEC_014', 'SEC040').
+resolution_step('SEC_014', 1, 'Security Alert').
+resolution_step('SEC_014', 2, 'Forensics').
+
+fault_profile('SEC_015', 'Security', 'CCTV / Surveillance', 'Camera View Obstruction Detected', 'HIGH').
+fault_description('SEC_015', 'Camera View Obstruction Detected').
+has_error_code('SEC_015', 'SEC041').
+resolution_step('SEC_015', 1, 'Security Alert').
+resolution_step('SEC_015', 2, 'Forensics').
+
+fault_profile('SEC_016', 'Security', 'Logical Security', 'Failed Admin Login Attempts Threshold', 'HIGH').
+fault_description('SEC_016', 'Failed Admin Login Attempts Threshold').
+has_error_code('SEC_016', 'SEC050').
+resolution_step('SEC_016', 1, 'Security Alert').
+resolution_step('SEC_016', 2, 'Forensics').
+
+fault_profile('SEC_017', 'Security', 'Logical Security', 'Unauthorised Remote Access Attempt', 'CRITICAL').
+fault_description('SEC_017', 'Unauthorised Remote Access Attempt').
+has_error_code('SEC_017', 'SEC051').
+resolution_step('SEC_017', 1, 'Security Alert').
+resolution_step('SEC_017', 2, 'Forensics').
+
+fault_profile('SEC_018', 'Security', 'Logical Security', 'Malware Signature Detected on ATM OS', 'CRITICAL').
+fault_description('SEC_018', 'Malware Signature Detected on ATM OS').
+has_error_code('SEC_018', 'SEC052').
+resolution_step('SEC_018', 1, 'Security Alert').
+resolution_step('SEC_018', 2, 'Forensics').
+
+fault_profile('SEC_019', 'Security', 'Compliance', 'PCI-DSS Compliance Check Failed', 'HIGH').
+fault_description('SEC_019', 'PCI-DSS Compliance Check Failed').
+has_error_code('SEC_019', 'SEC060').
+resolution_step('SEC_019', 1, 'Security Alert').
+resolution_step('SEC_019', 2, 'Forensics').
+
+fault_profile('S_SW_000', 'Software', 'OS', 'OS Kernel Panic / Blue Screen', 'CRITICAL').
+fault_description('S_SW_000', 'OS Kernel Panic / Blue Screen').
+has_error_code('S_SW_000', 'SW001').
+has_symptom('S_SW_000', 'Software status: FAULT').
+resolution_step('S_SW_000', 1, 'Restart').
+resolution_step('S_SW_000', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_001', 'Software', 'OS', 'OS Disk Space Critical', 'HIGH').
+fault_description('S_SW_001', 'OS Disk Space Critical').
+has_error_code('S_SW_001', 'SW002').
+has_symptom('S_SW_001', 'Software status: FAULT').
+resolution_step('S_SW_001', 1, 'Restart').
+resolution_step('S_SW_001', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_002', 'Software', 'Application', 'ATM Application Crash', 'HIGH').
+fault_description('S_SW_002', 'ATM Application Crash').
+has_error_code('S_SW_002', 'SW010').
+has_symptom('S_SW_002', 'Software status: FAULT').
+resolution_step('S_SW_002', 1, 'Restart').
+resolution_step('S_SW_002', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_003', 'Software', 'Application', 'Application Version Mismatch', 'MEDIUM').
+fault_description('S_SW_003', 'Application Version Mismatch').
+has_error_code('S_SW_003', 'SW011').
+has_symptom('S_SW_003', 'Software status: FAULT').
+resolution_step('S_SW_003', 1, 'Restart').
+resolution_step('S_SW_003', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_004', 'Software', 'Application', 'Application Deadlock Detected', 'HIGH').
+fault_description('S_SW_004', 'Application Deadlock Detected').
+has_error_code('S_SW_004', 'SW012').
+has_symptom('S_SW_004', 'Software status: FAULT').
+resolution_step('S_SW_004', 1, 'Restart').
+resolution_step('S_SW_004', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_005', 'Software', 'Application', 'Configuration File Corrupt', 'HIGH').
+fault_description('S_SW_005', 'Configuration File Corrupt').
+has_error_code('S_SW_005', 'SW013').
+has_symptom('S_SW_005', 'Software status: FAULT').
+resolution_step('S_SW_005', 1, 'Restart').
+resolution_step('S_SW_005', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_006', 'Software', 'Firmware', 'Firmware Update Failed', 'HIGH').
+fault_description('S_SW_006', 'Firmware Update Failed').
+has_error_code('S_SW_006', 'SW020').
+has_symptom('S_SW_006', 'Software status: FAULT').
+resolution_step('S_SW_006', 1, 'Restart').
+resolution_step('S_SW_006', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_007', 'Software', 'Firmware', 'Firmware Version Mismatch', 'MEDIUM').
+fault_description('S_SW_007', 'Firmware Version Mismatch').
+has_error_code('S_SW_007', 'SW021').
+has_symptom('S_SW_007', 'Software status: FAULT').
+resolution_step('S_SW_007', 1, 'Restart').
+resolution_step('S_SW_007', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_008', 'Software', 'Database', 'Transaction Database Unreachable', 'CRITICAL').
+fault_description('S_SW_008', 'Transaction Database Unreachable').
+has_error_code('S_SW_008', 'SW030').
+has_symptom('S_SW_008', 'Software status: FAULT').
+resolution_step('S_SW_008', 1, 'Restart').
+resolution_step('S_SW_008', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_009', 'Software', 'Database', 'Transaction Log Full', 'HIGH').
+fault_description('S_SW_009', 'Transaction Log Full').
+has_error_code('S_SW_009', 'SW031').
+has_symptom('S_SW_009', 'Software status: FAULT').
+resolution_step('S_SW_009', 1, 'Restart').
+resolution_step('S_SW_009', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_010', 'Software', 'Security Software', 'Anti-Tamper Software Alert', 'CRITICAL').
+fault_description('S_SW_010', 'Anti-Tamper Software Alert').
+has_error_code('S_SW_010', 'SW040').
+has_symptom('S_SW_010', 'Software status: FAULT').
+resolution_step('S_SW_010', 1, 'Restart').
+resolution_step('S_SW_010', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_011', 'Software', 'Security Software', 'Certificate / TLS Expiry', 'HIGH').
+fault_description('S_SW_011', 'Certificate / TLS Expiry').
+has_error_code('S_SW_011', 'SW041').
+has_symptom('S_SW_011', 'Software status: FAULT').
+resolution_step('S_SW_011', 1, 'Restart').
+resolution_step('S_SW_011', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_012', 'Software', 'Security Software', 'Encryption Key Rotation Overdue', 'HIGH').
+fault_description('S_SW_012', 'Encryption Key Rotation Overdue').
+has_error_code('S_SW_012', 'SW042').
+has_symptom('S_SW_012', 'Software status: FAULT').
+resolution_step('S_SW_012', 1, 'Restart').
+resolution_step('S_SW_012', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_013', 'Software', 'Diagnostics', 'Self-Test Failure at Startup', 'HIGH').
+fault_description('S_SW_013', 'Self-Test Failure at Startup').
+has_error_code('S_SW_013', 'SW050').
+has_symptom('S_SW_013', 'Software status: FAULT').
+resolution_step('S_SW_013', 1, 'Restart').
+resolution_step('S_SW_013', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_014', 'Software', 'Diagnostics', 'Scheduled Maintenance Mode Stuck', 'MEDIUM').
+fault_description('S_SW_014', 'Scheduled Maintenance Mode Stuck').
+has_error_code('S_SW_014', 'SW051').
+has_symptom('S_SW_014', 'Software status: FAULT').
+resolution_step('S_SW_014', 1, 'Restart').
+resolution_step('S_SW_014', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_015', 'Software', 'Remote Management', 'Remote Management Agent Offline', 'MEDIUM').
+fault_description('S_SW_015', 'Remote Management Agent Offline').
+has_error_code('S_SW_015', 'SW060').
+has_symptom('S_SW_015', 'Software status: FAULT').
+resolution_step('S_SW_015', 1, 'Restart').
+resolution_step('S_SW_015', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_016', 'Software', 'Remote Management', 'Software Patch Failed to Apply', 'MEDIUM').
+fault_description('S_SW_016', 'Software Patch Failed to Apply').
+has_error_code('S_SW_016', 'SW061').
+has_symptom('S_SW_016', 'Software status: FAULT').
+resolution_step('S_SW_016', 1, 'Restart').
+resolution_step('S_SW_016', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_017', 'Software', 'Watchdog', 'Watchdog Timer Restart Loop', 'HIGH').
+fault_description('S_SW_017', 'Watchdog Timer Restart Loop').
+has_error_code('S_SW_017', 'SW070').
+has_symptom('S_SW_017', 'Software status: FAULT').
+resolution_step('S_SW_017', 1, 'Restart').
+resolution_step('S_SW_017', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_018', 'Software', 'Watchdog', 'Memory Leak Detected', 'HIGH').
+fault_description('S_SW_018', 'Memory Leak Detected').
+has_error_code('S_SW_018', 'SW071').
+has_symptom('S_SW_018', 'Software status: FAULT').
+resolution_step('S_SW_018', 1, 'Restart').
+resolution_step('S_SW_018', 2, 'Remote Maintenance').
+
+fault_profile('S_SW_019', 'Software', 'Startup', 'ATM Failed to Boot', 'CRITICAL').
+fault_description('S_SW_019', 'ATM Failed to Boot').
+has_error_code('S_SW_019', 'SW080').
+has_symptom('S_SW_019', 'Software status: FAULT').
+resolution_step('S_SW_019', 1, 'Restart').
+resolution_step('S_SW_019', 2, 'Remote Maintenance').
