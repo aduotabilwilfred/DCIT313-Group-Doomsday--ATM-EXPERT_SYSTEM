@@ -1,78 +1,363 @@
 [
-    {
-        "fault_id": "NET_001",
-        "domain": "Network",
-        "sub_domain": "Connectivity",
-        "title": "ATM Offline",
-        "description": "The ATM has no network connectivity and cannot reach the bank server.",
-        "severity": "CRITICAL",
-        "error_codes": [
-            "NET001"
-        ],
-        "symptoms": [
-            "System status: OFFLINE",
-            "Ping timeouts"
-        ],
-        "causes": [
-            "Faulty LAN cable",
-            "Switch port failure",
-            "Router misconfiguration"
-        ],
-        "resolution_steps": [
-            "Ping ATM from operations centre",
-            "Check physical LAN cable",
-            "Verify router settings",
-            "Dispatch engineer if cable/port is damaged"
-        ]
-    },
-    {
-        "fault_id": "NET_002",
-        "domain": "Network",
-        "sub_domain": "Security",
-        "title": "TLS Handshake Failure",
-        "description": "Secure communication cannot be established due to certificate or cipher issues.",
-        "severity": "HIGH",
-        "error_codes": [
-            "NET010",
-            "TLS_ERR_403"
-        ],
-        "symptoms": [
-            "Connection rejected by core",
-            "Cert expiry warnings"
-        ],
-        "causes": [
-            "Expired SSL certificate",
-            "Incompatible cipher suite"
-        ],
-        "resolution_steps": [
-            "Check certificate validity",
-            "Renew TLS certificate",
-            "Restart network services"
-        ]
-    },
-    {
-        "fault_id": "NET_003",
-        "domain": "Network",
-        "sub_domain": "VPN",
-        "title": "VPN Tunnel Down",
-        "description": "The secure VPN tunnel used for ATM-to-bank communication has collapsed.",
-        "severity": "CRITICAL",
-        "error_codes": [
-            "NET030"
-        ],
-        "symptoms": [
-            "Remote management unreachable",
-            "VPN status: DOWN"
-        ],
-        "causes": [
-            "VPN credential expiry",
-            "ISP outage",
-            "Server-side tunnel termination"
-        ],
-        "resolution_steps": [
-            "Restart VPN client on ATM",
-            "Verify VPN server status",
-            "Re-authenticate VPN session"
-        ]
-    }
+  {
+    "fault_id": "N_NET_000",
+    "domain": "Network",
+    "sub_domain": "Connectivity",
+    "title": "ATM Offline \u2014 No Network Response",
+    "severity": "CRITICAL",
+    "description": "ATM Offline \u2014 No Network Response",
+    "error_codes": [
+      "NET001"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: DOWN",
+      "Network connection lost"
+    ]
+  },
+  {
+    "fault_id": "N_NET_001",
+    "domain": "Network",
+    "sub_domain": "Connectivity",
+    "title": "Intermittent Network Drops",
+    "severity": "HIGH",
+    "description": "Intermittent Network Drops",
+    "error_codes": [
+      "NET002"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_002",
+    "domain": "Network",
+    "sub_domain": "Connectivity",
+    "title": "High Network Latency",
+    "severity": "MEDIUM",
+    "description": "High Network Latency",
+    "error_codes": [
+      "NET003"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_003",
+    "domain": "Network",
+    "sub_domain": "Connectivity",
+    "title": "DNS Resolution Failure",
+    "severity": "HIGH",
+    "description": "DNS Resolution Failure",
+    "error_codes": [
+      "NET004"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_004",
+    "domain": "Network",
+    "sub_domain": "TLS/Security",
+    "title": "TLS Handshake Failure",
+    "severity": "HIGH",
+    "description": "TLS Handshake Failure",
+    "error_codes": [
+      "NET010"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_005",
+    "domain": "Network",
+    "sub_domain": "TLS/Security",
+    "title": "SSL Certificate Mismatch",
+    "severity": "HIGH",
+    "description": "SSL Certificate Mismatch",
+    "error_codes": [
+      "NET011"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_006",
+    "domain": "Network",
+    "sub_domain": "TLS/Security",
+    "title": "Man-in-the-Middle Warning",
+    "severity": "CRITICAL",
+    "description": "Man-in-the-Middle Warning",
+    "error_codes": [
+      "NET012"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_007",
+    "domain": "Network",
+    "sub_domain": "Host Connectivity",
+    "title": "Cannot Reach Bank Core System",
+    "severity": "CRITICAL",
+    "description": "Cannot Reach Bank Core System",
+    "error_codes": [
+      "NET020"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_008",
+    "domain": "Network",
+    "sub_domain": "Host Connectivity",
+    "title": "Connection Timeout to Core System",
+    "severity": "HIGH",
+    "description": "Connection Timeout to Core System",
+    "error_codes": [
+      "NET021"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_009",
+    "domain": "Network",
+    "sub_domain": "Host Connectivity",
+    "title": "Authentication Rejected by Core",
+    "severity": "HIGH",
+    "description": "Authentication Rejected by Core",
+    "error_codes": [
+      "NET022"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_010",
+    "domain": "Network",
+    "sub_domain": "VPN",
+    "title": "VPN Tunnel Down",
+    "severity": "CRITICAL",
+    "description": "VPN Tunnel Down",
+    "error_codes": [
+      "NET030"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_011",
+    "domain": "Network",
+    "sub_domain": "VPN",
+    "title": "VPN Authentication Failed",
+    "severity": "HIGH",
+    "description": "VPN Authentication Failed",
+    "error_codes": [
+      "NET031"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_012",
+    "domain": "Network",
+    "sub_domain": "Firewall",
+    "title": "ATM Traffic Blocked by Firewall",
+    "severity": "HIGH",
+    "description": "ATM Traffic Blocked by Firewall",
+    "error_codes": [
+      "NET040"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_013",
+    "domain": "Network",
+    "sub_domain": "Firewall",
+    "title": "IP Address Conflict",
+    "severity": "MEDIUM",
+    "description": "IP Address Conflict",
+    "error_codes": [
+      "NET041"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_014",
+    "domain": "Network",
+    "sub_domain": "Switch/Router",
+    "title": "Network Switch Port Down",
+    "severity": "HIGH",
+    "description": "Network Switch Port Down",
+    "error_codes": [
+      "NET050"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_015",
+    "domain": "Network",
+    "sub_domain": "Switch/Router",
+    "title": "Router Unreachable",
+    "severity": "CRITICAL",
+    "description": "Router Unreachable",
+    "error_codes": [
+      "NET051"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_016",
+    "domain": "Network",
+    "sub_domain": "Bandwidth",
+    "title": "Bandwidth Saturation",
+    "severity": "MEDIUM",
+    "description": "Bandwidth Saturation",
+    "error_codes": [
+      "NET060"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_017",
+    "domain": "Network",
+    "sub_domain": "Bandwidth",
+    "title": "Packet Loss Exceeding Threshold",
+    "severity": "HIGH",
+    "description": "Packet Loss Exceeding Threshold",
+    "error_codes": [
+      "NET061"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_018",
+    "domain": "Network",
+    "sub_domain": "NTP",
+    "title": "Clock Sync Failure (NTP)",
+    "severity": "MEDIUM",
+    "description": "Clock Sync Failure (NTP)",
+    "error_codes": [
+      "NET070"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  },
+  {
+    "fault_id": "N_NET_019",
+    "domain": "Network",
+    "sub_domain": "NTP",
+    "title": "ATM Clock Drift Detected",
+    "severity": "MEDIUM",
+    "description": "ATM Clock Drift Detected",
+    "error_codes": [
+      "NET071"
+    ],
+    "resolution_steps": [
+      "Check LAN",
+      "Network Reset"
+    ],
+    "symptoms": [
+      "Network status: FAULT"
+    ]
+  }
 ]
