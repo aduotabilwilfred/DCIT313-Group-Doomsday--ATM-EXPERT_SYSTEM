@@ -70,6 +70,7 @@ atm-expert/
 │   ├── rules.pl                      # Diagnostic logic and inference rules
 │   ├── loader.pl                     # Master loader for facts and rules
 │   ├── json_to_prolog.py             # Script to compile JSON profiles into atm_kb.pl
+│   ├── seed.py                       # [NEW] Script to seed Knowledge Base from benchmark data
 │   └── schema.md                     # Rule and fault profile schema documentation
 │
 ├── inference_engine/                 # Dev 1 — Shadrack Dorkenoo
@@ -92,7 +93,8 @@ atm-expert/
 │
 ├── benchmark/                        # Accuracy testing
 │   ├── atm_benchmark_scenarios.json  # 200-scenario benchmark dataset
-│   └── generate_benchmark_scenarios.py # Scenario generation script
+│   ├── generate_benchmark_scenarios.py # Scenario generation script
+│   └── run_benchmark.py              # Script to execute benchmark and calculate accuracy
 │
 ├── simulator/                        # ATM hardware simulator
 │   ├── atm_simulator.py              # [NEW] CLI-based fault simulation tool
