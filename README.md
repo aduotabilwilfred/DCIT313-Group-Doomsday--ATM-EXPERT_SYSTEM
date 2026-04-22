@@ -4,6 +4,17 @@
 > A rule-based expert system that diagnoses ATM faults, guides operators through resolution, and predicts failures before they cause downtime.
 
 ---
+| No. | GitHub Username | Student ID |
+| --: | --------------- | ---------- |
+|   1 | `aduotabilwilfred`    | `22045896`    |
+|   2 | `shadyOg`     | `22027811`    |
+|   3 | `Didemudopeterpaul`     | `22046391`    |
+|   4 | `Jerry-Kuake`     | `22020691`    |
+|   5 | `username5`     |     |
+|   6 | `username6`     |     |
+|   7 | `username7`     |     |
+
+
 
 ## Table of Contents
 
